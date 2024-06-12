@@ -416,7 +416,7 @@ ul {
  */
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: Ubuntu, Sans-serif; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -544,7 +544,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /**
@@ -582,30 +582,6 @@ video {
 
 .container{
   width: 100%;
-}
-
-@media (min-width: 640px){
-  .container{
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px){
-  .container{
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px){
-  .container{
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px){
-  .container{
-    max-width: 1280px;
-  }
 }
 
 /* PrismJS 1.19.0
@@ -1618,6 +1594,42 @@ div.code-toolbar .toolbar button:hover {
   margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
 }
 
+.space-y-72 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(18rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(18rem * var(--space-y-reverse));
+}
+
+.space-x-72 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(18rem * var(--space-x-reverse));
+  margin-left: calc(18rem * calc(1 - var(--space-x-reverse)));
+}
+
+.space-y-84 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(21rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(21rem * var(--space-y-reverse));
+}
+
+.space-x-84 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(21rem * var(--space-x-reverse));
+  margin-left: calc(21rem * calc(1 - var(--space-x-reverse)));
+}
+
+.space-y-96 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(24rem * var(--space-y-reverse));
+}
+
+.space-x-96 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(24rem * var(--space-x-reverse));
+  margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+}
+
 .space-y-px > :not(template) ~ :not(template){
   --space-y-reverse: 0;
   margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -1832,6 +1844,42 @@ div.code-toolbar .toolbar button:hover {
   --space-x-reverse: 0;
   margin-right: calc(-16rem * var(--space-x-reverse));
   margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+}
+
+.-space-y-72 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(-18rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-18rem * var(--space-y-reverse));
+}
+
+.-space-x-72 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(-18rem * var(--space-x-reverse));
+  margin-left: calc(-18rem * calc(1 - var(--space-x-reverse)));
+}
+
+.-space-y-84 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(-21rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-21rem * var(--space-y-reverse));
+}
+
+.-space-x-84 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(-21rem * var(--space-x-reverse));
+  margin-left: calc(-21rem * calc(1 - var(--space-x-reverse)));
+}
+
+.-space-y-96 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-24rem * var(--space-y-reverse));
+}
+
+.-space-x-96 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(-24rem * var(--space-x-reverse));
+  margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
 }
 
 .-space-y-px > :not(template) ~ :not(template){
@@ -11089,15 +11137,7 @@ div.code-toolbar .toolbar button:hover {
 }
 
 .font-sans{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.font-serif{
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.font-mono{
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Ubuntu, Sans-serif;
 }
 
 .font-hairline{
@@ -11278,6 +11318,18 @@ div.code-toolbar .toolbar button:hover {
 
 .h-64{
   height: 16rem;
+}
+
+.h-72{
+  height: 18rem;
+}
+
+.h-84{
+  height: 21rem;
+}
+
+.h-96{
+  height: 24rem;
 }
 
 .h-auto{
@@ -11484,6 +11536,18 @@ div.code-toolbar .toolbar button:hover {
   margin: 16rem;
 }
 
+.m-72{
+  margin: 18rem;
+}
+
+.m-84{
+  margin: 21rem;
+}
+
+.m-96{
+  margin: 24rem;
+}
+
 .m-auto{
   margin: auto;
 }
@@ -11558,6 +11622,18 @@ div.code-toolbar .toolbar button:hover {
 
 .-m-64{
   margin: -16rem;
+}
+
+.-m-72{
+  margin: -18rem;
+}
+
+.-m-84{
+  margin: -21rem;
+}
+
+.-m-96{
+  margin: -24rem;
 }
 
 .-m-px{
@@ -11742,6 +11818,36 @@ div.code-toolbar .toolbar button:hover {
 .mx-64{
   margin-left: 16rem;
   margin-right: 16rem;
+}
+
+.my-72{
+  margin-top: 18rem;
+  margin-bottom: 18rem;
+}
+
+.mx-72{
+  margin-left: 18rem;
+  margin-right: 18rem;
+}
+
+.my-84{
+  margin-top: 21rem;
+  margin-bottom: 21rem;
+}
+
+.mx-84{
+  margin-left: 21rem;
+  margin-right: 21rem;
+}
+
+.my-96{
+  margin-top: 24rem;
+  margin-bottom: 24rem;
+}
+
+.mx-96{
+  margin-left: 24rem;
+  margin-right: 24rem;
 }
 
 .my-auto{
@@ -11932,6 +12038,36 @@ div.code-toolbar .toolbar button:hover {
 .-mx-64{
   margin-left: -16rem;
   margin-right: -16rem;
+}
+
+.-my-72{
+  margin-top: -18rem;
+  margin-bottom: -18rem;
+}
+
+.-mx-72{
+  margin-left: -18rem;
+  margin-right: -18rem;
+}
+
+.-my-84{
+  margin-top: -21rem;
+  margin-bottom: -21rem;
+}
+
+.-mx-84{
+  margin-left: -21rem;
+  margin-right: -21rem;
+}
+
+.-my-96{
+  margin-top: -24rem;
+  margin-bottom: -24rem;
+}
+
+.-mx-96{
+  margin-left: -24rem;
+  margin-right: -24rem;
 }
 
 .-my-px{
@@ -12230,6 +12366,54 @@ div.code-toolbar .toolbar button:hover {
 
 .ml-64{
   margin-left: 16rem;
+}
+
+.mt-72{
+  margin-top: 18rem;
+}
+
+.mr-72{
+  margin-right: 18rem;
+}
+
+.mb-72{
+  margin-bottom: 18rem;
+}
+
+.ml-72{
+  margin-left: 18rem;
+}
+
+.mt-84{
+  margin-top: 21rem;
+}
+
+.mr-84{
+  margin-right: 21rem;
+}
+
+.mb-84{
+  margin-bottom: 21rem;
+}
+
+.ml-84{
+  margin-left: 21rem;
+}
+
+.mt-96{
+  margin-top: 24rem;
+}
+
+.mr-96{
+  margin-right: 24rem;
+}
+
+.mb-96{
+  margin-bottom: 24rem;
+}
+
+.ml-96{
+  margin-left: 24rem;
 }
 
 .mt-auto{
@@ -12536,6 +12720,54 @@ div.code-toolbar .toolbar button:hover {
   margin-left: -16rem;
 }
 
+.-mt-72{
+  margin-top: -18rem;
+}
+
+.-mr-72{
+  margin-right: -18rem;
+}
+
+.-mb-72{
+  margin-bottom: -18rem;
+}
+
+.-ml-72{
+  margin-left: -18rem;
+}
+
+.-mt-84{
+  margin-top: -21rem;
+}
+
+.-mr-84{
+  margin-right: -21rem;
+}
+
+.-mb-84{
+  margin-bottom: -21rem;
+}
+
+.-ml-84{
+  margin-left: -21rem;
+}
+
+.-mt-96{
+  margin-top: -24rem;
+}
+
+.-mr-96{
+  margin-right: -24rem;
+}
+
+.-mb-96{
+  margin-bottom: -24rem;
+}
+
+.-ml-96{
+  margin-left: -24rem;
+}
+
 .-mt-px{
   margin-top: -1px;
 }
@@ -12606,22 +12838,6 @@ div.code-toolbar .toolbar button:hover {
 
 .max-w-full{
   max-width: 100%;
-}
-
-.max-w-screen-sm{
-  max-width: 640px;
-}
-
-.max-w-screen-md{
-  max-width: 768px;
-}
-
-.max-w-screen-lg{
-  max-width: 1024px;
-}
-
-.max-w-screen-xl{
-  max-width: 1280px;
 }
 
 .min-h-0{
@@ -12954,6 +13170,18 @@ div.code-toolbar .toolbar button:hover {
   padding: 16rem;
 }
 
+.p-72{
+  padding: 18rem;
+}
+
+.p-84{
+  padding: 21rem;
+}
+
+.p-96{
+  padding: 24rem;
+}
+
 .p-px{
   padding: 1px;
 }
@@ -13136,6 +13364,36 @@ div.code-toolbar .toolbar button:hover {
 .px-64{
   padding-left: 16rem;
   padding-right: 16rem;
+}
+
+.py-72{
+  padding-top: 18rem;
+  padding-bottom: 18rem;
+}
+
+.px-72{
+  padding-left: 18rem;
+  padding-right: 18rem;
+}
+
+.py-84{
+  padding-top: 21rem;
+  padding-bottom: 21rem;
+}
+
+.px-84{
+  padding-left: 21rem;
+  padding-right: 21rem;
+}
+
+.py-96{
+  padding-top: 24rem;
+  padding-bottom: 24rem;
+}
+
+.px-96{
+  padding-left: 24rem;
+  padding-right: 24rem;
 }
 
 .py-px{
@@ -13434,6 +13692,54 @@ div.code-toolbar .toolbar button:hover {
 
 .pl-64{
   padding-left: 16rem;
+}
+
+.pt-72{
+  padding-top: 18rem;
+}
+
+.pr-72{
+  padding-right: 18rem;
+}
+
+.pb-72{
+  padding-bottom: 18rem;
+}
+
+.pl-72{
+  padding-left: 18rem;
+}
+
+.pt-84{
+  padding-top: 21rem;
+}
+
+.pr-84{
+  padding-right: 21rem;
+}
+
+.pb-84{
+  padding-bottom: 21rem;
+}
+
+.pl-84{
+  padding-left: 21rem;
+}
+
+.pt-96{
+  padding-top: 24rem;
+}
+
+.pr-96{
+  padding-right: 24rem;
+}
+
+.pb-96{
+  padding-bottom: 24rem;
+}
+
+.pl-96{
+  padding-left: 24rem;
 }
 
 .pt-px{
@@ -16931,6 +17237,18 @@ div.code-toolbar .toolbar button:hover {
   width: 16rem;
 }
 
+.w-72{
+  width: 18rem;
+}
+
+.w-84{
+  width: 21rem;
+}
+
+.w-96{
+  width: 24rem;
+}
+
 .w-auto{
   width: auto;
 }
@@ -17169,6 +17487,21 @@ div.code-toolbar .toolbar button:hover {
   gap: 16rem;
 }
 
+.gap-72{
+  grid-gap: 18rem;
+  gap: 18rem;
+}
+
+.gap-84{
+  grid-gap: 21rem;
+  gap: 21rem;
+}
+
+.gap-96{
+  grid-gap: 24rem;
+  gap: 24rem;
+}
+
 .gap-px{
   grid-gap: 1px;
   gap: 1px;
@@ -17262,6 +17595,21 @@ div.code-toolbar .toolbar button:hover {
 .col-gap-64{
   grid-column-gap: 16rem;
   column-gap: 16rem;
+}
+
+.col-gap-72{
+  grid-column-gap: 18rem;
+  column-gap: 18rem;
+}
+
+.col-gap-84{
+  grid-column-gap: 21rem;
+  column-gap: 21rem;
+}
+
+.col-gap-96{
+  grid-column-gap: 24rem;
+  column-gap: 24rem;
 }
 
 .col-gap-px{
@@ -17359,6 +17707,21 @@ div.code-toolbar .toolbar button:hover {
   column-gap: 16rem;
 }
 
+.gap-x-72{
+  grid-column-gap: 18rem;
+  column-gap: 18rem;
+}
+
+.gap-x-84{
+  grid-column-gap: 21rem;
+  column-gap: 21rem;
+}
+
+.gap-x-96{
+  grid-column-gap: 24rem;
+  column-gap: 24rem;
+}
+
 .gap-x-px{
   grid-column-gap: 1px;
   column-gap: 1px;
@@ -17454,6 +17817,21 @@ div.code-toolbar .toolbar button:hover {
   row-gap: 16rem;
 }
 
+.row-gap-72{
+  grid-row-gap: 18rem;
+  row-gap: 18rem;
+}
+
+.row-gap-84{
+  grid-row-gap: 21rem;
+  row-gap: 21rem;
+}
+
+.row-gap-96{
+  grid-row-gap: 24rem;
+  row-gap: 24rem;
+}
+
 .row-gap-px{
   grid-row-gap: 1px;
   row-gap: 1px;
@@ -17547,6 +17925,21 @@ div.code-toolbar .toolbar button:hover {
 .gap-y-64{
   grid-row-gap: 16rem;
   row-gap: 16rem;
+}
+
+.gap-y-72{
+  grid-row-gap: 18rem;
+  row-gap: 18rem;
+}
+
+.gap-y-84{
+  grid-row-gap: 21rem;
+  row-gap: 21rem;
+}
+
+.gap-y-96{
+  grid-row-gap: 24rem;
+  row-gap: 24rem;
 }
 
 .gap-y-px{
@@ -18667,6 +19060,18 @@ div.code-toolbar .toolbar button:hover {
   --transform-translate-x: 16rem;
 }
 
+.translate-x-72{
+  --transform-translate-x: 18rem;
+}
+
+.translate-x-84{
+  --transform-translate-x: 21rem;
+}
+
+.translate-x-96{
+  --transform-translate-x: 24rem;
+}
+
 .translate-x-px{
   --transform-translate-x: 1px;
 }
@@ -18737,6 +19142,18 @@ div.code-toolbar .toolbar button:hover {
 
 .-translate-x-64{
   --transform-translate-x: -16rem;
+}
+
+.-translate-x-72{
+  --transform-translate-x: -18rem;
+}
+
+.-translate-x-84{
+  --transform-translate-x: -21rem;
+}
+
+.-translate-x-96{
+  --transform-translate-x: -24rem;
 }
 
 .-translate-x-px{
@@ -18831,6 +19248,18 @@ div.code-toolbar .toolbar button:hover {
   --transform-translate-y: 16rem;
 }
 
+.translate-y-72{
+  --transform-translate-y: 18rem;
+}
+
+.translate-y-84{
+  --transform-translate-y: 21rem;
+}
+
+.translate-y-96{
+  --transform-translate-y: 24rem;
+}
+
 .translate-y-px{
   --transform-translate-y: 1px;
 }
@@ -18901,6 +19330,18 @@ div.code-toolbar .toolbar button:hover {
 
 .-translate-y-64{
   --transform-translate-y: -16rem;
+}
+
+.-translate-y-72{
+  --transform-translate-y: -18rem;
+}
+
+.-translate-y-84{
+  --transform-translate-y: -21rem;
+}
+
+.-translate-y-96{
+  --transform-translate-y: -24rem;
 }
 
 .-translate-y-px{
@@ -18995,6 +19436,18 @@ div.code-toolbar .toolbar button:hover {
   --transform-translate-x: 16rem;
 }
 
+.hover\:translate-x-72:hover{
+  --transform-translate-x: 18rem;
+}
+
+.hover\:translate-x-84:hover{
+  --transform-translate-x: 21rem;
+}
+
+.hover\:translate-x-96:hover{
+  --transform-translate-x: 24rem;
+}
+
 .hover\:translate-x-px:hover{
   --transform-translate-x: 1px;
 }
@@ -19065,6 +19518,18 @@ div.code-toolbar .toolbar button:hover {
 
 .hover\:-translate-x-64:hover{
   --transform-translate-x: -16rem;
+}
+
+.hover\:-translate-x-72:hover{
+  --transform-translate-x: -18rem;
+}
+
+.hover\:-translate-x-84:hover{
+  --transform-translate-x: -21rem;
+}
+
+.hover\:-translate-x-96:hover{
+  --transform-translate-x: -24rem;
 }
 
 .hover\:-translate-x-px:hover{
@@ -19159,6 +19624,18 @@ div.code-toolbar .toolbar button:hover {
   --transform-translate-y: 16rem;
 }
 
+.hover\:translate-y-72:hover{
+  --transform-translate-y: 18rem;
+}
+
+.hover\:translate-y-84:hover{
+  --transform-translate-y: 21rem;
+}
+
+.hover\:translate-y-96:hover{
+  --transform-translate-y: 24rem;
+}
+
 .hover\:translate-y-px:hover{
   --transform-translate-y: 1px;
 }
@@ -19229,6 +19706,18 @@ div.code-toolbar .toolbar button:hover {
 
 .hover\:-translate-y-64:hover{
   --transform-translate-y: -16rem;
+}
+
+.hover\:-translate-y-72:hover{
+  --transform-translate-y: -18rem;
+}
+
+.hover\:-translate-y-84:hover{
+  --transform-translate-y: -21rem;
+}
+
+.hover\:-translate-y-96:hover{
+  --transform-translate-y: -24rem;
 }
 
 .hover\:-translate-y-px:hover{
@@ -19323,6 +19812,18 @@ div.code-toolbar .toolbar button:hover {
   --transform-translate-x: 16rem;
 }
 
+.focus\:translate-x-72:focus{
+  --transform-translate-x: 18rem;
+}
+
+.focus\:translate-x-84:focus{
+  --transform-translate-x: 21rem;
+}
+
+.focus\:translate-x-96:focus{
+  --transform-translate-x: 24rem;
+}
+
 .focus\:translate-x-px:focus{
   --transform-translate-x: 1px;
 }
@@ -19393,6 +19894,18 @@ div.code-toolbar .toolbar button:hover {
 
 .focus\:-translate-x-64:focus{
   --transform-translate-x: -16rem;
+}
+
+.focus\:-translate-x-72:focus{
+  --transform-translate-x: -18rem;
+}
+
+.focus\:-translate-x-84:focus{
+  --transform-translate-x: -21rem;
+}
+
+.focus\:-translate-x-96:focus{
+  --transform-translate-x: -24rem;
 }
 
 .focus\:-translate-x-px:focus{
@@ -19487,6 +20000,18 @@ div.code-toolbar .toolbar button:hover {
   --transform-translate-y: 16rem;
 }
 
+.focus\:translate-y-72:focus{
+  --transform-translate-y: 18rem;
+}
+
+.focus\:translate-y-84:focus{
+  --transform-translate-y: 21rem;
+}
+
+.focus\:translate-y-96:focus{
+  --transform-translate-y: 24rem;
+}
+
 .focus\:translate-y-px:focus{
   --transform-translate-y: 1px;
 }
@@ -19557,6 +20082,18 @@ div.code-toolbar .toolbar button:hover {
 
 .focus\:-translate-y-64:focus{
   --transform-translate-y: -16rem;
+}
+
+.focus\:-translate-y-72:focus{
+  --transform-translate-y: -18rem;
+}
+
+.focus\:-translate-y-84:focus{
+  --transform-translate-y: -21rem;
+}
+
+.focus\:-translate-y-96:focus{
+  --transform-translate-y: -24rem;
 }
 
 .focus\:-translate-y-px:focus{
@@ -20002,33 +20539,1618 @@ div.code-toolbar .toolbar button:hover {
   animation: bounce 1s infinite;
 }
 
-@media (min-width: 640px){
+.animated{
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+}
+
+.infinite{
+  animation-iteration-count: infinite;
+}
+
+.delay{
+  animation-delay: 1000ms;
+}
+
+.delay-1s{
+  animation-delay: 1000ms;
+}
+
+.delay-2s{
+  animation-delay: 2000ms;
+}
+
+.delay-3s{
+  animation-delay: 3000ms;
+}
+
+.delay-4s{
+  animation-delay: 4000ms;
+}
+
+.delay-5s{
+  animation-delay: 5000ms;
+}
+
+.fast{
+  animation-duration: 800ms;
+}
+
+.faster{
+  animation-duration: 500ms;
+}
+
+.slow{
+  animation-duration: 2000ms;
+}
+
+.slower{
+  animation-duration: 3000ms;
+}
+
+.bounce{
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+.flash{
+  animation-name: flash;
+}
+
+.pulse{
+  animation-name: pulse;
+}
+
+.rubberBand{
+  animation-name: rubberBand;
+}
+
+.shake{
+  animation-name: shake;
+}
+
+.headShake{
+  animation-timing-function: ease-in-out;
+  animation-name: headShake;
+}
+
+.swing{
+  transform-origin: top center;
+  animation-name: swing;
+}
+
+.tada{
+  animation-name: tada;
+}
+
+.wobble{
+  animation-name: wobble;
+}
+
+.jello{
+  animation-name: jello;
+}
+
+.heartBeat{
+  animation-name: heartBeat;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+}
+
+.hinge{
+  animation-name: hinge;
+  animation-duration: 2000ms;
+}
+
+.jackInTheBox{
+  animation-name: jackInTheBox;
+}
+
+.lightSpeedIn{
+  animation-name: lightSpeedIn;
+}
+
+.lightSpeedOut{
+  animation-name: lightSpeedOut;
+}
+
+.flip{
+  animation-name: flip;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.flipInX{
+  animation-name: flipInX;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.flipInY{
+  animation-name: flipInY;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.flipOutX{
+  animation-name: flipOutX;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.rotateIn{
+  animation-name: rotateIn;
+}
+
+.rotateInDownLeft{
+  animation-name: rotateInDownLeft;
+}
+
+.rotateInDownRight{
+  animation-name: rotateInDownRight;
+}
+
+.rotateInUpLeft{
+  animation-name: rotateInUpLeft;
+}
+
+.rotateInUpRight{
+  animation-name: rotateInUpRight;
+}
+
+.rotateOut{
+  animation-name: rotateOut;
+}
+
+.rotateOutDownLeft{
+  animation-name: rotateOutDownLeft;
+}
+
+.rotateOutDownRight{
+  animation-name: rotateOutDownRight;
+}
+
+.rotateOutUpLeft{
+  animation-name: rotateOutUpLeft;
+}
+
+.rotateOutUpRight{
+  animation-name: rotateOutUpRight;
+}
+
+.rollIn{
+  animation-name: rollIn;
+}
+
+.rollOut{
+  animation-name: rollOut;
+}
+
+.zoomIn{
+  animation-name: zoomIn;
+}
+
+.zoomInDown{
+  animation-name: zoomInDown;
+}
+
+.zoomInLeft{
+  animation-name: zoomInLeft;
+}
+
+.zoomInRight{
+  animation-name: zoomInRight;
+}
+
+.zoomInUp{
+  animation-name: zoomInUp;
+}
+
+.bounceIn{
+  animation-name: bounceIn;
+  animation-duration: 750ms;
+}
+
+.bounceInDown{
+  animation-name: bounceInDown;
+}
+
+.bounceInLeft{
+  animation-name: bounceInLeft;
+}
+
+.bounceInRight{
+  animation-name: bounceInRight;
+}
+
+.bounceInUp{
+  animation-name: bounceInUp;
+}
+
+.bounceOut{
+  animation-name: bounceOut;
+  animation-duration: 750ms;
+}
+
+.bounceOutDown{
+  animation-name: bounceOutDown;
+}
+
+.bounceOutLeft{
+  animation-name: bounceOutLeft;
+}
+
+.bounceOutRight{
+  animation-name: bounceOutRight;
+}
+
+.bounceOutUp{
+  animation-name: bounceOutUp;
+}
+
+.zoomOut{
+  animation-name: zoomIn;
+}
+
+.zoomOutDown{
+  animation-name: zoomOutDown;
+}
+
+.zoomOutLeft{
+  animation-name: zoomOutLeft;
+}
+
+.zoomOutRight{
+  animation-name: zoomOutRight;
+}
+
+.zoomOutUp{
+  animation-name: zoomOutUp;
+}
+
+.slideInDown{
+  animation-name: slideInDown;
+}
+
+.slideInLeft{
+  animation-name: slideInLeft;
+}
+
+.slideInRight{
+  animation-name: slideInRight;
+}
+
+.slideInUp{
+  animation-name: slideInUp;
+}
+
+.slideOutDown{
+  animation-name: slideOutDown;
+}
+
+.slideOutLeft{
+  animation-name: slideOutLeft;
+}
+
+.slideOutRight{
+  animation-name: slideOutRight;
+}
+
+.slideOutUp{
+  animation-name: slideOutUp;
+}
+
+.fadeIn{
+  animation-name: fadeIn;
+}
+
+.fadeInDown{
+  animation-name: fadeInDown;
+}
+
+.fadeInDownBig{
+  animation-name: fadeInDownBig;
+}
+
+.fadeInLeft{
+  animation-name: fadeInLeft;
+}
+
+.fadeInLeftBig{
+  animation-name: fadeInLeftBig;
+}
+
+.fadeInRight{
+  animation-name: fadeInRight;
+}
+
+.fadeInRightBig{
+  animation-name: fadeInRightBig;
+}
+
+.fadeInUp{
+  animation-name: fadeInUp;
+}
+
+.fadeInUpBig{
+  animation-name: fadeInUpBig;
+}
+
+.fadeOut{
+  animation-name: fadeOut;
+}
+
+.fadeOutDown{
+  animation-name: fadeOutDown;
+}
+
+.fadeOutDownBig{
+  animation-name: fadeOutDownBig;
+}
+
+.fadeOutLeft{
+  animation-name: fadeOutLeft;
+}
+
+.fadeOutLeftBig{
+  animation-name: fadeOutLeftBig;
+}
+
+.fadeOutRight{
+  animation-name: fadeOutRight;
+}
+
+.fadeOutRightBig{
+  animation-name: fadeOutRightBig;
+}
+
+.fadeOutUp{
+  animation-name: fadeOutUp;
+}
+
+.fadeOutUpBig{
+  animation-name: fadeOutUpBig;
+}
+
+@keyframes bounce{
+  from, 20%, 53%, 80%, to{
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%, 43%{
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70%{
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90%{
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes flash{
+  from, 50%, to{
+    opacity: 1;
+  }
+
+  25%, 75%{
+    opacity: 0;
+  }
+}
+
+@keyframes pulse{
+  from{
+    transform: scale3d(1, 1, 1);
+  }
+
+  50%{
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to{
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rubberBand{
+  from{
+    transform: scale3d(1, 1, 1);
+  }
+
+  30%{
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40%{
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50%{
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65%{
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75%{
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to{
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes shake{
+  from, to{
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90%{
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80%{
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes headShake{
+  0%{
+    transform: translateX(0);
+  }
+
+  6.5%{
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5%{
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5%{
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5%{
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes swing{
+  20%{
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40%{
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60%{
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80%{
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to{
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes tada{
+  from{
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20%{
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90%{
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80%{
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to{
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes wobble{
+  from{
+    transform: translate3d(0, 0, 0);
+  }
+
+  15%{
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30%{
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45%{
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60%{
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75%{
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes jello{
+  from, 11.1% to{
+    transform: translate3d(0, 0, 0);
+  }
+
+  22.2%{
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+
+  33.3%{
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+
+  44.4%{
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+
+  55.5%{
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+
+  66.6%{
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+
+  77.7%{
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+
+  88.8%{
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+}
+
+@keyframes heartBeat{
+  0%{
+    transform: scale(1);
+  }
+
+  14%{
+    transform: scale(1.3);
+  }
+
+  28%{
+    transform: scale(1);
+  }
+
+  42%{
+    transform: scale(1.3);
+  }
+
+  70%{
+    transform: scale(1);
+  }
+}
+
+@keyframes hinge{
+  0%{
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%, 60%{
+    transform: rotate3d(0, 0, 1, 80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%, 80%{
+    transform: rotate3d(0, 0, 1, 60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+
+  to{
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes jackInTheBox{
+  from{
+    opacity: 0;
+    transform-origin: center bottom;
+    transform: scale(0.1) rotate(30deg);
+  }
+
+  50%{
+    transform: rotate(-10deg);
+  }
+
+  70%{
+    transform: rotate(3deg);
+  }
+
+  to{
+    transform: scale(1);
+  }
+}
+
+@keyframes lightSpeedIn{
+  from{
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+  }
+
+  60%{
+    opacity: 1;
+    transform: skewX(20deg);
+  }
+
+  80%{
+    transform: skewX(-5deg);
+  }
+
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes lightSpeedOut{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+  }
+}
+
+@keyframes flip{
+  from{
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+  }
+
+  40%{
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+
+  50%{
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+
+  80%{
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+
+  to{
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes flipInX{
+  from{
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40%{
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60%{
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80%{
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to{
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInY{
+  from{
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40%{
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60%{
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80%{
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to{
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipOutX{
+  from{
+    transform: perspective(400px);
+  }
+
+  30%{
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+
+  to{
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOutY{
+  from{
+    transform: perspective(400px);
+  }
+
+  30%{
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
+  }
+
+  to{
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateIn{
+  from{
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+
+  to{
+    transform-origin: center;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownLeft{
+  from{
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+
+  to{
+    transform-origin: left bottom;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownRight{
+  from{
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+
+  to{
+    transform-origin: right bottom;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInUpLeft{
+  from{
+    transform-origin: left top;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+
+  to{
+    transform-origin: left top;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInUpRight{
+  from{
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+  }
+
+  to{
+    transform-origin: right bottom;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateOut{
+  from{
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  to{
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutDownLeft{
+  from{
+    transform-origin: left bottom;
+    opacity: 1;
+  }
+
+  to{
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutDownRight{
+  from{
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+
+  to{
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpLeft{
+  from{
+    transform-origin: left bottom;
+    opacity: 1;
+  }
+
+  to{
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpRight{
+  from{
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+
+  to{
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rollIn{
+  from{
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rollOut{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+  }
+}
+
+@keyframes zoomIn{
+  from{
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50%{
+    opacity: 1;
+  }
+}
+
+@keyframes zoomInDown{
+  from{
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60%{
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomInLeft{
+  from{
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60%{
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomInRight{
+  from{
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60%{
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomInUp{
+  from{
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60%{
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes bounceIn{
+  from, 20%, 40%, 60%, 80%, to{
+    animation-timing-function: ease-in-out;
+  }
+
+  0%{
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20%{
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40%{
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60%{
+    transform: scale3d(1.03, 1.03, 1.03);
+    opacity: 1;
+  }
+
+  80%{
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to{
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceInDown{
+  from, 60%, 75%, 90%, to{
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0%{
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60%{
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75%{
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90%{
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInLeft{
+  from, 60%, 75%, 90%, to{
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0%{
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60%{
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75%{
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90%{
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInRight{
+  from, 60%, 75%, 90%, to{
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0%{
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60%{
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75%{
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90%{
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInUp{
+  from, 60%, 75%, 90%, to{
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0%{
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60%{
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75%{
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90%{
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceOut{
+  20%{
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50%, 55%{
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to{
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@keyframes bounceOutDown{
+  20%{
+    transform: translate3d(0, 10px, 0);
+  }
+
+  40%, 45%{
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+@keyframes bounceOutLeft{
+  20%{
+    opacity: 1;
+    transform: translate3d(20px, 0, 0);
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+@keyframes bounceOutRight{
+  20%{
+    opacity: 1;
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+
+@keyframes bounceOutUp{
+  20%{
+    transform: translate3d(0, -10px, 0);
+  }
+
+  40%, 45%{
+    opacity: 1;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+@keyframes zoomOut{
+  from{
+    opacity: 1;
+  }
+
+  50%{
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to{
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOutDown{
+  40%{
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  to{
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomOutLeft{
+  40%{
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0, 0);
+  }
+
+  to{
+    opacity: 0;
+    transform: scale(0.1) translate3d(-2000px, 0, 0);
+    transform-origin: left center;
+  }
+}
+
+@keyframes zoomOutRight{
+  40%{
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0);
+  }
+
+  to{
+    opacity: 0;
+    transform: scale(0.1) translate3d(2000px, 0, 0);
+    transform-origin: right center;
+  }
+}
+
+@keyframes zoomOutUp{
+  40%{
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  to{
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes slideInDown{
+  from{
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft{
+  from{
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight{
+  from{
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp{
+  from{
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutDown{
+  from{
+    transform: translate3d(0, 0, 0);
+  }
+
+  to{
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes slideOutLeft{
+  from{
+    transform: translate3d(0, 0, 0);
+  }
+
+  to{
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes slideOutRight{
+  from{
+    transform: translate3d(0, 0, 0);
+  }
+
+  to{
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes slideOutUp{
+  from{
+    transform: translate3d(0, 0, 0);
+  }
+
+  to{
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown{
+  from{
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDownBig{
+  from{
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft{
+  from{
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeftBig{
+  from{
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight{
+  from{
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRightBig{
+  from{
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp{
+  from{
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUpBig{
+  from{
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOut{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutDown{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeOutDownBig{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+@keyframes fadeOutLeft{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutLeftBig{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+@keyframes fadeOutRight{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutRightBig{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+
+@keyframes fadeOutUp{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutUpBig{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+@media (max-width: 639px){
   .sm\:container{
     width: 100%;
-  }
-
-  @media (min-width: 640px){
-    .sm\:container{
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px){
-    .sm\:container{
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px){
-    .sm\:container{
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px){
-    .sm\:container{
-      max-width: 1280px;
-    }
   }
 
   .sm\:space-y-0 > :not(template) ~ :not(template){
@@ -20247,6 +22369,42 @@ div.code-toolbar .toolbar button:hover {
     margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .sm\:space-y-72 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(18rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(18rem * var(--space-y-reverse));
+  }
+
+  .sm\:space-x-72 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(18rem * var(--space-x-reverse));
+    margin-left: calc(18rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:space-y-84 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(21rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(21rem * var(--space-y-reverse));
+  }
+
+  .sm\:space-x-84 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(21rem * var(--space-x-reverse));
+    margin-left: calc(21rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:space-y-96 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(24rem * var(--space-y-reverse));
+  }
+
+  .sm\:space-x-96 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(24rem * var(--space-x-reverse));
+    margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .sm\:space-y-px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -20461,6 +22619,42 @@ div.code-toolbar .toolbar button:hover {
     --space-x-reverse: 0;
     margin-right: calc(-16rem * var(--space-x-reverse));
     margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:-space-y-72 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-18rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-18rem * var(--space-y-reverse));
+  }
+
+  .sm\:-space-x-72 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-18rem * var(--space-x-reverse));
+    margin-left: calc(-18rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:-space-y-84 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-21rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-21rem * var(--space-y-reverse));
+  }
+
+  .sm\:-space-x-84 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-21rem * var(--space-x-reverse));
+    margin-left: calc(-21rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:-space-y-96 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-24rem * var(--space-y-reverse));
+  }
+
+  .sm\:-space-x-96 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-24rem * var(--space-x-reverse));
+    margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
   .sm\:-space-y-px > :not(template) ~ :not(template){
@@ -29718,15 +31912,7 @@ div.code-toolbar .toolbar button:hover {
   }
 
   .sm\:font-sans{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .sm\:font-serif{
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .sm\:font-mono{
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Ubuntu, Sans-serif;
   }
 
   .sm\:font-hairline{
@@ -29907,6 +32093,18 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:h-64{
     height: 16rem;
+  }
+
+  .sm\:h-72{
+    height: 18rem;
+  }
+
+  .sm\:h-84{
+    height: 21rem;
+  }
+
+  .sm\:h-96{
+    height: 24rem;
   }
 
   .sm\:h-auto{
@@ -30113,6 +32311,18 @@ div.code-toolbar .toolbar button:hover {
     margin: 16rem;
   }
 
+  .sm\:m-72{
+    margin: 18rem;
+  }
+
+  .sm\:m-84{
+    margin: 21rem;
+  }
+
+  .sm\:m-96{
+    margin: 24rem;
+  }
+
   .sm\:m-auto{
     margin: auto;
   }
@@ -30187,6 +32397,18 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:-m-64{
     margin: -16rem;
+  }
+
+  .sm\:-m-72{
+    margin: -18rem;
+  }
+
+  .sm\:-m-84{
+    margin: -21rem;
+  }
+
+  .sm\:-m-96{
+    margin: -24rem;
   }
 
   .sm\:-m-px{
@@ -30371,6 +32593,36 @@ div.code-toolbar .toolbar button:hover {
   .sm\:mx-64{
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .sm\:my-72{
+    margin-top: 18rem;
+    margin-bottom: 18rem;
+  }
+
+  .sm\:mx-72{
+    margin-left: 18rem;
+    margin-right: 18rem;
+  }
+
+  .sm\:my-84{
+    margin-top: 21rem;
+    margin-bottom: 21rem;
+  }
+
+  .sm\:mx-84{
+    margin-left: 21rem;
+    margin-right: 21rem;
+  }
+
+  .sm\:my-96{
+    margin-top: 24rem;
+    margin-bottom: 24rem;
+  }
+
+  .sm\:mx-96{
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .sm\:my-auto{
@@ -30561,6 +32813,36 @@ div.code-toolbar .toolbar button:hover {
   .sm\:-mx-64{
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .sm\:-my-72{
+    margin-top: -18rem;
+    margin-bottom: -18rem;
+  }
+
+  .sm\:-mx-72{
+    margin-left: -18rem;
+    margin-right: -18rem;
+  }
+
+  .sm\:-my-84{
+    margin-top: -21rem;
+    margin-bottom: -21rem;
+  }
+
+  .sm\:-mx-84{
+    margin-left: -21rem;
+    margin-right: -21rem;
+  }
+
+  .sm\:-my-96{
+    margin-top: -24rem;
+    margin-bottom: -24rem;
+  }
+
+  .sm\:-mx-96{
+    margin-left: -24rem;
+    margin-right: -24rem;
   }
 
   .sm\:-my-px{
@@ -30859,6 +33141,54 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:ml-64{
     margin-left: 16rem;
+  }
+
+  .sm\:mt-72{
+    margin-top: 18rem;
+  }
+
+  .sm\:mr-72{
+    margin-right: 18rem;
+  }
+
+  .sm\:mb-72{
+    margin-bottom: 18rem;
+  }
+
+  .sm\:ml-72{
+    margin-left: 18rem;
+  }
+
+  .sm\:mt-84{
+    margin-top: 21rem;
+  }
+
+  .sm\:mr-84{
+    margin-right: 21rem;
+  }
+
+  .sm\:mb-84{
+    margin-bottom: 21rem;
+  }
+
+  .sm\:ml-84{
+    margin-left: 21rem;
+  }
+
+  .sm\:mt-96{
+    margin-top: 24rem;
+  }
+
+  .sm\:mr-96{
+    margin-right: 24rem;
+  }
+
+  .sm\:mb-96{
+    margin-bottom: 24rem;
+  }
+
+  .sm\:ml-96{
+    margin-left: 24rem;
   }
 
   .sm\:mt-auto{
@@ -31165,6 +33495,54 @@ div.code-toolbar .toolbar button:hover {
     margin-left: -16rem;
   }
 
+  .sm\:-mt-72{
+    margin-top: -18rem;
+  }
+
+  .sm\:-mr-72{
+    margin-right: -18rem;
+  }
+
+  .sm\:-mb-72{
+    margin-bottom: -18rem;
+  }
+
+  .sm\:-ml-72{
+    margin-left: -18rem;
+  }
+
+  .sm\:-mt-84{
+    margin-top: -21rem;
+  }
+
+  .sm\:-mr-84{
+    margin-right: -21rem;
+  }
+
+  .sm\:-mb-84{
+    margin-bottom: -21rem;
+  }
+
+  .sm\:-ml-84{
+    margin-left: -21rem;
+  }
+
+  .sm\:-mt-96{
+    margin-top: -24rem;
+  }
+
+  .sm\:-mr-96{
+    margin-right: -24rem;
+  }
+
+  .sm\:-mb-96{
+    margin-bottom: -24rem;
+  }
+
+  .sm\:-ml-96{
+    margin-left: -24rem;
+  }
+
   .sm\:-mt-px{
     margin-top: -1px;
   }
@@ -31235,22 +33613,6 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:max-w-full{
     max-width: 100%;
-  }
-
-  .sm\:max-w-screen-sm{
-    max-width: 640px;
-  }
-
-  .sm\:max-w-screen-md{
-    max-width: 768px;
-  }
-
-  .sm\:max-w-screen-lg{
-    max-width: 1024px;
-  }
-
-  .sm\:max-w-screen-xl{
-    max-width: 1280px;
   }
 
   .sm\:min-h-0{
@@ -31583,6 +33945,18 @@ div.code-toolbar .toolbar button:hover {
     padding: 16rem;
   }
 
+  .sm\:p-72{
+    padding: 18rem;
+  }
+
+  .sm\:p-84{
+    padding: 21rem;
+  }
+
+  .sm\:p-96{
+    padding: 24rem;
+  }
+
   .sm\:p-px{
     padding: 1px;
   }
@@ -31765,6 +34139,36 @@ div.code-toolbar .toolbar button:hover {
   .sm\:px-64{
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .sm\:py-72{
+    padding-top: 18rem;
+    padding-bottom: 18rem;
+  }
+
+  .sm\:px-72{
+    padding-left: 18rem;
+    padding-right: 18rem;
+  }
+
+  .sm\:py-84{
+    padding-top: 21rem;
+    padding-bottom: 21rem;
+  }
+
+  .sm\:px-84{
+    padding-left: 21rem;
+    padding-right: 21rem;
+  }
+
+  .sm\:py-96{
+    padding-top: 24rem;
+    padding-bottom: 24rem;
+  }
+
+  .sm\:px-96{
+    padding-left: 24rem;
+    padding-right: 24rem;
   }
 
   .sm\:py-px{
@@ -32063,6 +34467,54 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:pl-64{
     padding-left: 16rem;
+  }
+
+  .sm\:pt-72{
+    padding-top: 18rem;
+  }
+
+  .sm\:pr-72{
+    padding-right: 18rem;
+  }
+
+  .sm\:pb-72{
+    padding-bottom: 18rem;
+  }
+
+  .sm\:pl-72{
+    padding-left: 18rem;
+  }
+
+  .sm\:pt-84{
+    padding-top: 21rem;
+  }
+
+  .sm\:pr-84{
+    padding-right: 21rem;
+  }
+
+  .sm\:pb-84{
+    padding-bottom: 21rem;
+  }
+
+  .sm\:pl-84{
+    padding-left: 21rem;
+  }
+
+  .sm\:pt-96{
+    padding-top: 24rem;
+  }
+
+  .sm\:pr-96{
+    padding-right: 24rem;
+  }
+
+  .sm\:pb-96{
+    padding-bottom: 24rem;
+  }
+
+  .sm\:pl-96{
+    padding-left: 24rem;
   }
 
   .sm\:pt-px{
@@ -35560,6 +38012,18 @@ div.code-toolbar .toolbar button:hover {
     width: 16rem;
   }
 
+  .sm\:w-72{
+    width: 18rem;
+  }
+
+  .sm\:w-84{
+    width: 21rem;
+  }
+
+  .sm\:w-96{
+    width: 24rem;
+  }
+
   .sm\:w-auto{
     width: auto;
   }
@@ -35798,6 +38262,21 @@ div.code-toolbar .toolbar button:hover {
     gap: 16rem;
   }
 
+  .sm\:gap-72{
+    grid-gap: 18rem;
+    gap: 18rem;
+  }
+
+  .sm\:gap-84{
+    grid-gap: 21rem;
+    gap: 21rem;
+  }
+
+  .sm\:gap-96{
+    grid-gap: 24rem;
+    gap: 24rem;
+  }
+
   .sm\:gap-px{
     grid-gap: 1px;
     gap: 1px;
@@ -35891,6 +38370,21 @@ div.code-toolbar .toolbar button:hover {
   .sm\:col-gap-64{
     grid-column-gap: 16rem;
     column-gap: 16rem;
+  }
+
+  .sm\:col-gap-72{
+    grid-column-gap: 18rem;
+    column-gap: 18rem;
+  }
+
+  .sm\:col-gap-84{
+    grid-column-gap: 21rem;
+    column-gap: 21rem;
+  }
+
+  .sm\:col-gap-96{
+    grid-column-gap: 24rem;
+    column-gap: 24rem;
   }
 
   .sm\:col-gap-px{
@@ -35988,6 +38482,21 @@ div.code-toolbar .toolbar button:hover {
     column-gap: 16rem;
   }
 
+  .sm\:gap-x-72{
+    grid-column-gap: 18rem;
+    column-gap: 18rem;
+  }
+
+  .sm\:gap-x-84{
+    grid-column-gap: 21rem;
+    column-gap: 21rem;
+  }
+
+  .sm\:gap-x-96{
+    grid-column-gap: 24rem;
+    column-gap: 24rem;
+  }
+
   .sm\:gap-x-px{
     grid-column-gap: 1px;
     column-gap: 1px;
@@ -36083,6 +38592,21 @@ div.code-toolbar .toolbar button:hover {
     row-gap: 16rem;
   }
 
+  .sm\:row-gap-72{
+    grid-row-gap: 18rem;
+    row-gap: 18rem;
+  }
+
+  .sm\:row-gap-84{
+    grid-row-gap: 21rem;
+    row-gap: 21rem;
+  }
+
+  .sm\:row-gap-96{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
+  }
+
   .sm\:row-gap-px{
     grid-row-gap: 1px;
     row-gap: 1px;
@@ -36176,6 +38700,21 @@ div.code-toolbar .toolbar button:hover {
   .sm\:gap-y-64{
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .sm\:gap-y-72{
+    grid-row-gap: 18rem;
+    row-gap: 18rem;
+  }
+
+  .sm\:gap-y-84{
+    grid-row-gap: 21rem;
+    row-gap: 21rem;
+  }
+
+  .sm\:gap-y-96{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
   }
 
   .sm\:gap-y-px{
@@ -37296,6 +39835,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .sm\:translate-x-72{
+    --transform-translate-x: 18rem;
+  }
+
+  .sm\:translate-x-84{
+    --transform-translate-x: 21rem;
+  }
+
+  .sm\:translate-x-96{
+    --transform-translate-x: 24rem;
+  }
+
   .sm\:translate-x-px{
     --transform-translate-x: 1px;
   }
@@ -37366,6 +39917,18 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:-translate-x-64{
     --transform-translate-x: -16rem;
+  }
+
+  .sm\:-translate-x-72{
+    --transform-translate-x: -18rem;
+  }
+
+  .sm\:-translate-x-84{
+    --transform-translate-x: -21rem;
+  }
+
+  .sm\:-translate-x-96{
+    --transform-translate-x: -24rem;
   }
 
   .sm\:-translate-x-px{
@@ -37460,6 +40023,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .sm\:translate-y-72{
+    --transform-translate-y: 18rem;
+  }
+
+  .sm\:translate-y-84{
+    --transform-translate-y: 21rem;
+  }
+
+  .sm\:translate-y-96{
+    --transform-translate-y: 24rem;
+  }
+
   .sm\:translate-y-px{
     --transform-translate-y: 1px;
   }
@@ -37530,6 +40105,18 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:-translate-y-64{
     --transform-translate-y: -16rem;
+  }
+
+  .sm\:-translate-y-72{
+    --transform-translate-y: -18rem;
+  }
+
+  .sm\:-translate-y-84{
+    --transform-translate-y: -21rem;
+  }
+
+  .sm\:-translate-y-96{
+    --transform-translate-y: -24rem;
   }
 
   .sm\:-translate-y-px{
@@ -37624,6 +40211,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .sm\:hover\:translate-x-72:hover{
+    --transform-translate-x: 18rem;
+  }
+
+  .sm\:hover\:translate-x-84:hover{
+    --transform-translate-x: 21rem;
+  }
+
+  .sm\:hover\:translate-x-96:hover{
+    --transform-translate-x: 24rem;
+  }
+
   .sm\:hover\:translate-x-px:hover{
     --transform-translate-x: 1px;
   }
@@ -37694,6 +40293,18 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:hover\:-translate-x-64:hover{
     --transform-translate-x: -16rem;
+  }
+
+  .sm\:hover\:-translate-x-72:hover{
+    --transform-translate-x: -18rem;
+  }
+
+  .sm\:hover\:-translate-x-84:hover{
+    --transform-translate-x: -21rem;
+  }
+
+  .sm\:hover\:-translate-x-96:hover{
+    --transform-translate-x: -24rem;
   }
 
   .sm\:hover\:-translate-x-px:hover{
@@ -37788,6 +40399,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .sm\:hover\:translate-y-72:hover{
+    --transform-translate-y: 18rem;
+  }
+
+  .sm\:hover\:translate-y-84:hover{
+    --transform-translate-y: 21rem;
+  }
+
+  .sm\:hover\:translate-y-96:hover{
+    --transform-translate-y: 24rem;
+  }
+
   .sm\:hover\:translate-y-px:hover{
     --transform-translate-y: 1px;
   }
@@ -37858,6 +40481,18 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:hover\:-translate-y-64:hover{
     --transform-translate-y: -16rem;
+  }
+
+  .sm\:hover\:-translate-y-72:hover{
+    --transform-translate-y: -18rem;
+  }
+
+  .sm\:hover\:-translate-y-84:hover{
+    --transform-translate-y: -21rem;
+  }
+
+  .sm\:hover\:-translate-y-96:hover{
+    --transform-translate-y: -24rem;
   }
 
   .sm\:hover\:-translate-y-px:hover{
@@ -37952,6 +40587,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .sm\:focus\:translate-x-72:focus{
+    --transform-translate-x: 18rem;
+  }
+
+  .sm\:focus\:translate-x-84:focus{
+    --transform-translate-x: 21rem;
+  }
+
+  .sm\:focus\:translate-x-96:focus{
+    --transform-translate-x: 24rem;
+  }
+
   .sm\:focus\:translate-x-px:focus{
     --transform-translate-x: 1px;
   }
@@ -38022,6 +40669,18 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:focus\:-translate-x-64:focus{
     --transform-translate-x: -16rem;
+  }
+
+  .sm\:focus\:-translate-x-72:focus{
+    --transform-translate-x: -18rem;
+  }
+
+  .sm\:focus\:-translate-x-84:focus{
+    --transform-translate-x: -21rem;
+  }
+
+  .sm\:focus\:-translate-x-96:focus{
+    --transform-translate-x: -24rem;
   }
 
   .sm\:focus\:-translate-x-px:focus{
@@ -38116,6 +40775,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .sm\:focus\:translate-y-72:focus{
+    --transform-translate-y: 18rem;
+  }
+
+  .sm\:focus\:translate-y-84:focus{
+    --transform-translate-y: 21rem;
+  }
+
+  .sm\:focus\:translate-y-96:focus{
+    --transform-translate-y: 24rem;
+  }
+
   .sm\:focus\:translate-y-px:focus{
     --transform-translate-y: 1px;
   }
@@ -38186,6 +40857,18 @@ div.code-toolbar .toolbar button:hover {
 
   .sm\:focus\:-translate-y-64:focus{
     --transform-translate-y: -16rem;
+  }
+
+  .sm\:focus\:-translate-y-72:focus{
+    --transform-translate-y: -18rem;
+  }
+
+  .sm\:focus\:-translate-y-84:focus{
+    --transform-translate-y: -21rem;
+  }
+
+  .sm\:focus\:-translate-y-96:focus{
+    --transform-translate-y: -24rem;
   }
 
   .sm\:focus\:-translate-y-px:focus{
@@ -38599,35 +41282,384 @@ div.code-toolbar .toolbar button:hover {
   .sm\:animate-bounce{
     animation: bounce 1s infinite;
   }
+
+  .sm\:animated{
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .sm\:infinite{
+    animation-iteration-count: infinite;
+  }
+
+  .sm\:delay{
+    animation-delay: 1000ms;
+  }
+
+  .sm\:delay-1s{
+    animation-delay: 1000ms;
+  }
+
+  .sm\:delay-2s{
+    animation-delay: 2000ms;
+  }
+
+  .sm\:delay-3s{
+    animation-delay: 3000ms;
+  }
+
+  .sm\:delay-4s{
+    animation-delay: 4000ms;
+  }
+
+  .sm\:delay-5s{
+    animation-delay: 5000ms;
+  }
+
+  .sm\:fast{
+    animation-duration: 800ms;
+  }
+
+  .sm\:faster{
+    animation-duration: 500ms;
+  }
+
+  .sm\:slow{
+    animation-duration: 2000ms;
+  }
+
+  .sm\:slower{
+    animation-duration: 3000ms;
+  }
+
+  .sm\:bounce{
+    animation-name: bounce;
+    transform-origin: center bottom;
+  }
+
+  .sm\:flash{
+    animation-name: flash;
+  }
+
+  .sm\:pulse{
+    animation-name: pulse;
+  }
+
+  .sm\:rubberBand{
+    animation-name: rubberBand;
+  }
+
+  .sm\:shake{
+    animation-name: shake;
+  }
+
+  .sm\:headShake{
+    animation-timing-function: ease-in-out;
+    animation-name: headShake;
+  }
+
+  .sm\:swing{
+    transform-origin: top center;
+    animation-name: swing;
+  }
+
+  .sm\:tada{
+    animation-name: tada;
+  }
+
+  .sm\:wobble{
+    animation-name: wobble;
+  }
+
+  .sm\:jello{
+    animation-name: jello;
+  }
+
+  .sm\:heartBeat{
+    animation-name: heartBeat;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  .sm\:hinge{
+    animation-name: hinge;
+    animation-duration: 2000ms;
+  }
+
+  .sm\:jackInTheBox{
+    animation-name: jackInTheBox;
+  }
+
+  .sm\:lightSpeedIn{
+    animation-name: lightSpeedIn;
+  }
+
+  .sm\:lightSpeedOut{
+    animation-name: lightSpeedOut;
+  }
+
+  .sm\:flip{
+    animation-name: flip;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .sm\:flipInX{
+    animation-name: flipInX;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .sm\:flipInY{
+    animation-name: flipInY;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .sm\:flipOutX{
+    animation-name: flipOutX;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .sm\:rotateIn{
+    animation-name: rotateIn;
+  }
+
+  .sm\:rotateInDownLeft{
+    animation-name: rotateInDownLeft;
+  }
+
+  .sm\:rotateInDownRight{
+    animation-name: rotateInDownRight;
+  }
+
+  .sm\:rotateInUpLeft{
+    animation-name: rotateInUpLeft;
+  }
+
+  .sm\:rotateInUpRight{
+    animation-name: rotateInUpRight;
+  }
+
+  .sm\:rotateOut{
+    animation-name: rotateOut;
+  }
+
+  .sm\:rotateOutDownLeft{
+    animation-name: rotateOutDownLeft;
+  }
+
+  .sm\:rotateOutDownRight{
+    animation-name: rotateOutDownRight;
+  }
+
+  .sm\:rotateOutUpLeft{
+    animation-name: rotateOutUpLeft;
+  }
+
+  .sm\:rotateOutUpRight{
+    animation-name: rotateOutUpRight;
+  }
+
+  .sm\:rollIn{
+    animation-name: rollIn;
+  }
+
+  .sm\:rollOut{
+    animation-name: rollOut;
+  }
+
+  .sm\:zoomIn{
+    animation-name: zoomIn;
+  }
+
+  .sm\:zoomInDown{
+    animation-name: zoomInDown;
+  }
+
+  .sm\:zoomInLeft{
+    animation-name: zoomInLeft;
+  }
+
+  .sm\:zoomInRight{
+    animation-name: zoomInRight;
+  }
+
+  .sm\:zoomInUp{
+    animation-name: zoomInUp;
+  }
+
+  .sm\:bounceIn{
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  .sm\:bounceInDown{
+    animation-name: bounceInDown;
+  }
+
+  .sm\:bounceInLeft{
+    animation-name: bounceInLeft;
+  }
+
+  .sm\:bounceInRight{
+    animation-name: bounceInRight;
+  }
+
+  .sm\:bounceInUp{
+    animation-name: bounceInUp;
+  }
+
+  .sm\:bounceOut{
+    animation-name: bounceOut;
+    animation-duration: 750ms;
+  }
+
+  .sm\:bounceOutDown{
+    animation-name: bounceOutDown;
+  }
+
+  .sm\:bounceOutLeft{
+    animation-name: bounceOutLeft;
+  }
+
+  .sm\:bounceOutRight{
+    animation-name: bounceOutRight;
+  }
+
+  .sm\:bounceOutUp{
+    animation-name: bounceOutUp;
+  }
+
+  .sm\:zoomOut{
+    animation-name: zoomIn;
+  }
+
+  .sm\:zoomOutDown{
+    animation-name: zoomOutDown;
+  }
+
+  .sm\:zoomOutLeft{
+    animation-name: zoomOutLeft;
+  }
+
+  .sm\:zoomOutRight{
+    animation-name: zoomOutRight;
+  }
+
+  .sm\:zoomOutUp{
+    animation-name: zoomOutUp;
+  }
+
+  .sm\:slideInDown{
+    animation-name: slideInDown;
+  }
+
+  .sm\:slideInLeft{
+    animation-name: slideInLeft;
+  }
+
+  .sm\:slideInRight{
+    animation-name: slideInRight;
+  }
+
+  .sm\:slideInUp{
+    animation-name: slideInUp;
+  }
+
+  .sm\:slideOutDown{
+    animation-name: slideOutDown;
+  }
+
+  .sm\:slideOutLeft{
+    animation-name: slideOutLeft;
+  }
+
+  .sm\:slideOutRight{
+    animation-name: slideOutRight;
+  }
+
+  .sm\:slideOutUp{
+    animation-name: slideOutUp;
+  }
+
+  .sm\:fadeIn{
+    animation-name: fadeIn;
+  }
+
+  .sm\:fadeInDown{
+    animation-name: fadeInDown;
+  }
+
+  .sm\:fadeInDownBig{
+    animation-name: fadeInDownBig;
+  }
+
+  .sm\:fadeInLeft{
+    animation-name: fadeInLeft;
+  }
+
+  .sm\:fadeInLeftBig{
+    animation-name: fadeInLeftBig;
+  }
+
+  .sm\:fadeInRight{
+    animation-name: fadeInRight;
+  }
+
+  .sm\:fadeInRightBig{
+    animation-name: fadeInRightBig;
+  }
+
+  .sm\:fadeInUp{
+    animation-name: fadeInUp;
+  }
+
+  .sm\:fadeInUpBig{
+    animation-name: fadeInUpBig;
+  }
+
+  .sm\:fadeOut{
+    animation-name: fadeOut;
+  }
+
+  .sm\:fadeOutDown{
+    animation-name: fadeOutDown;
+  }
+
+  .sm\:fadeOutDownBig{
+    animation-name: fadeOutDownBig;
+  }
+
+  .sm\:fadeOutLeft{
+    animation-name: fadeOutLeft;
+  }
+
+  .sm\:fadeOutLeftBig{
+    animation-name: fadeOutLeftBig;
+  }
+
+  .sm\:fadeOutRight{
+    animation-name: fadeOutRight;
+  }
+
+  .sm\:fadeOutRightBig{
+    animation-name: fadeOutRightBig;
+  }
+
+  .sm\:fadeOutUp{
+    animation-name: fadeOutUp;
+  }
+
+  .sm\:fadeOutUpBig{
+    animation-name: fadeOutUpBig;
+  }
 }
 
-@media (min-width: 768px){
+@media (max-width: 767px){
   .md\:container{
     width: 100%;
-  }
-
-  @media (min-width: 640px){
-    .md\:container{
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px){
-    .md\:container{
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px){
-    .md\:container{
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px){
-    .md\:container{
-      max-width: 1280px;
-    }
   }
 
   .md\:space-y-0 > :not(template) ~ :not(template){
@@ -38846,6 +41878,42 @@ div.code-toolbar .toolbar button:hover {
     margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .md\:space-y-72 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(18rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(18rem * var(--space-y-reverse));
+  }
+
+  .md\:space-x-72 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(18rem * var(--space-x-reverse));
+    margin-left: calc(18rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:space-y-84 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(21rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(21rem * var(--space-y-reverse));
+  }
+
+  .md\:space-x-84 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(21rem * var(--space-x-reverse));
+    margin-left: calc(21rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:space-y-96 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(24rem * var(--space-y-reverse));
+  }
+
+  .md\:space-x-96 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(24rem * var(--space-x-reverse));
+    margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .md\:space-y-px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -39060,6 +42128,42 @@ div.code-toolbar .toolbar button:hover {
     --space-x-reverse: 0;
     margin-right: calc(-16rem * var(--space-x-reverse));
     margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:-space-y-72 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-18rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-18rem * var(--space-y-reverse));
+  }
+
+  .md\:-space-x-72 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-18rem * var(--space-x-reverse));
+    margin-left: calc(-18rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:-space-y-84 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-21rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-21rem * var(--space-y-reverse));
+  }
+
+  .md\:-space-x-84 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-21rem * var(--space-x-reverse));
+    margin-left: calc(-21rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:-space-y-96 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-24rem * var(--space-y-reverse));
+  }
+
+  .md\:-space-x-96 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-24rem * var(--space-x-reverse));
+    margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
   .md\:-space-y-px > :not(template) ~ :not(template){
@@ -48317,15 +51421,7 @@ div.code-toolbar .toolbar button:hover {
   }
 
   .md\:font-sans{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .md\:font-serif{
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .md\:font-mono{
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Ubuntu, Sans-serif;
   }
 
   .md\:font-hairline{
@@ -48506,6 +51602,18 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:h-64{
     height: 16rem;
+  }
+
+  .md\:h-72{
+    height: 18rem;
+  }
+
+  .md\:h-84{
+    height: 21rem;
+  }
+
+  .md\:h-96{
+    height: 24rem;
   }
 
   .md\:h-auto{
@@ -48712,6 +51820,18 @@ div.code-toolbar .toolbar button:hover {
     margin: 16rem;
   }
 
+  .md\:m-72{
+    margin: 18rem;
+  }
+
+  .md\:m-84{
+    margin: 21rem;
+  }
+
+  .md\:m-96{
+    margin: 24rem;
+  }
+
   .md\:m-auto{
     margin: auto;
   }
@@ -48786,6 +51906,18 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:-m-64{
     margin: -16rem;
+  }
+
+  .md\:-m-72{
+    margin: -18rem;
+  }
+
+  .md\:-m-84{
+    margin: -21rem;
+  }
+
+  .md\:-m-96{
+    margin: -24rem;
   }
 
   .md\:-m-px{
@@ -48970,6 +52102,36 @@ div.code-toolbar .toolbar button:hover {
   .md\:mx-64{
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .md\:my-72{
+    margin-top: 18rem;
+    margin-bottom: 18rem;
+  }
+
+  .md\:mx-72{
+    margin-left: 18rem;
+    margin-right: 18rem;
+  }
+
+  .md\:my-84{
+    margin-top: 21rem;
+    margin-bottom: 21rem;
+  }
+
+  .md\:mx-84{
+    margin-left: 21rem;
+    margin-right: 21rem;
+  }
+
+  .md\:my-96{
+    margin-top: 24rem;
+    margin-bottom: 24rem;
+  }
+
+  .md\:mx-96{
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .md\:my-auto{
@@ -49160,6 +52322,36 @@ div.code-toolbar .toolbar button:hover {
   .md\:-mx-64{
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .md\:-my-72{
+    margin-top: -18rem;
+    margin-bottom: -18rem;
+  }
+
+  .md\:-mx-72{
+    margin-left: -18rem;
+    margin-right: -18rem;
+  }
+
+  .md\:-my-84{
+    margin-top: -21rem;
+    margin-bottom: -21rem;
+  }
+
+  .md\:-mx-84{
+    margin-left: -21rem;
+    margin-right: -21rem;
+  }
+
+  .md\:-my-96{
+    margin-top: -24rem;
+    margin-bottom: -24rem;
+  }
+
+  .md\:-mx-96{
+    margin-left: -24rem;
+    margin-right: -24rem;
   }
 
   .md\:-my-px{
@@ -49458,6 +52650,54 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:ml-64{
     margin-left: 16rem;
+  }
+
+  .md\:mt-72{
+    margin-top: 18rem;
+  }
+
+  .md\:mr-72{
+    margin-right: 18rem;
+  }
+
+  .md\:mb-72{
+    margin-bottom: 18rem;
+  }
+
+  .md\:ml-72{
+    margin-left: 18rem;
+  }
+
+  .md\:mt-84{
+    margin-top: 21rem;
+  }
+
+  .md\:mr-84{
+    margin-right: 21rem;
+  }
+
+  .md\:mb-84{
+    margin-bottom: 21rem;
+  }
+
+  .md\:ml-84{
+    margin-left: 21rem;
+  }
+
+  .md\:mt-96{
+    margin-top: 24rem;
+  }
+
+  .md\:mr-96{
+    margin-right: 24rem;
+  }
+
+  .md\:mb-96{
+    margin-bottom: 24rem;
+  }
+
+  .md\:ml-96{
+    margin-left: 24rem;
   }
 
   .md\:mt-auto{
@@ -49764,6 +53004,54 @@ div.code-toolbar .toolbar button:hover {
     margin-left: -16rem;
   }
 
+  .md\:-mt-72{
+    margin-top: -18rem;
+  }
+
+  .md\:-mr-72{
+    margin-right: -18rem;
+  }
+
+  .md\:-mb-72{
+    margin-bottom: -18rem;
+  }
+
+  .md\:-ml-72{
+    margin-left: -18rem;
+  }
+
+  .md\:-mt-84{
+    margin-top: -21rem;
+  }
+
+  .md\:-mr-84{
+    margin-right: -21rem;
+  }
+
+  .md\:-mb-84{
+    margin-bottom: -21rem;
+  }
+
+  .md\:-ml-84{
+    margin-left: -21rem;
+  }
+
+  .md\:-mt-96{
+    margin-top: -24rem;
+  }
+
+  .md\:-mr-96{
+    margin-right: -24rem;
+  }
+
+  .md\:-mb-96{
+    margin-bottom: -24rem;
+  }
+
+  .md\:-ml-96{
+    margin-left: -24rem;
+  }
+
   .md\:-mt-px{
     margin-top: -1px;
   }
@@ -49834,22 +53122,6 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:max-w-full{
     max-width: 100%;
-  }
-
-  .md\:max-w-screen-sm{
-    max-width: 640px;
-  }
-
-  .md\:max-w-screen-md{
-    max-width: 768px;
-  }
-
-  .md\:max-w-screen-lg{
-    max-width: 1024px;
-  }
-
-  .md\:max-w-screen-xl{
-    max-width: 1280px;
   }
 
   .md\:min-h-0{
@@ -50182,6 +53454,18 @@ div.code-toolbar .toolbar button:hover {
     padding: 16rem;
   }
 
+  .md\:p-72{
+    padding: 18rem;
+  }
+
+  .md\:p-84{
+    padding: 21rem;
+  }
+
+  .md\:p-96{
+    padding: 24rem;
+  }
+
   .md\:p-px{
     padding: 1px;
   }
@@ -50364,6 +53648,36 @@ div.code-toolbar .toolbar button:hover {
   .md\:px-64{
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .md\:py-72{
+    padding-top: 18rem;
+    padding-bottom: 18rem;
+  }
+
+  .md\:px-72{
+    padding-left: 18rem;
+    padding-right: 18rem;
+  }
+
+  .md\:py-84{
+    padding-top: 21rem;
+    padding-bottom: 21rem;
+  }
+
+  .md\:px-84{
+    padding-left: 21rem;
+    padding-right: 21rem;
+  }
+
+  .md\:py-96{
+    padding-top: 24rem;
+    padding-bottom: 24rem;
+  }
+
+  .md\:px-96{
+    padding-left: 24rem;
+    padding-right: 24rem;
   }
 
   .md\:py-px{
@@ -50662,6 +53976,54 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:pl-64{
     padding-left: 16rem;
+  }
+
+  .md\:pt-72{
+    padding-top: 18rem;
+  }
+
+  .md\:pr-72{
+    padding-right: 18rem;
+  }
+
+  .md\:pb-72{
+    padding-bottom: 18rem;
+  }
+
+  .md\:pl-72{
+    padding-left: 18rem;
+  }
+
+  .md\:pt-84{
+    padding-top: 21rem;
+  }
+
+  .md\:pr-84{
+    padding-right: 21rem;
+  }
+
+  .md\:pb-84{
+    padding-bottom: 21rem;
+  }
+
+  .md\:pl-84{
+    padding-left: 21rem;
+  }
+
+  .md\:pt-96{
+    padding-top: 24rem;
+  }
+
+  .md\:pr-96{
+    padding-right: 24rem;
+  }
+
+  .md\:pb-96{
+    padding-bottom: 24rem;
+  }
+
+  .md\:pl-96{
+    padding-left: 24rem;
   }
 
   .md\:pt-px{
@@ -54159,6 +57521,18 @@ div.code-toolbar .toolbar button:hover {
     width: 16rem;
   }
 
+  .md\:w-72{
+    width: 18rem;
+  }
+
+  .md\:w-84{
+    width: 21rem;
+  }
+
+  .md\:w-96{
+    width: 24rem;
+  }
+
   .md\:w-auto{
     width: auto;
   }
@@ -54397,6 +57771,21 @@ div.code-toolbar .toolbar button:hover {
     gap: 16rem;
   }
 
+  .md\:gap-72{
+    grid-gap: 18rem;
+    gap: 18rem;
+  }
+
+  .md\:gap-84{
+    grid-gap: 21rem;
+    gap: 21rem;
+  }
+
+  .md\:gap-96{
+    grid-gap: 24rem;
+    gap: 24rem;
+  }
+
   .md\:gap-px{
     grid-gap: 1px;
     gap: 1px;
@@ -54490,6 +57879,21 @@ div.code-toolbar .toolbar button:hover {
   .md\:col-gap-64{
     grid-column-gap: 16rem;
     column-gap: 16rem;
+  }
+
+  .md\:col-gap-72{
+    grid-column-gap: 18rem;
+    column-gap: 18rem;
+  }
+
+  .md\:col-gap-84{
+    grid-column-gap: 21rem;
+    column-gap: 21rem;
+  }
+
+  .md\:col-gap-96{
+    grid-column-gap: 24rem;
+    column-gap: 24rem;
   }
 
   .md\:col-gap-px{
@@ -54587,6 +57991,21 @@ div.code-toolbar .toolbar button:hover {
     column-gap: 16rem;
   }
 
+  .md\:gap-x-72{
+    grid-column-gap: 18rem;
+    column-gap: 18rem;
+  }
+
+  .md\:gap-x-84{
+    grid-column-gap: 21rem;
+    column-gap: 21rem;
+  }
+
+  .md\:gap-x-96{
+    grid-column-gap: 24rem;
+    column-gap: 24rem;
+  }
+
   .md\:gap-x-px{
     grid-column-gap: 1px;
     column-gap: 1px;
@@ -54682,6 +58101,21 @@ div.code-toolbar .toolbar button:hover {
     row-gap: 16rem;
   }
 
+  .md\:row-gap-72{
+    grid-row-gap: 18rem;
+    row-gap: 18rem;
+  }
+
+  .md\:row-gap-84{
+    grid-row-gap: 21rem;
+    row-gap: 21rem;
+  }
+
+  .md\:row-gap-96{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
+  }
+
   .md\:row-gap-px{
     grid-row-gap: 1px;
     row-gap: 1px;
@@ -54775,6 +58209,21 @@ div.code-toolbar .toolbar button:hover {
   .md\:gap-y-64{
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .md\:gap-y-72{
+    grid-row-gap: 18rem;
+    row-gap: 18rem;
+  }
+
+  .md\:gap-y-84{
+    grid-row-gap: 21rem;
+    row-gap: 21rem;
+  }
+
+  .md\:gap-y-96{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
   }
 
   .md\:gap-y-px{
@@ -55895,6 +59344,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .md\:translate-x-72{
+    --transform-translate-x: 18rem;
+  }
+
+  .md\:translate-x-84{
+    --transform-translate-x: 21rem;
+  }
+
+  .md\:translate-x-96{
+    --transform-translate-x: 24rem;
+  }
+
   .md\:translate-x-px{
     --transform-translate-x: 1px;
   }
@@ -55965,6 +59426,18 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:-translate-x-64{
     --transform-translate-x: -16rem;
+  }
+
+  .md\:-translate-x-72{
+    --transform-translate-x: -18rem;
+  }
+
+  .md\:-translate-x-84{
+    --transform-translate-x: -21rem;
+  }
+
+  .md\:-translate-x-96{
+    --transform-translate-x: -24rem;
   }
 
   .md\:-translate-x-px{
@@ -56059,6 +59532,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .md\:translate-y-72{
+    --transform-translate-y: 18rem;
+  }
+
+  .md\:translate-y-84{
+    --transform-translate-y: 21rem;
+  }
+
+  .md\:translate-y-96{
+    --transform-translate-y: 24rem;
+  }
+
   .md\:translate-y-px{
     --transform-translate-y: 1px;
   }
@@ -56129,6 +59614,18 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:-translate-y-64{
     --transform-translate-y: -16rem;
+  }
+
+  .md\:-translate-y-72{
+    --transform-translate-y: -18rem;
+  }
+
+  .md\:-translate-y-84{
+    --transform-translate-y: -21rem;
+  }
+
+  .md\:-translate-y-96{
+    --transform-translate-y: -24rem;
   }
 
   .md\:-translate-y-px{
@@ -56223,6 +59720,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .md\:hover\:translate-x-72:hover{
+    --transform-translate-x: 18rem;
+  }
+
+  .md\:hover\:translate-x-84:hover{
+    --transform-translate-x: 21rem;
+  }
+
+  .md\:hover\:translate-x-96:hover{
+    --transform-translate-x: 24rem;
+  }
+
   .md\:hover\:translate-x-px:hover{
     --transform-translate-x: 1px;
   }
@@ -56293,6 +59802,18 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:hover\:-translate-x-64:hover{
     --transform-translate-x: -16rem;
+  }
+
+  .md\:hover\:-translate-x-72:hover{
+    --transform-translate-x: -18rem;
+  }
+
+  .md\:hover\:-translate-x-84:hover{
+    --transform-translate-x: -21rem;
+  }
+
+  .md\:hover\:-translate-x-96:hover{
+    --transform-translate-x: -24rem;
   }
 
   .md\:hover\:-translate-x-px:hover{
@@ -56387,6 +59908,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .md\:hover\:translate-y-72:hover{
+    --transform-translate-y: 18rem;
+  }
+
+  .md\:hover\:translate-y-84:hover{
+    --transform-translate-y: 21rem;
+  }
+
+  .md\:hover\:translate-y-96:hover{
+    --transform-translate-y: 24rem;
+  }
+
   .md\:hover\:translate-y-px:hover{
     --transform-translate-y: 1px;
   }
@@ -56457,6 +59990,18 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:hover\:-translate-y-64:hover{
     --transform-translate-y: -16rem;
+  }
+
+  .md\:hover\:-translate-y-72:hover{
+    --transform-translate-y: -18rem;
+  }
+
+  .md\:hover\:-translate-y-84:hover{
+    --transform-translate-y: -21rem;
+  }
+
+  .md\:hover\:-translate-y-96:hover{
+    --transform-translate-y: -24rem;
   }
 
   .md\:hover\:-translate-y-px:hover{
@@ -56551,6 +60096,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .md\:focus\:translate-x-72:focus{
+    --transform-translate-x: 18rem;
+  }
+
+  .md\:focus\:translate-x-84:focus{
+    --transform-translate-x: 21rem;
+  }
+
+  .md\:focus\:translate-x-96:focus{
+    --transform-translate-x: 24rem;
+  }
+
   .md\:focus\:translate-x-px:focus{
     --transform-translate-x: 1px;
   }
@@ -56621,6 +60178,18 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:focus\:-translate-x-64:focus{
     --transform-translate-x: -16rem;
+  }
+
+  .md\:focus\:-translate-x-72:focus{
+    --transform-translate-x: -18rem;
+  }
+
+  .md\:focus\:-translate-x-84:focus{
+    --transform-translate-x: -21rem;
+  }
+
+  .md\:focus\:-translate-x-96:focus{
+    --transform-translate-x: -24rem;
   }
 
   .md\:focus\:-translate-x-px:focus{
@@ -56715,6 +60284,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .md\:focus\:translate-y-72:focus{
+    --transform-translate-y: 18rem;
+  }
+
+  .md\:focus\:translate-y-84:focus{
+    --transform-translate-y: 21rem;
+  }
+
+  .md\:focus\:translate-y-96:focus{
+    --transform-translate-y: 24rem;
+  }
+
   .md\:focus\:translate-y-px:focus{
     --transform-translate-y: 1px;
   }
@@ -56785,6 +60366,18 @@ div.code-toolbar .toolbar button:hover {
 
   .md\:focus\:-translate-y-64:focus{
     --transform-translate-y: -16rem;
+  }
+
+  .md\:focus\:-translate-y-72:focus{
+    --transform-translate-y: -18rem;
+  }
+
+  .md\:focus\:-translate-y-84:focus{
+    --transform-translate-y: -21rem;
+  }
+
+  .md\:focus\:-translate-y-96:focus{
+    --transform-translate-y: -24rem;
   }
 
   .md\:focus\:-translate-y-px:focus{
@@ -57198,35 +60791,384 @@ div.code-toolbar .toolbar button:hover {
   .md\:animate-bounce{
     animation: bounce 1s infinite;
   }
+
+  .md\:animated{
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .md\:infinite{
+    animation-iteration-count: infinite;
+  }
+
+  .md\:delay{
+    animation-delay: 1000ms;
+  }
+
+  .md\:delay-1s{
+    animation-delay: 1000ms;
+  }
+
+  .md\:delay-2s{
+    animation-delay: 2000ms;
+  }
+
+  .md\:delay-3s{
+    animation-delay: 3000ms;
+  }
+
+  .md\:delay-4s{
+    animation-delay: 4000ms;
+  }
+
+  .md\:delay-5s{
+    animation-delay: 5000ms;
+  }
+
+  .md\:fast{
+    animation-duration: 800ms;
+  }
+
+  .md\:faster{
+    animation-duration: 500ms;
+  }
+
+  .md\:slow{
+    animation-duration: 2000ms;
+  }
+
+  .md\:slower{
+    animation-duration: 3000ms;
+  }
+
+  .md\:bounce{
+    animation-name: bounce;
+    transform-origin: center bottom;
+  }
+
+  .md\:flash{
+    animation-name: flash;
+  }
+
+  .md\:pulse{
+    animation-name: pulse;
+  }
+
+  .md\:rubberBand{
+    animation-name: rubberBand;
+  }
+
+  .md\:shake{
+    animation-name: shake;
+  }
+
+  .md\:headShake{
+    animation-timing-function: ease-in-out;
+    animation-name: headShake;
+  }
+
+  .md\:swing{
+    transform-origin: top center;
+    animation-name: swing;
+  }
+
+  .md\:tada{
+    animation-name: tada;
+  }
+
+  .md\:wobble{
+    animation-name: wobble;
+  }
+
+  .md\:jello{
+    animation-name: jello;
+  }
+
+  .md\:heartBeat{
+    animation-name: heartBeat;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  .md\:hinge{
+    animation-name: hinge;
+    animation-duration: 2000ms;
+  }
+
+  .md\:jackInTheBox{
+    animation-name: jackInTheBox;
+  }
+
+  .md\:lightSpeedIn{
+    animation-name: lightSpeedIn;
+  }
+
+  .md\:lightSpeedOut{
+    animation-name: lightSpeedOut;
+  }
+
+  .md\:flip{
+    animation-name: flip;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .md\:flipInX{
+    animation-name: flipInX;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .md\:flipInY{
+    animation-name: flipInY;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .md\:flipOutX{
+    animation-name: flipOutX;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .md\:rotateIn{
+    animation-name: rotateIn;
+  }
+
+  .md\:rotateInDownLeft{
+    animation-name: rotateInDownLeft;
+  }
+
+  .md\:rotateInDownRight{
+    animation-name: rotateInDownRight;
+  }
+
+  .md\:rotateInUpLeft{
+    animation-name: rotateInUpLeft;
+  }
+
+  .md\:rotateInUpRight{
+    animation-name: rotateInUpRight;
+  }
+
+  .md\:rotateOut{
+    animation-name: rotateOut;
+  }
+
+  .md\:rotateOutDownLeft{
+    animation-name: rotateOutDownLeft;
+  }
+
+  .md\:rotateOutDownRight{
+    animation-name: rotateOutDownRight;
+  }
+
+  .md\:rotateOutUpLeft{
+    animation-name: rotateOutUpLeft;
+  }
+
+  .md\:rotateOutUpRight{
+    animation-name: rotateOutUpRight;
+  }
+
+  .md\:rollIn{
+    animation-name: rollIn;
+  }
+
+  .md\:rollOut{
+    animation-name: rollOut;
+  }
+
+  .md\:zoomIn{
+    animation-name: zoomIn;
+  }
+
+  .md\:zoomInDown{
+    animation-name: zoomInDown;
+  }
+
+  .md\:zoomInLeft{
+    animation-name: zoomInLeft;
+  }
+
+  .md\:zoomInRight{
+    animation-name: zoomInRight;
+  }
+
+  .md\:zoomInUp{
+    animation-name: zoomInUp;
+  }
+
+  .md\:bounceIn{
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  .md\:bounceInDown{
+    animation-name: bounceInDown;
+  }
+
+  .md\:bounceInLeft{
+    animation-name: bounceInLeft;
+  }
+
+  .md\:bounceInRight{
+    animation-name: bounceInRight;
+  }
+
+  .md\:bounceInUp{
+    animation-name: bounceInUp;
+  }
+
+  .md\:bounceOut{
+    animation-name: bounceOut;
+    animation-duration: 750ms;
+  }
+
+  .md\:bounceOutDown{
+    animation-name: bounceOutDown;
+  }
+
+  .md\:bounceOutLeft{
+    animation-name: bounceOutLeft;
+  }
+
+  .md\:bounceOutRight{
+    animation-name: bounceOutRight;
+  }
+
+  .md\:bounceOutUp{
+    animation-name: bounceOutUp;
+  }
+
+  .md\:zoomOut{
+    animation-name: zoomIn;
+  }
+
+  .md\:zoomOutDown{
+    animation-name: zoomOutDown;
+  }
+
+  .md\:zoomOutLeft{
+    animation-name: zoomOutLeft;
+  }
+
+  .md\:zoomOutRight{
+    animation-name: zoomOutRight;
+  }
+
+  .md\:zoomOutUp{
+    animation-name: zoomOutUp;
+  }
+
+  .md\:slideInDown{
+    animation-name: slideInDown;
+  }
+
+  .md\:slideInLeft{
+    animation-name: slideInLeft;
+  }
+
+  .md\:slideInRight{
+    animation-name: slideInRight;
+  }
+
+  .md\:slideInUp{
+    animation-name: slideInUp;
+  }
+
+  .md\:slideOutDown{
+    animation-name: slideOutDown;
+  }
+
+  .md\:slideOutLeft{
+    animation-name: slideOutLeft;
+  }
+
+  .md\:slideOutRight{
+    animation-name: slideOutRight;
+  }
+
+  .md\:slideOutUp{
+    animation-name: slideOutUp;
+  }
+
+  .md\:fadeIn{
+    animation-name: fadeIn;
+  }
+
+  .md\:fadeInDown{
+    animation-name: fadeInDown;
+  }
+
+  .md\:fadeInDownBig{
+    animation-name: fadeInDownBig;
+  }
+
+  .md\:fadeInLeft{
+    animation-name: fadeInLeft;
+  }
+
+  .md\:fadeInLeftBig{
+    animation-name: fadeInLeftBig;
+  }
+
+  .md\:fadeInRight{
+    animation-name: fadeInRight;
+  }
+
+  .md\:fadeInRightBig{
+    animation-name: fadeInRightBig;
+  }
+
+  .md\:fadeInUp{
+    animation-name: fadeInUp;
+  }
+
+  .md\:fadeInUpBig{
+    animation-name: fadeInUpBig;
+  }
+
+  .md\:fadeOut{
+    animation-name: fadeOut;
+  }
+
+  .md\:fadeOutDown{
+    animation-name: fadeOutDown;
+  }
+
+  .md\:fadeOutDownBig{
+    animation-name: fadeOutDownBig;
+  }
+
+  .md\:fadeOutLeft{
+    animation-name: fadeOutLeft;
+  }
+
+  .md\:fadeOutLeftBig{
+    animation-name: fadeOutLeftBig;
+  }
+
+  .md\:fadeOutRight{
+    animation-name: fadeOutRight;
+  }
+
+  .md\:fadeOutRightBig{
+    animation-name: fadeOutRightBig;
+  }
+
+  .md\:fadeOutUp{
+    animation-name: fadeOutUp;
+  }
+
+  .md\:fadeOutUpBig{
+    animation-name: fadeOutUpBig;
+  }
 }
 
-@media (min-width: 1024px){
+@media (max-width: 1023px){
   .lg\:container{
     width: 100%;
-  }
-
-  @media (min-width: 640px){
-    .lg\:container{
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px){
-    .lg\:container{
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px){
-    .lg\:container{
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px){
-    .lg\:container{
-      max-width: 1280px;
-    }
   }
 
   .lg\:space-y-0 > :not(template) ~ :not(template){
@@ -57445,6 +61387,42 @@ div.code-toolbar .toolbar button:hover {
     margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .lg\:space-y-72 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(18rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(18rem * var(--space-y-reverse));
+  }
+
+  .lg\:space-x-72 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(18rem * var(--space-x-reverse));
+    margin-left: calc(18rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:space-y-84 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(21rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(21rem * var(--space-y-reverse));
+  }
+
+  .lg\:space-x-84 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(21rem * var(--space-x-reverse));
+    margin-left: calc(21rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:space-y-96 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(24rem * var(--space-y-reverse));
+  }
+
+  .lg\:space-x-96 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(24rem * var(--space-x-reverse));
+    margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .lg\:space-y-px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -57659,6 +61637,42 @@ div.code-toolbar .toolbar button:hover {
     --space-x-reverse: 0;
     margin-right: calc(-16rem * var(--space-x-reverse));
     margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:-space-y-72 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-18rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-18rem * var(--space-y-reverse));
+  }
+
+  .lg\:-space-x-72 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-18rem * var(--space-x-reverse));
+    margin-left: calc(-18rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:-space-y-84 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-21rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-21rem * var(--space-y-reverse));
+  }
+
+  .lg\:-space-x-84 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-21rem * var(--space-x-reverse));
+    margin-left: calc(-21rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:-space-y-96 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-24rem * var(--space-y-reverse));
+  }
+
+  .lg\:-space-x-96 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-24rem * var(--space-x-reverse));
+    margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
   .lg\:-space-y-px > :not(template) ~ :not(template){
@@ -66916,15 +70930,7 @@ div.code-toolbar .toolbar button:hover {
   }
 
   .lg\:font-sans{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .lg\:font-serif{
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .lg\:font-mono{
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Ubuntu, Sans-serif;
   }
 
   .lg\:font-hairline{
@@ -67105,6 +71111,18 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:h-64{
     height: 16rem;
+  }
+
+  .lg\:h-72{
+    height: 18rem;
+  }
+
+  .lg\:h-84{
+    height: 21rem;
+  }
+
+  .lg\:h-96{
+    height: 24rem;
   }
 
   .lg\:h-auto{
@@ -67311,6 +71329,18 @@ div.code-toolbar .toolbar button:hover {
     margin: 16rem;
   }
 
+  .lg\:m-72{
+    margin: 18rem;
+  }
+
+  .lg\:m-84{
+    margin: 21rem;
+  }
+
+  .lg\:m-96{
+    margin: 24rem;
+  }
+
   .lg\:m-auto{
     margin: auto;
   }
@@ -67385,6 +71415,18 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:-m-64{
     margin: -16rem;
+  }
+
+  .lg\:-m-72{
+    margin: -18rem;
+  }
+
+  .lg\:-m-84{
+    margin: -21rem;
+  }
+
+  .lg\:-m-96{
+    margin: -24rem;
   }
 
   .lg\:-m-px{
@@ -67569,6 +71611,36 @@ div.code-toolbar .toolbar button:hover {
   .lg\:mx-64{
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .lg\:my-72{
+    margin-top: 18rem;
+    margin-bottom: 18rem;
+  }
+
+  .lg\:mx-72{
+    margin-left: 18rem;
+    margin-right: 18rem;
+  }
+
+  .lg\:my-84{
+    margin-top: 21rem;
+    margin-bottom: 21rem;
+  }
+
+  .lg\:mx-84{
+    margin-left: 21rem;
+    margin-right: 21rem;
+  }
+
+  .lg\:my-96{
+    margin-top: 24rem;
+    margin-bottom: 24rem;
+  }
+
+  .lg\:mx-96{
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .lg\:my-auto{
@@ -67759,6 +71831,36 @@ div.code-toolbar .toolbar button:hover {
   .lg\:-mx-64{
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .lg\:-my-72{
+    margin-top: -18rem;
+    margin-bottom: -18rem;
+  }
+
+  .lg\:-mx-72{
+    margin-left: -18rem;
+    margin-right: -18rem;
+  }
+
+  .lg\:-my-84{
+    margin-top: -21rem;
+    margin-bottom: -21rem;
+  }
+
+  .lg\:-mx-84{
+    margin-left: -21rem;
+    margin-right: -21rem;
+  }
+
+  .lg\:-my-96{
+    margin-top: -24rem;
+    margin-bottom: -24rem;
+  }
+
+  .lg\:-mx-96{
+    margin-left: -24rem;
+    margin-right: -24rem;
   }
 
   .lg\:-my-px{
@@ -68057,6 +72159,54 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:ml-64{
     margin-left: 16rem;
+  }
+
+  .lg\:mt-72{
+    margin-top: 18rem;
+  }
+
+  .lg\:mr-72{
+    margin-right: 18rem;
+  }
+
+  .lg\:mb-72{
+    margin-bottom: 18rem;
+  }
+
+  .lg\:ml-72{
+    margin-left: 18rem;
+  }
+
+  .lg\:mt-84{
+    margin-top: 21rem;
+  }
+
+  .lg\:mr-84{
+    margin-right: 21rem;
+  }
+
+  .lg\:mb-84{
+    margin-bottom: 21rem;
+  }
+
+  .lg\:ml-84{
+    margin-left: 21rem;
+  }
+
+  .lg\:mt-96{
+    margin-top: 24rem;
+  }
+
+  .lg\:mr-96{
+    margin-right: 24rem;
+  }
+
+  .lg\:mb-96{
+    margin-bottom: 24rem;
+  }
+
+  .lg\:ml-96{
+    margin-left: 24rem;
   }
 
   .lg\:mt-auto{
@@ -68363,6 +72513,54 @@ div.code-toolbar .toolbar button:hover {
     margin-left: -16rem;
   }
 
+  .lg\:-mt-72{
+    margin-top: -18rem;
+  }
+
+  .lg\:-mr-72{
+    margin-right: -18rem;
+  }
+
+  .lg\:-mb-72{
+    margin-bottom: -18rem;
+  }
+
+  .lg\:-ml-72{
+    margin-left: -18rem;
+  }
+
+  .lg\:-mt-84{
+    margin-top: -21rem;
+  }
+
+  .lg\:-mr-84{
+    margin-right: -21rem;
+  }
+
+  .lg\:-mb-84{
+    margin-bottom: -21rem;
+  }
+
+  .lg\:-ml-84{
+    margin-left: -21rem;
+  }
+
+  .lg\:-mt-96{
+    margin-top: -24rem;
+  }
+
+  .lg\:-mr-96{
+    margin-right: -24rem;
+  }
+
+  .lg\:-mb-96{
+    margin-bottom: -24rem;
+  }
+
+  .lg\:-ml-96{
+    margin-left: -24rem;
+  }
+
   .lg\:-mt-px{
     margin-top: -1px;
   }
@@ -68433,22 +72631,6 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:max-w-full{
     max-width: 100%;
-  }
-
-  .lg\:max-w-screen-sm{
-    max-width: 640px;
-  }
-
-  .lg\:max-w-screen-md{
-    max-width: 768px;
-  }
-
-  .lg\:max-w-screen-lg{
-    max-width: 1024px;
-  }
-
-  .lg\:max-w-screen-xl{
-    max-width: 1280px;
   }
 
   .lg\:min-h-0{
@@ -68781,6 +72963,18 @@ div.code-toolbar .toolbar button:hover {
     padding: 16rem;
   }
 
+  .lg\:p-72{
+    padding: 18rem;
+  }
+
+  .lg\:p-84{
+    padding: 21rem;
+  }
+
+  .lg\:p-96{
+    padding: 24rem;
+  }
+
   .lg\:p-px{
     padding: 1px;
   }
@@ -68963,6 +73157,36 @@ div.code-toolbar .toolbar button:hover {
   .lg\:px-64{
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .lg\:py-72{
+    padding-top: 18rem;
+    padding-bottom: 18rem;
+  }
+
+  .lg\:px-72{
+    padding-left: 18rem;
+    padding-right: 18rem;
+  }
+
+  .lg\:py-84{
+    padding-top: 21rem;
+    padding-bottom: 21rem;
+  }
+
+  .lg\:px-84{
+    padding-left: 21rem;
+    padding-right: 21rem;
+  }
+
+  .lg\:py-96{
+    padding-top: 24rem;
+    padding-bottom: 24rem;
+  }
+
+  .lg\:px-96{
+    padding-left: 24rem;
+    padding-right: 24rem;
   }
 
   .lg\:py-px{
@@ -69261,6 +73485,54 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:pl-64{
     padding-left: 16rem;
+  }
+
+  .lg\:pt-72{
+    padding-top: 18rem;
+  }
+
+  .lg\:pr-72{
+    padding-right: 18rem;
+  }
+
+  .lg\:pb-72{
+    padding-bottom: 18rem;
+  }
+
+  .lg\:pl-72{
+    padding-left: 18rem;
+  }
+
+  .lg\:pt-84{
+    padding-top: 21rem;
+  }
+
+  .lg\:pr-84{
+    padding-right: 21rem;
+  }
+
+  .lg\:pb-84{
+    padding-bottom: 21rem;
+  }
+
+  .lg\:pl-84{
+    padding-left: 21rem;
+  }
+
+  .lg\:pt-96{
+    padding-top: 24rem;
+  }
+
+  .lg\:pr-96{
+    padding-right: 24rem;
+  }
+
+  .lg\:pb-96{
+    padding-bottom: 24rem;
+  }
+
+  .lg\:pl-96{
+    padding-left: 24rem;
   }
 
   .lg\:pt-px{
@@ -72758,6 +77030,18 @@ div.code-toolbar .toolbar button:hover {
     width: 16rem;
   }
 
+  .lg\:w-72{
+    width: 18rem;
+  }
+
+  .lg\:w-84{
+    width: 21rem;
+  }
+
+  .lg\:w-96{
+    width: 24rem;
+  }
+
   .lg\:w-auto{
     width: auto;
   }
@@ -72996,6 +77280,21 @@ div.code-toolbar .toolbar button:hover {
     gap: 16rem;
   }
 
+  .lg\:gap-72{
+    grid-gap: 18rem;
+    gap: 18rem;
+  }
+
+  .lg\:gap-84{
+    grid-gap: 21rem;
+    gap: 21rem;
+  }
+
+  .lg\:gap-96{
+    grid-gap: 24rem;
+    gap: 24rem;
+  }
+
   .lg\:gap-px{
     grid-gap: 1px;
     gap: 1px;
@@ -73089,6 +77388,21 @@ div.code-toolbar .toolbar button:hover {
   .lg\:col-gap-64{
     grid-column-gap: 16rem;
     column-gap: 16rem;
+  }
+
+  .lg\:col-gap-72{
+    grid-column-gap: 18rem;
+    column-gap: 18rem;
+  }
+
+  .lg\:col-gap-84{
+    grid-column-gap: 21rem;
+    column-gap: 21rem;
+  }
+
+  .lg\:col-gap-96{
+    grid-column-gap: 24rem;
+    column-gap: 24rem;
   }
 
   .lg\:col-gap-px{
@@ -73186,6 +77500,21 @@ div.code-toolbar .toolbar button:hover {
     column-gap: 16rem;
   }
 
+  .lg\:gap-x-72{
+    grid-column-gap: 18rem;
+    column-gap: 18rem;
+  }
+
+  .lg\:gap-x-84{
+    grid-column-gap: 21rem;
+    column-gap: 21rem;
+  }
+
+  .lg\:gap-x-96{
+    grid-column-gap: 24rem;
+    column-gap: 24rem;
+  }
+
   .lg\:gap-x-px{
     grid-column-gap: 1px;
     column-gap: 1px;
@@ -73281,6 +77610,21 @@ div.code-toolbar .toolbar button:hover {
     row-gap: 16rem;
   }
 
+  .lg\:row-gap-72{
+    grid-row-gap: 18rem;
+    row-gap: 18rem;
+  }
+
+  .lg\:row-gap-84{
+    grid-row-gap: 21rem;
+    row-gap: 21rem;
+  }
+
+  .lg\:row-gap-96{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
+  }
+
   .lg\:row-gap-px{
     grid-row-gap: 1px;
     row-gap: 1px;
@@ -73374,6 +77718,21 @@ div.code-toolbar .toolbar button:hover {
   .lg\:gap-y-64{
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .lg\:gap-y-72{
+    grid-row-gap: 18rem;
+    row-gap: 18rem;
+  }
+
+  .lg\:gap-y-84{
+    grid-row-gap: 21rem;
+    row-gap: 21rem;
+  }
+
+  .lg\:gap-y-96{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
   }
 
   .lg\:gap-y-px{
@@ -74494,6 +78853,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .lg\:translate-x-72{
+    --transform-translate-x: 18rem;
+  }
+
+  .lg\:translate-x-84{
+    --transform-translate-x: 21rem;
+  }
+
+  .lg\:translate-x-96{
+    --transform-translate-x: 24rem;
+  }
+
   .lg\:translate-x-px{
     --transform-translate-x: 1px;
   }
@@ -74564,6 +78935,18 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:-translate-x-64{
     --transform-translate-x: -16rem;
+  }
+
+  .lg\:-translate-x-72{
+    --transform-translate-x: -18rem;
+  }
+
+  .lg\:-translate-x-84{
+    --transform-translate-x: -21rem;
+  }
+
+  .lg\:-translate-x-96{
+    --transform-translate-x: -24rem;
   }
 
   .lg\:-translate-x-px{
@@ -74658,6 +79041,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .lg\:translate-y-72{
+    --transform-translate-y: 18rem;
+  }
+
+  .lg\:translate-y-84{
+    --transform-translate-y: 21rem;
+  }
+
+  .lg\:translate-y-96{
+    --transform-translate-y: 24rem;
+  }
+
   .lg\:translate-y-px{
     --transform-translate-y: 1px;
   }
@@ -74728,6 +79123,18 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:-translate-y-64{
     --transform-translate-y: -16rem;
+  }
+
+  .lg\:-translate-y-72{
+    --transform-translate-y: -18rem;
+  }
+
+  .lg\:-translate-y-84{
+    --transform-translate-y: -21rem;
+  }
+
+  .lg\:-translate-y-96{
+    --transform-translate-y: -24rem;
   }
 
   .lg\:-translate-y-px{
@@ -74822,6 +79229,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .lg\:hover\:translate-x-72:hover{
+    --transform-translate-x: 18rem;
+  }
+
+  .lg\:hover\:translate-x-84:hover{
+    --transform-translate-x: 21rem;
+  }
+
+  .lg\:hover\:translate-x-96:hover{
+    --transform-translate-x: 24rem;
+  }
+
   .lg\:hover\:translate-x-px:hover{
     --transform-translate-x: 1px;
   }
@@ -74892,6 +79311,18 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:hover\:-translate-x-64:hover{
     --transform-translate-x: -16rem;
+  }
+
+  .lg\:hover\:-translate-x-72:hover{
+    --transform-translate-x: -18rem;
+  }
+
+  .lg\:hover\:-translate-x-84:hover{
+    --transform-translate-x: -21rem;
+  }
+
+  .lg\:hover\:-translate-x-96:hover{
+    --transform-translate-x: -24rem;
   }
 
   .lg\:hover\:-translate-x-px:hover{
@@ -74986,6 +79417,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .lg\:hover\:translate-y-72:hover{
+    --transform-translate-y: 18rem;
+  }
+
+  .lg\:hover\:translate-y-84:hover{
+    --transform-translate-y: 21rem;
+  }
+
+  .lg\:hover\:translate-y-96:hover{
+    --transform-translate-y: 24rem;
+  }
+
   .lg\:hover\:translate-y-px:hover{
     --transform-translate-y: 1px;
   }
@@ -75056,6 +79499,18 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:hover\:-translate-y-64:hover{
     --transform-translate-y: -16rem;
+  }
+
+  .lg\:hover\:-translate-y-72:hover{
+    --transform-translate-y: -18rem;
+  }
+
+  .lg\:hover\:-translate-y-84:hover{
+    --transform-translate-y: -21rem;
+  }
+
+  .lg\:hover\:-translate-y-96:hover{
+    --transform-translate-y: -24rem;
   }
 
   .lg\:hover\:-translate-y-px:hover{
@@ -75150,6 +79605,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .lg\:focus\:translate-x-72:focus{
+    --transform-translate-x: 18rem;
+  }
+
+  .lg\:focus\:translate-x-84:focus{
+    --transform-translate-x: 21rem;
+  }
+
+  .lg\:focus\:translate-x-96:focus{
+    --transform-translate-x: 24rem;
+  }
+
   .lg\:focus\:translate-x-px:focus{
     --transform-translate-x: 1px;
   }
@@ -75220,6 +79687,18 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:focus\:-translate-x-64:focus{
     --transform-translate-x: -16rem;
+  }
+
+  .lg\:focus\:-translate-x-72:focus{
+    --transform-translate-x: -18rem;
+  }
+
+  .lg\:focus\:-translate-x-84:focus{
+    --transform-translate-x: -21rem;
+  }
+
+  .lg\:focus\:-translate-x-96:focus{
+    --transform-translate-x: -24rem;
   }
 
   .lg\:focus\:-translate-x-px:focus{
@@ -75314,6 +79793,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .lg\:focus\:translate-y-72:focus{
+    --transform-translate-y: 18rem;
+  }
+
+  .lg\:focus\:translate-y-84:focus{
+    --transform-translate-y: 21rem;
+  }
+
+  .lg\:focus\:translate-y-96:focus{
+    --transform-translate-y: 24rem;
+  }
+
   .lg\:focus\:translate-y-px:focus{
     --transform-translate-y: 1px;
   }
@@ -75384,6 +79875,18 @@ div.code-toolbar .toolbar button:hover {
 
   .lg\:focus\:-translate-y-64:focus{
     --transform-translate-y: -16rem;
+  }
+
+  .lg\:focus\:-translate-y-72:focus{
+    --transform-translate-y: -18rem;
+  }
+
+  .lg\:focus\:-translate-y-84:focus{
+    --transform-translate-y: -21rem;
+  }
+
+  .lg\:focus\:-translate-y-96:focus{
+    --transform-translate-y: -24rem;
   }
 
   .lg\:focus\:-translate-y-px:focus{
@@ -75797,35 +80300,384 @@ div.code-toolbar .toolbar button:hover {
   .lg\:animate-bounce{
     animation: bounce 1s infinite;
   }
+
+  .lg\:animated{
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .lg\:infinite{
+    animation-iteration-count: infinite;
+  }
+
+  .lg\:delay{
+    animation-delay: 1000ms;
+  }
+
+  .lg\:delay-1s{
+    animation-delay: 1000ms;
+  }
+
+  .lg\:delay-2s{
+    animation-delay: 2000ms;
+  }
+
+  .lg\:delay-3s{
+    animation-delay: 3000ms;
+  }
+
+  .lg\:delay-4s{
+    animation-delay: 4000ms;
+  }
+
+  .lg\:delay-5s{
+    animation-delay: 5000ms;
+  }
+
+  .lg\:fast{
+    animation-duration: 800ms;
+  }
+
+  .lg\:faster{
+    animation-duration: 500ms;
+  }
+
+  .lg\:slow{
+    animation-duration: 2000ms;
+  }
+
+  .lg\:slower{
+    animation-duration: 3000ms;
+  }
+
+  .lg\:bounce{
+    animation-name: bounce;
+    transform-origin: center bottom;
+  }
+
+  .lg\:flash{
+    animation-name: flash;
+  }
+
+  .lg\:pulse{
+    animation-name: pulse;
+  }
+
+  .lg\:rubberBand{
+    animation-name: rubberBand;
+  }
+
+  .lg\:shake{
+    animation-name: shake;
+  }
+
+  .lg\:headShake{
+    animation-timing-function: ease-in-out;
+    animation-name: headShake;
+  }
+
+  .lg\:swing{
+    transform-origin: top center;
+    animation-name: swing;
+  }
+
+  .lg\:tada{
+    animation-name: tada;
+  }
+
+  .lg\:wobble{
+    animation-name: wobble;
+  }
+
+  .lg\:jello{
+    animation-name: jello;
+  }
+
+  .lg\:heartBeat{
+    animation-name: heartBeat;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  .lg\:hinge{
+    animation-name: hinge;
+    animation-duration: 2000ms;
+  }
+
+  .lg\:jackInTheBox{
+    animation-name: jackInTheBox;
+  }
+
+  .lg\:lightSpeedIn{
+    animation-name: lightSpeedIn;
+  }
+
+  .lg\:lightSpeedOut{
+    animation-name: lightSpeedOut;
+  }
+
+  .lg\:flip{
+    animation-name: flip;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .lg\:flipInX{
+    animation-name: flipInX;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .lg\:flipInY{
+    animation-name: flipInY;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .lg\:flipOutX{
+    animation-name: flipOutX;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .lg\:rotateIn{
+    animation-name: rotateIn;
+  }
+
+  .lg\:rotateInDownLeft{
+    animation-name: rotateInDownLeft;
+  }
+
+  .lg\:rotateInDownRight{
+    animation-name: rotateInDownRight;
+  }
+
+  .lg\:rotateInUpLeft{
+    animation-name: rotateInUpLeft;
+  }
+
+  .lg\:rotateInUpRight{
+    animation-name: rotateInUpRight;
+  }
+
+  .lg\:rotateOut{
+    animation-name: rotateOut;
+  }
+
+  .lg\:rotateOutDownLeft{
+    animation-name: rotateOutDownLeft;
+  }
+
+  .lg\:rotateOutDownRight{
+    animation-name: rotateOutDownRight;
+  }
+
+  .lg\:rotateOutUpLeft{
+    animation-name: rotateOutUpLeft;
+  }
+
+  .lg\:rotateOutUpRight{
+    animation-name: rotateOutUpRight;
+  }
+
+  .lg\:rollIn{
+    animation-name: rollIn;
+  }
+
+  .lg\:rollOut{
+    animation-name: rollOut;
+  }
+
+  .lg\:zoomIn{
+    animation-name: zoomIn;
+  }
+
+  .lg\:zoomInDown{
+    animation-name: zoomInDown;
+  }
+
+  .lg\:zoomInLeft{
+    animation-name: zoomInLeft;
+  }
+
+  .lg\:zoomInRight{
+    animation-name: zoomInRight;
+  }
+
+  .lg\:zoomInUp{
+    animation-name: zoomInUp;
+  }
+
+  .lg\:bounceIn{
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  .lg\:bounceInDown{
+    animation-name: bounceInDown;
+  }
+
+  .lg\:bounceInLeft{
+    animation-name: bounceInLeft;
+  }
+
+  .lg\:bounceInRight{
+    animation-name: bounceInRight;
+  }
+
+  .lg\:bounceInUp{
+    animation-name: bounceInUp;
+  }
+
+  .lg\:bounceOut{
+    animation-name: bounceOut;
+    animation-duration: 750ms;
+  }
+
+  .lg\:bounceOutDown{
+    animation-name: bounceOutDown;
+  }
+
+  .lg\:bounceOutLeft{
+    animation-name: bounceOutLeft;
+  }
+
+  .lg\:bounceOutRight{
+    animation-name: bounceOutRight;
+  }
+
+  .lg\:bounceOutUp{
+    animation-name: bounceOutUp;
+  }
+
+  .lg\:zoomOut{
+    animation-name: zoomIn;
+  }
+
+  .lg\:zoomOutDown{
+    animation-name: zoomOutDown;
+  }
+
+  .lg\:zoomOutLeft{
+    animation-name: zoomOutLeft;
+  }
+
+  .lg\:zoomOutRight{
+    animation-name: zoomOutRight;
+  }
+
+  .lg\:zoomOutUp{
+    animation-name: zoomOutUp;
+  }
+
+  .lg\:slideInDown{
+    animation-name: slideInDown;
+  }
+
+  .lg\:slideInLeft{
+    animation-name: slideInLeft;
+  }
+
+  .lg\:slideInRight{
+    animation-name: slideInRight;
+  }
+
+  .lg\:slideInUp{
+    animation-name: slideInUp;
+  }
+
+  .lg\:slideOutDown{
+    animation-name: slideOutDown;
+  }
+
+  .lg\:slideOutLeft{
+    animation-name: slideOutLeft;
+  }
+
+  .lg\:slideOutRight{
+    animation-name: slideOutRight;
+  }
+
+  .lg\:slideOutUp{
+    animation-name: slideOutUp;
+  }
+
+  .lg\:fadeIn{
+    animation-name: fadeIn;
+  }
+
+  .lg\:fadeInDown{
+    animation-name: fadeInDown;
+  }
+
+  .lg\:fadeInDownBig{
+    animation-name: fadeInDownBig;
+  }
+
+  .lg\:fadeInLeft{
+    animation-name: fadeInLeft;
+  }
+
+  .lg\:fadeInLeftBig{
+    animation-name: fadeInLeftBig;
+  }
+
+  .lg\:fadeInRight{
+    animation-name: fadeInRight;
+  }
+
+  .lg\:fadeInRightBig{
+    animation-name: fadeInRightBig;
+  }
+
+  .lg\:fadeInUp{
+    animation-name: fadeInUp;
+  }
+
+  .lg\:fadeInUpBig{
+    animation-name: fadeInUpBig;
+  }
+
+  .lg\:fadeOut{
+    animation-name: fadeOut;
+  }
+
+  .lg\:fadeOutDown{
+    animation-name: fadeOutDown;
+  }
+
+  .lg\:fadeOutDownBig{
+    animation-name: fadeOutDownBig;
+  }
+
+  .lg\:fadeOutLeft{
+    animation-name: fadeOutLeft;
+  }
+
+  .lg\:fadeOutLeftBig{
+    animation-name: fadeOutLeftBig;
+  }
+
+  .lg\:fadeOutRight{
+    animation-name: fadeOutRight;
+  }
+
+  .lg\:fadeOutRightBig{
+    animation-name: fadeOutRightBig;
+  }
+
+  .lg\:fadeOutUp{
+    animation-name: fadeOutUp;
+  }
+
+  .lg\:fadeOutUpBig{
+    animation-name: fadeOutUpBig;
+  }
 }
 
-@media (min-width: 1280px){
+@media (max-width: 1279px){
   .xl\:container{
     width: 100%;
-  }
-
-  @media (min-width: 640px){
-    .xl\:container{
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px){
-    .xl\:container{
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px){
-    .xl\:container{
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px){
-    .xl\:container{
-      max-width: 1280px;
-    }
   }
 
   .xl\:space-y-0 > :not(template) ~ :not(template){
@@ -76044,6 +80896,42 @@ div.code-toolbar .toolbar button:hover {
     margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .xl\:space-y-72 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(18rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(18rem * var(--space-y-reverse));
+  }
+
+  .xl\:space-x-72 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(18rem * var(--space-x-reverse));
+    margin-left: calc(18rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:space-y-84 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(21rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(21rem * var(--space-y-reverse));
+  }
+
+  .xl\:space-x-84 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(21rem * var(--space-x-reverse));
+    margin-left: calc(21rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:space-y-96 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(24rem * var(--space-y-reverse));
+  }
+
+  .xl\:space-x-96 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(24rem * var(--space-x-reverse));
+    margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .xl\:space-y-px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -76258,6 +81146,42 @@ div.code-toolbar .toolbar button:hover {
     --space-x-reverse: 0;
     margin-right: calc(-16rem * var(--space-x-reverse));
     margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:-space-y-72 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-18rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-18rem * var(--space-y-reverse));
+  }
+
+  .xl\:-space-x-72 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-18rem * var(--space-x-reverse));
+    margin-left: calc(-18rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:-space-y-84 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-21rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-21rem * var(--space-y-reverse));
+  }
+
+  .xl\:-space-x-84 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-21rem * var(--space-x-reverse));
+    margin-left: calc(-21rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:-space-y-96 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-24rem * var(--space-y-reverse));
+  }
+
+  .xl\:-space-x-96 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-24rem * var(--space-x-reverse));
+    margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
   .xl\:-space-y-px > :not(template) ~ :not(template){
@@ -85515,15 +90439,7 @@ div.code-toolbar .toolbar button:hover {
   }
 
   .xl\:font-sans{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .xl\:font-serif{
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .xl\:font-mono{
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Ubuntu, Sans-serif;
   }
 
   .xl\:font-hairline{
@@ -85704,6 +90620,18 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:h-64{
     height: 16rem;
+  }
+
+  .xl\:h-72{
+    height: 18rem;
+  }
+
+  .xl\:h-84{
+    height: 21rem;
+  }
+
+  .xl\:h-96{
+    height: 24rem;
   }
 
   .xl\:h-auto{
@@ -85910,6 +90838,18 @@ div.code-toolbar .toolbar button:hover {
     margin: 16rem;
   }
 
+  .xl\:m-72{
+    margin: 18rem;
+  }
+
+  .xl\:m-84{
+    margin: 21rem;
+  }
+
+  .xl\:m-96{
+    margin: 24rem;
+  }
+
   .xl\:m-auto{
     margin: auto;
   }
@@ -85984,6 +90924,18 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:-m-64{
     margin: -16rem;
+  }
+
+  .xl\:-m-72{
+    margin: -18rem;
+  }
+
+  .xl\:-m-84{
+    margin: -21rem;
+  }
+
+  .xl\:-m-96{
+    margin: -24rem;
   }
 
   .xl\:-m-px{
@@ -86168,6 +91120,36 @@ div.code-toolbar .toolbar button:hover {
   .xl\:mx-64{
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .xl\:my-72{
+    margin-top: 18rem;
+    margin-bottom: 18rem;
+  }
+
+  .xl\:mx-72{
+    margin-left: 18rem;
+    margin-right: 18rem;
+  }
+
+  .xl\:my-84{
+    margin-top: 21rem;
+    margin-bottom: 21rem;
+  }
+
+  .xl\:mx-84{
+    margin-left: 21rem;
+    margin-right: 21rem;
+  }
+
+  .xl\:my-96{
+    margin-top: 24rem;
+    margin-bottom: 24rem;
+  }
+
+  .xl\:mx-96{
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .xl\:my-auto{
@@ -86358,6 +91340,36 @@ div.code-toolbar .toolbar button:hover {
   .xl\:-mx-64{
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .xl\:-my-72{
+    margin-top: -18rem;
+    margin-bottom: -18rem;
+  }
+
+  .xl\:-mx-72{
+    margin-left: -18rem;
+    margin-right: -18rem;
+  }
+
+  .xl\:-my-84{
+    margin-top: -21rem;
+    margin-bottom: -21rem;
+  }
+
+  .xl\:-mx-84{
+    margin-left: -21rem;
+    margin-right: -21rem;
+  }
+
+  .xl\:-my-96{
+    margin-top: -24rem;
+    margin-bottom: -24rem;
+  }
+
+  .xl\:-mx-96{
+    margin-left: -24rem;
+    margin-right: -24rem;
   }
 
   .xl\:-my-px{
@@ -86656,6 +91668,54 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:ml-64{
     margin-left: 16rem;
+  }
+
+  .xl\:mt-72{
+    margin-top: 18rem;
+  }
+
+  .xl\:mr-72{
+    margin-right: 18rem;
+  }
+
+  .xl\:mb-72{
+    margin-bottom: 18rem;
+  }
+
+  .xl\:ml-72{
+    margin-left: 18rem;
+  }
+
+  .xl\:mt-84{
+    margin-top: 21rem;
+  }
+
+  .xl\:mr-84{
+    margin-right: 21rem;
+  }
+
+  .xl\:mb-84{
+    margin-bottom: 21rem;
+  }
+
+  .xl\:ml-84{
+    margin-left: 21rem;
+  }
+
+  .xl\:mt-96{
+    margin-top: 24rem;
+  }
+
+  .xl\:mr-96{
+    margin-right: 24rem;
+  }
+
+  .xl\:mb-96{
+    margin-bottom: 24rem;
+  }
+
+  .xl\:ml-96{
+    margin-left: 24rem;
   }
 
   .xl\:mt-auto{
@@ -86962,6 +92022,54 @@ div.code-toolbar .toolbar button:hover {
     margin-left: -16rem;
   }
 
+  .xl\:-mt-72{
+    margin-top: -18rem;
+  }
+
+  .xl\:-mr-72{
+    margin-right: -18rem;
+  }
+
+  .xl\:-mb-72{
+    margin-bottom: -18rem;
+  }
+
+  .xl\:-ml-72{
+    margin-left: -18rem;
+  }
+
+  .xl\:-mt-84{
+    margin-top: -21rem;
+  }
+
+  .xl\:-mr-84{
+    margin-right: -21rem;
+  }
+
+  .xl\:-mb-84{
+    margin-bottom: -21rem;
+  }
+
+  .xl\:-ml-84{
+    margin-left: -21rem;
+  }
+
+  .xl\:-mt-96{
+    margin-top: -24rem;
+  }
+
+  .xl\:-mr-96{
+    margin-right: -24rem;
+  }
+
+  .xl\:-mb-96{
+    margin-bottom: -24rem;
+  }
+
+  .xl\:-ml-96{
+    margin-left: -24rem;
+  }
+
   .xl\:-mt-px{
     margin-top: -1px;
   }
@@ -87032,22 +92140,6 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:max-w-full{
     max-width: 100%;
-  }
-
-  .xl\:max-w-screen-sm{
-    max-width: 640px;
-  }
-
-  .xl\:max-w-screen-md{
-    max-width: 768px;
-  }
-
-  .xl\:max-w-screen-lg{
-    max-width: 1024px;
-  }
-
-  .xl\:max-w-screen-xl{
-    max-width: 1280px;
   }
 
   .xl\:min-h-0{
@@ -87380,6 +92472,18 @@ div.code-toolbar .toolbar button:hover {
     padding: 16rem;
   }
 
+  .xl\:p-72{
+    padding: 18rem;
+  }
+
+  .xl\:p-84{
+    padding: 21rem;
+  }
+
+  .xl\:p-96{
+    padding: 24rem;
+  }
+
   .xl\:p-px{
     padding: 1px;
   }
@@ -87562,6 +92666,36 @@ div.code-toolbar .toolbar button:hover {
   .xl\:px-64{
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .xl\:py-72{
+    padding-top: 18rem;
+    padding-bottom: 18rem;
+  }
+
+  .xl\:px-72{
+    padding-left: 18rem;
+    padding-right: 18rem;
+  }
+
+  .xl\:py-84{
+    padding-top: 21rem;
+    padding-bottom: 21rem;
+  }
+
+  .xl\:px-84{
+    padding-left: 21rem;
+    padding-right: 21rem;
+  }
+
+  .xl\:py-96{
+    padding-top: 24rem;
+    padding-bottom: 24rem;
+  }
+
+  .xl\:px-96{
+    padding-left: 24rem;
+    padding-right: 24rem;
   }
 
   .xl\:py-px{
@@ -87860,6 +92994,54 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:pl-64{
     padding-left: 16rem;
+  }
+
+  .xl\:pt-72{
+    padding-top: 18rem;
+  }
+
+  .xl\:pr-72{
+    padding-right: 18rem;
+  }
+
+  .xl\:pb-72{
+    padding-bottom: 18rem;
+  }
+
+  .xl\:pl-72{
+    padding-left: 18rem;
+  }
+
+  .xl\:pt-84{
+    padding-top: 21rem;
+  }
+
+  .xl\:pr-84{
+    padding-right: 21rem;
+  }
+
+  .xl\:pb-84{
+    padding-bottom: 21rem;
+  }
+
+  .xl\:pl-84{
+    padding-left: 21rem;
+  }
+
+  .xl\:pt-96{
+    padding-top: 24rem;
+  }
+
+  .xl\:pr-96{
+    padding-right: 24rem;
+  }
+
+  .xl\:pb-96{
+    padding-bottom: 24rem;
+  }
+
+  .xl\:pl-96{
+    padding-left: 24rem;
   }
 
   .xl\:pt-px{
@@ -91357,6 +96539,18 @@ div.code-toolbar .toolbar button:hover {
     width: 16rem;
   }
 
+  .xl\:w-72{
+    width: 18rem;
+  }
+
+  .xl\:w-84{
+    width: 21rem;
+  }
+
+  .xl\:w-96{
+    width: 24rem;
+  }
+
   .xl\:w-auto{
     width: auto;
   }
@@ -91595,6 +96789,21 @@ div.code-toolbar .toolbar button:hover {
     gap: 16rem;
   }
 
+  .xl\:gap-72{
+    grid-gap: 18rem;
+    gap: 18rem;
+  }
+
+  .xl\:gap-84{
+    grid-gap: 21rem;
+    gap: 21rem;
+  }
+
+  .xl\:gap-96{
+    grid-gap: 24rem;
+    gap: 24rem;
+  }
+
   .xl\:gap-px{
     grid-gap: 1px;
     gap: 1px;
@@ -91688,6 +96897,21 @@ div.code-toolbar .toolbar button:hover {
   .xl\:col-gap-64{
     grid-column-gap: 16rem;
     column-gap: 16rem;
+  }
+
+  .xl\:col-gap-72{
+    grid-column-gap: 18rem;
+    column-gap: 18rem;
+  }
+
+  .xl\:col-gap-84{
+    grid-column-gap: 21rem;
+    column-gap: 21rem;
+  }
+
+  .xl\:col-gap-96{
+    grid-column-gap: 24rem;
+    column-gap: 24rem;
   }
 
   .xl\:col-gap-px{
@@ -91785,6 +97009,21 @@ div.code-toolbar .toolbar button:hover {
     column-gap: 16rem;
   }
 
+  .xl\:gap-x-72{
+    grid-column-gap: 18rem;
+    column-gap: 18rem;
+  }
+
+  .xl\:gap-x-84{
+    grid-column-gap: 21rem;
+    column-gap: 21rem;
+  }
+
+  .xl\:gap-x-96{
+    grid-column-gap: 24rem;
+    column-gap: 24rem;
+  }
+
   .xl\:gap-x-px{
     grid-column-gap: 1px;
     column-gap: 1px;
@@ -91880,6 +97119,21 @@ div.code-toolbar .toolbar button:hover {
     row-gap: 16rem;
   }
 
+  .xl\:row-gap-72{
+    grid-row-gap: 18rem;
+    row-gap: 18rem;
+  }
+
+  .xl\:row-gap-84{
+    grid-row-gap: 21rem;
+    row-gap: 21rem;
+  }
+
+  .xl\:row-gap-96{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
+  }
+
   .xl\:row-gap-px{
     grid-row-gap: 1px;
     row-gap: 1px;
@@ -91973,6 +97227,21 @@ div.code-toolbar .toolbar button:hover {
   .xl\:gap-y-64{
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .xl\:gap-y-72{
+    grid-row-gap: 18rem;
+    row-gap: 18rem;
+  }
+
+  .xl\:gap-y-84{
+    grid-row-gap: 21rem;
+    row-gap: 21rem;
+  }
+
+  .xl\:gap-y-96{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
   }
 
   .xl\:gap-y-px{
@@ -93093,6 +98362,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .xl\:translate-x-72{
+    --transform-translate-x: 18rem;
+  }
+
+  .xl\:translate-x-84{
+    --transform-translate-x: 21rem;
+  }
+
+  .xl\:translate-x-96{
+    --transform-translate-x: 24rem;
+  }
+
   .xl\:translate-x-px{
     --transform-translate-x: 1px;
   }
@@ -93163,6 +98444,18 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:-translate-x-64{
     --transform-translate-x: -16rem;
+  }
+
+  .xl\:-translate-x-72{
+    --transform-translate-x: -18rem;
+  }
+
+  .xl\:-translate-x-84{
+    --transform-translate-x: -21rem;
+  }
+
+  .xl\:-translate-x-96{
+    --transform-translate-x: -24rem;
   }
 
   .xl\:-translate-x-px{
@@ -93257,6 +98550,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .xl\:translate-y-72{
+    --transform-translate-y: 18rem;
+  }
+
+  .xl\:translate-y-84{
+    --transform-translate-y: 21rem;
+  }
+
+  .xl\:translate-y-96{
+    --transform-translate-y: 24rem;
+  }
+
   .xl\:translate-y-px{
     --transform-translate-y: 1px;
   }
@@ -93327,6 +98632,18 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:-translate-y-64{
     --transform-translate-y: -16rem;
+  }
+
+  .xl\:-translate-y-72{
+    --transform-translate-y: -18rem;
+  }
+
+  .xl\:-translate-y-84{
+    --transform-translate-y: -21rem;
+  }
+
+  .xl\:-translate-y-96{
+    --transform-translate-y: -24rem;
   }
 
   .xl\:-translate-y-px{
@@ -93421,6 +98738,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .xl\:hover\:translate-x-72:hover{
+    --transform-translate-x: 18rem;
+  }
+
+  .xl\:hover\:translate-x-84:hover{
+    --transform-translate-x: 21rem;
+  }
+
+  .xl\:hover\:translate-x-96:hover{
+    --transform-translate-x: 24rem;
+  }
+
   .xl\:hover\:translate-x-px:hover{
     --transform-translate-x: 1px;
   }
@@ -93491,6 +98820,18 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:hover\:-translate-x-64:hover{
     --transform-translate-x: -16rem;
+  }
+
+  .xl\:hover\:-translate-x-72:hover{
+    --transform-translate-x: -18rem;
+  }
+
+  .xl\:hover\:-translate-x-84:hover{
+    --transform-translate-x: -21rem;
+  }
+
+  .xl\:hover\:-translate-x-96:hover{
+    --transform-translate-x: -24rem;
   }
 
   .xl\:hover\:-translate-x-px:hover{
@@ -93585,6 +98926,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .xl\:hover\:translate-y-72:hover{
+    --transform-translate-y: 18rem;
+  }
+
+  .xl\:hover\:translate-y-84:hover{
+    --transform-translate-y: 21rem;
+  }
+
+  .xl\:hover\:translate-y-96:hover{
+    --transform-translate-y: 24rem;
+  }
+
   .xl\:hover\:translate-y-px:hover{
     --transform-translate-y: 1px;
   }
@@ -93655,6 +99008,18 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:hover\:-translate-y-64:hover{
     --transform-translate-y: -16rem;
+  }
+
+  .xl\:hover\:-translate-y-72:hover{
+    --transform-translate-y: -18rem;
+  }
+
+  .xl\:hover\:-translate-y-84:hover{
+    --transform-translate-y: -21rem;
+  }
+
+  .xl\:hover\:-translate-y-96:hover{
+    --transform-translate-y: -24rem;
   }
 
   .xl\:hover\:-translate-y-px:hover{
@@ -93749,6 +99114,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-x: 16rem;
   }
 
+  .xl\:focus\:translate-x-72:focus{
+    --transform-translate-x: 18rem;
+  }
+
+  .xl\:focus\:translate-x-84:focus{
+    --transform-translate-x: 21rem;
+  }
+
+  .xl\:focus\:translate-x-96:focus{
+    --transform-translate-x: 24rem;
+  }
+
   .xl\:focus\:translate-x-px:focus{
     --transform-translate-x: 1px;
   }
@@ -93819,6 +99196,18 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:focus\:-translate-x-64:focus{
     --transform-translate-x: -16rem;
+  }
+
+  .xl\:focus\:-translate-x-72:focus{
+    --transform-translate-x: -18rem;
+  }
+
+  .xl\:focus\:-translate-x-84:focus{
+    --transform-translate-x: -21rem;
+  }
+
+  .xl\:focus\:-translate-x-96:focus{
+    --transform-translate-x: -24rem;
   }
 
   .xl\:focus\:-translate-x-px:focus{
@@ -93913,6 +99302,18 @@ div.code-toolbar .toolbar button:hover {
     --transform-translate-y: 16rem;
   }
 
+  .xl\:focus\:translate-y-72:focus{
+    --transform-translate-y: 18rem;
+  }
+
+  .xl\:focus\:translate-y-84:focus{
+    --transform-translate-y: 21rem;
+  }
+
+  .xl\:focus\:translate-y-96:focus{
+    --transform-translate-y: 24rem;
+  }
+
   .xl\:focus\:translate-y-px:focus{
     --transform-translate-y: 1px;
   }
@@ -93983,6 +99384,18 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:focus\:-translate-y-64:focus{
     --transform-translate-y: -16rem;
+  }
+
+  .xl\:focus\:-translate-y-72:focus{
+    --transform-translate-y: -18rem;
+  }
+
+  .xl\:focus\:-translate-y-84:focus{
+    --transform-translate-y: -21rem;
+  }
+
+  .xl\:focus\:-translate-y-96:focus{
+    --transform-translate-y: -24rem;
   }
 
   .xl\:focus\:-translate-y-px:focus{
@@ -94395,6 +99808,379 @@ div.code-toolbar .toolbar button:hover {
 
   .xl\:animate-bounce{
     animation: bounce 1s infinite;
+  }
+
+  .xl\:animated{
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .xl\:infinite{
+    animation-iteration-count: infinite;
+  }
+
+  .xl\:delay{
+    animation-delay: 1000ms;
+  }
+
+  .xl\:delay-1s{
+    animation-delay: 1000ms;
+  }
+
+  .xl\:delay-2s{
+    animation-delay: 2000ms;
+  }
+
+  .xl\:delay-3s{
+    animation-delay: 3000ms;
+  }
+
+  .xl\:delay-4s{
+    animation-delay: 4000ms;
+  }
+
+  .xl\:delay-5s{
+    animation-delay: 5000ms;
+  }
+
+  .xl\:fast{
+    animation-duration: 800ms;
+  }
+
+  .xl\:faster{
+    animation-duration: 500ms;
+  }
+
+  .xl\:slow{
+    animation-duration: 2000ms;
+  }
+
+  .xl\:slower{
+    animation-duration: 3000ms;
+  }
+
+  .xl\:bounce{
+    animation-name: bounce;
+    transform-origin: center bottom;
+  }
+
+  .xl\:flash{
+    animation-name: flash;
+  }
+
+  .xl\:pulse{
+    animation-name: pulse;
+  }
+
+  .xl\:rubberBand{
+    animation-name: rubberBand;
+  }
+
+  .xl\:shake{
+    animation-name: shake;
+  }
+
+  .xl\:headShake{
+    animation-timing-function: ease-in-out;
+    animation-name: headShake;
+  }
+
+  .xl\:swing{
+    transform-origin: top center;
+    animation-name: swing;
+  }
+
+  .xl\:tada{
+    animation-name: tada;
+  }
+
+  .xl\:wobble{
+    animation-name: wobble;
+  }
+
+  .xl\:jello{
+    animation-name: jello;
+  }
+
+  .xl\:heartBeat{
+    animation-name: heartBeat;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  .xl\:hinge{
+    animation-name: hinge;
+    animation-duration: 2000ms;
+  }
+
+  .xl\:jackInTheBox{
+    animation-name: jackInTheBox;
+  }
+
+  .xl\:lightSpeedIn{
+    animation-name: lightSpeedIn;
+  }
+
+  .xl\:lightSpeedOut{
+    animation-name: lightSpeedOut;
+  }
+
+  .xl\:flip{
+    animation-name: flip;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .xl\:flipInX{
+    animation-name: flipInX;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .xl\:flipInY{
+    animation-name: flipInY;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .xl\:flipOutX{
+    animation-name: flipOutX;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+  .xl\:rotateIn{
+    animation-name: rotateIn;
+  }
+
+  .xl\:rotateInDownLeft{
+    animation-name: rotateInDownLeft;
+  }
+
+  .xl\:rotateInDownRight{
+    animation-name: rotateInDownRight;
+  }
+
+  .xl\:rotateInUpLeft{
+    animation-name: rotateInUpLeft;
+  }
+
+  .xl\:rotateInUpRight{
+    animation-name: rotateInUpRight;
+  }
+
+  .xl\:rotateOut{
+    animation-name: rotateOut;
+  }
+
+  .xl\:rotateOutDownLeft{
+    animation-name: rotateOutDownLeft;
+  }
+
+  .xl\:rotateOutDownRight{
+    animation-name: rotateOutDownRight;
+  }
+
+  .xl\:rotateOutUpLeft{
+    animation-name: rotateOutUpLeft;
+  }
+
+  .xl\:rotateOutUpRight{
+    animation-name: rotateOutUpRight;
+  }
+
+  .xl\:rollIn{
+    animation-name: rollIn;
+  }
+
+  .xl\:rollOut{
+    animation-name: rollOut;
+  }
+
+  .xl\:zoomIn{
+    animation-name: zoomIn;
+  }
+
+  .xl\:zoomInDown{
+    animation-name: zoomInDown;
+  }
+
+  .xl\:zoomInLeft{
+    animation-name: zoomInLeft;
+  }
+
+  .xl\:zoomInRight{
+    animation-name: zoomInRight;
+  }
+
+  .xl\:zoomInUp{
+    animation-name: zoomInUp;
+  }
+
+  .xl\:bounceIn{
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  .xl\:bounceInDown{
+    animation-name: bounceInDown;
+  }
+
+  .xl\:bounceInLeft{
+    animation-name: bounceInLeft;
+  }
+
+  .xl\:bounceInRight{
+    animation-name: bounceInRight;
+  }
+
+  .xl\:bounceInUp{
+    animation-name: bounceInUp;
+  }
+
+  .xl\:bounceOut{
+    animation-name: bounceOut;
+    animation-duration: 750ms;
+  }
+
+  .xl\:bounceOutDown{
+    animation-name: bounceOutDown;
+  }
+
+  .xl\:bounceOutLeft{
+    animation-name: bounceOutLeft;
+  }
+
+  .xl\:bounceOutRight{
+    animation-name: bounceOutRight;
+  }
+
+  .xl\:bounceOutUp{
+    animation-name: bounceOutUp;
+  }
+
+  .xl\:zoomOut{
+    animation-name: zoomIn;
+  }
+
+  .xl\:zoomOutDown{
+    animation-name: zoomOutDown;
+  }
+
+  .xl\:zoomOutLeft{
+    animation-name: zoomOutLeft;
+  }
+
+  .xl\:zoomOutRight{
+    animation-name: zoomOutRight;
+  }
+
+  .xl\:zoomOutUp{
+    animation-name: zoomOutUp;
+  }
+
+  .xl\:slideInDown{
+    animation-name: slideInDown;
+  }
+
+  .xl\:slideInLeft{
+    animation-name: slideInLeft;
+  }
+
+  .xl\:slideInRight{
+    animation-name: slideInRight;
+  }
+
+  .xl\:slideInUp{
+    animation-name: slideInUp;
+  }
+
+  .xl\:slideOutDown{
+    animation-name: slideOutDown;
+  }
+
+  .xl\:slideOutLeft{
+    animation-name: slideOutLeft;
+  }
+
+  .xl\:slideOutRight{
+    animation-name: slideOutRight;
+  }
+
+  .xl\:slideOutUp{
+    animation-name: slideOutUp;
+  }
+
+  .xl\:fadeIn{
+    animation-name: fadeIn;
+  }
+
+  .xl\:fadeInDown{
+    animation-name: fadeInDown;
+  }
+
+  .xl\:fadeInDownBig{
+    animation-name: fadeInDownBig;
+  }
+
+  .xl\:fadeInLeft{
+    animation-name: fadeInLeft;
+  }
+
+  .xl\:fadeInLeftBig{
+    animation-name: fadeInLeftBig;
+  }
+
+  .xl\:fadeInRight{
+    animation-name: fadeInRight;
+  }
+
+  .xl\:fadeInRightBig{
+    animation-name: fadeInRightBig;
+  }
+
+  .xl\:fadeInUp{
+    animation-name: fadeInUp;
+  }
+
+  .xl\:fadeInUpBig{
+    animation-name: fadeInUpBig;
+  }
+
+  .xl\:fadeOut{
+    animation-name: fadeOut;
+  }
+
+  .xl\:fadeOutDown{
+    animation-name: fadeOutDown;
+  }
+
+  .xl\:fadeOutDownBig{
+    animation-name: fadeOutDownBig;
+  }
+
+  .xl\:fadeOutLeft{
+    animation-name: fadeOutLeft;
+  }
+
+  .xl\:fadeOutLeftBig{
+    animation-name: fadeOutLeftBig;
+  }
+
+  .xl\:fadeOutRight{
+    animation-name: fadeOutRight;
+  }
+
+  .xl\:fadeOutRightBig{
+    animation-name: fadeOutRightBig;
+  }
+
+  .xl\:fadeOutUp{
+    animation-name: fadeOutUp;
+  }
+
+  .xl\:fadeOutUpBig{
+    animation-name: fadeOutUpBig;
   }
 }
 
