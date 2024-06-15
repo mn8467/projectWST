@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from './img/logo.png'; //되는데 왜..?
 import './css/style.css'; // "./" 까지는 현재 폴더까지 이미 경로가 설정되어있는 것 여기서의 현재폴더는 ./Component/Home 이므로 그 다음 적용할 하위 폴더를 적어주면 됨!
 export default function Main (){
         return(
@@ -18,7 +19,7 @@ export default function Main (){
                   
                   {/* logo */}
                   <div className="flex-none w-56 flex flex-row items-center">
-                    <img src="./img/logo.png" className="w-10 flex-none"></img>
+                    <img src= {logo} className="w-10 flex-none"></img>
                     <strong className="capitalize ml-1 flex-1">cleopatra</strong>
               
                     <button id="sliderBtn" className = "flex-none text-right text-gray-900 hidden md:block">
@@ -414,73 +415,7 @@ export default function Main (){
                     {/* end link  */}   
                     
                     
-                    <p className="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">UI Elements</p>
-              
-                    {/*  link  */}
-                    <a href="./typography.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-text text-xs mr-2"></i>
-                      typography
-                    </a>
-                    {/* end link  */}
-              
-                    {/*  link  */}
-                    <a href="./alert.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-whistle text-xs mr-2"></i>
-                      alerts
-                    </a>
-                    {/* end link  */}
-                    
-              
-                    {/*  link  */}
-                    <a href="./buttons.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-cricket text-xs mr-2"></i>
-                      buttons
-                    </a>
-                    {/* end link  */}
-              
-                    {/*  link  */}
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-box-open text-xs mr-2"></i>
-                      Content
-                    </a>
-                    {/* end link  */}
-              
-                    {/*  link  */}
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-swatchbook text-xs mr-2"></i>
-                      colors
-                    </a>
-                    {/* end link  */}
-              
-                    {/*  link  */}
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-atom-alt text-xs mr-2"></i>
-                      icons
-                    </a>
-                    {/* end link  */}
-              
-                    {/*  link  */}
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-club text-xs mr-2"></i>
-                      card
-                    </a>
-                    {/* end link  */}
-              
-                    {/*  link  */}
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-cheese-swiss text-xs mr-2"></i>
-                      Widgets
-                    </a>
-                    {/* end link  */}
-              
-                    {/*  link  */}
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-computer-classic text-xs mr-2"></i>
-                      Components
-                    </a>
-                    {/* end link  */}
-                    
-                    
+                   
               
                   </div>
                   {/* <!-- end sidebar content --> */}
