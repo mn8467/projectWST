@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './css/style.css'; // "./" 까지는 현재 폴더까지 이미 경로가 설정되어있는 것 여기서의 현재폴더는 ./Component/Home 이므로 그 다음 적용할 하위 폴더를 적어주면 됨!
 export default function Main (){
         return(
         <>
@@ -8,7 +8,6 @@ export default function Main (){
                         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>  
                         <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon"></link>
                         <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css"></link>
-                        <link rel="stylesheet" type="text/css" href="css/style.css"></link>
                         <title>Welcome To Cleopatra</title>
                 </head>
               <body className="bg-gray-100">
@@ -19,7 +18,7 @@ export default function Main (){
                   
                   {/* logo */}
                   <div className="flex-none w-56 flex flex-row items-center">
-                    <img src="img/logo.png" className="w-10 flex-none"></img>
+                    <img src="./img/logo.png" className="w-10 flex-none"></img>
                     <strong className="capitalize ml-1 flex-1">cleopatra</strong>
               
                     <button id="sliderBtn" className = "flex-none text-right text-gray-900 hidden md:block">
@@ -62,7 +61,6 @@ export default function Main (){
                             <i className="fad fa-chevron-down ml-2 text-xs leading-none"></i>
                           </div>                        
                         </button>
-              
                         <button className="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
               
                         <div className="text-gray-500 menu hidden md:mt-10 md:w-full rounded bg-white shadow-md absolute z-20 right-0 w-40 mt-5 py-2 animated faster">
@@ -74,909 +72,909 @@ export default function Main (){
                           </a>     
                           {/* end item */}
               
-                          <!-- item -->
-                          <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
-                            <i class="fad fa-inbox-in text-xs mr-1"></i> 
+                          {/* item */}
+                          <a className="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
+                            <i className="fad fa-inbox-in text-xs mr-1"></i> 
                             my inbox
                           </a>     
-                          <!-- end item -->
+                          {/* end item */}
               
-                          <!-- item -->
-                          <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
-                            <i class="fad fa-badge-check text-xs mr-1"></i> 
+                          {/* item */}
+                          <a className="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
+                            <i className="fad fa-badge-check text-xs mr-1"></i> 
                             tasks
                           </a>     
-                          <!-- end item -->
+                          {/* end item */}
               
-                          <!-- item -->
-                          <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
-                            <i class="fad fa-comment-alt-dots text-xs mr-1"></i> 
+                          {/* item */}
+                          <a className="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
+                            <i className="fad fa-comment-alt-dots text-xs mr-1"></i> 
                             chats
                           </a>     
-                          <!-- end item -->
+                          {/* end item */}
               
-                          <hr>
+                          <hr/>
               
-                          <!-- item -->
-                          <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
-                            <i class="fad fa-user-times text-xs mr-1"></i> 
+                          {/* item */}
+                          <a className="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
+                            <i className="fad fa-user-times text-xs mr-1"></i> 
                             log out
                           </a>     
-                          <!-- end item -->
+                          {/* end item */}
               
                         </div>
                       </div>
-                      <!-- end user -->
+                      {/* end user */}
               
-                      <!-- notifcation -->
-                      <div class="dropdown relative mr-5 md:static">
+                      {/* <!-- notifcation --> */}
+                      <div className="dropdown relative mr-5 md:static">
               
-                        <button class="text-gray-500 menu-btn p-0 m-0 hover:text-gray-900 focus:text-gray-900 focus:outline-none transition-all ease-in-out duration-300">
-                          <i class="fad fa-bells"></i>               
+                        <button className="text-gray-500 menu-btn p-0 m-0 hover:text-gray-900 focus:text-gray-900 focus:outline-none transition-all ease-in-out duration-300">
+                          <i className="fad fa-bells"></i>               
                         </button>
               
-                        <button class="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
+                        <button className="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
               
-                        <div class="menu hidden rounded bg-white md:right-0 md:w-full shadow-md absolute z-20 right-0 w-84 mt-5 py-2 animated faster">
-                          <!-- top -->
-                          <div class="px-4 py-2 flex flex-row justify-between items-center capitalize font-semibold text-sm">
+                        <div className="menu hidden rounded bg-white md:right-0 md:w-full shadow-md absolute z-20 right-0 w-84 mt-5 py-2 animated faster">
+                          {/* <!-- top --> */}
+                          <div className="px-4 py-2 flex flex-row justify-between items-center capitalize font-semibold text-sm">
                             <h1>notifications</h1>
-                            <div class="bg-teal-100 border border-teal-200 text-teal-500 text-xs rounded px-1">
+                            <div className="bg-teal-100 border border-teal-200 text-teal-500 text-xs rounded px-1">
                               <strong>5</strong>
                             </div>
                           </div>
-                          <hr>
-                          <!-- end top -->
+                          <hr/>
+                          {/* <!-- end top --> */}
               
-                          <!-- body -->
+                          {/* <!-- body --> */}
               
-                          <!-- item -->
-                          <a class="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
+                          {/* <!-- item --> */}
+                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
               
-                            <div class="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
-                              <i class="fad fa-birthday-cake text-sm"></i>
+                            <div className="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
+                              <i className="fad fa-birthday-cake text-sm"></i>
                             </div>
               
-                            <div class="flex-1 flex flex-rowbg-green-100">
-                              <div class="flex-1">
-                                <h1 class="text-sm font-semibold">poll..</h1>
-                                <p class="text-xs text-gray-500">text here also</p>
+                            <div className="flex-1 flex flex-rowbg-green-100">
+                              <div className="flex-1">
+                                <h1 className="text-sm font-semibold">poll..</h1>
+                                <p className="text-xs text-gray-500">text here also</p>
                               </div>
-                              <div class="text-right text-xs text-gray-500">
+                              <div className="text-right text-xs text-gray-500">
                                 <p>4 min ago</p>
                               </div>
                             </div>
               
                           </a>
-                          <hr>
-                          <!-- end item -->
+                          <hr/>
+                          {/* <!-- end item --> */}
               
-                          <!-- item -->
-                          <a class="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
+                          {/* <!-- item --> */}
+                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
               
-                            <div class="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
-                              <i class="fad fa-user-circle text-sm"></i>
+                            <div className="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
+                              <i className="fad fa-user-circle text-sm"></i>
                             </div>
               
-                            <div class="flex-1 flex flex-rowbg-green-100">
-                              <div class="flex-1">
-                                <h1 class="text-sm font-semibold">mohamed..</h1>
-                                <p class="text-xs text-gray-500">text here also</p>
+                            <div className="flex-1 flex flex-rowbg-green-100">
+                              <div className="flex-1">
+                                <h1 className="text-sm font-semibold">mohamed..</h1>
+                                <p className="text-xs text-gray-500">text here also</p>
                               </div>
-                              <div class="text-right text-xs text-gray-500">
+                              <div className="text-right text-xs text-gray-500">
                                 <p>78 min ago</p>
                               </div>
                             </div>
               
                           </a>
-                          <hr>
-                          <!-- end item -->
+                          <hr />
+                          {/* <!-- end item --> */}
               
-                          <!-- item -->
-                          <a class="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
+                          {/* <!-- item --> */}
+                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
               
-                            <div class="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
-                              <i class="fad fa-images text-sm"></i>
+                            <div className="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
+                              <i className="fad fa-images text-sm"></i>
                             </div>
               
-                            <div class="flex-1 flex flex-rowbg-green-100">
-                              <div class="flex-1">
-                                <h1 class="text-sm font-semibold">new imag..</h1>
-                                <p class="text-xs text-gray-500">text here also</p>
+                            <div className="flex-1 flex flex-rowbg-green-100">
+                              <div className="flex-1">
+                                <h1 className="text-sm font-semibold">new imag..</h1>
+                                <p className="text-xs text-gray-500">text here also</p>
                               </div>
-                              <div class="text-right text-xs text-gray-500">
+                              <div className="text-right text-xs text-gray-500">
                                 <p>65 min ago</p>
                               </div>
                             </div>
               
                           </a>
-                          <hr>
-                          <!-- end item -->
+                          <hr/>
+                          {/* <!-- end item --> */}
               
-                          <!-- item -->
-                          <a class="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
+                          {/* <!-- item --> */}
+                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
               
-                            <div class="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
-                              <i class="fad fa-alarm-exclamation text-sm"></i>
+                            <div className="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
+                              <i className="fad fa-alarm-exclamation text-sm"></i>
                             </div>
               
-                            <div class="flex-1 flex flex-rowbg-green-100">
-                              <div class="flex-1">
-                                <h1 class="text-sm font-semibold">time is up..</h1>
-                                <p class="text-xs text-gray-500">text here also</p>
+                            <div className="flex-1 flex flex-rowbg-green-100">
+                              <div className="flex-1">
+                                <h1 className="text-sm font-semibold">time is up..</h1>
+                                <p className="text-xs text-gray-500">text here also</p>
                               </div>
-                              <div class="text-right text-xs text-gray-500">
+                              <div className="text-right text-xs text-gray-500">
                                 <p>1 min ago</p>
                               </div>
                             </div>
               
                           </a>
-                          <!-- end item -->
+                          {/* <!-- end item --> */}
               
               
-                          <!-- end body -->
+                          {/* <!-- end body --> */}
               
-                          <!-- bottom -->
-                          <hr>
-                          <div class="px-4 py-2 mt-2">
-                            <a href="#" class="border border-gray-300 block text-center text-xs uppercase rounded p-1 hover:text-teal-500 transition-all ease-in-out duration-500">
+                          {/* <!-- bottom --> */}
+                          <hr/>
+                          <div className="px-4 py-2 mt-2">
+                            <a href="#" className="border border-gray-300 block text-center text-xs uppercase rounded p-1 hover:text-teal-500 transition-all ease-in-out duration-500">
                               view all
                             </a>
                           </div>
-                          <!-- end bottom -->            
+                          {/* <!-- end bottom --> */}            
                         </div>
                       </div>
-                      <!-- end notifcation -->
+                      {/* <!-- end notifcation --> */}
               
-                      <!-- messages -->
-                      <div class="dropdown relative mr-5 md:static">
+                      {/* <!-- messages --> */}
+                      <div className="dropdown relative mr-5 md:static">
               
-                        <button class="text-gray-500 menu-btn p-0 m-0 hover:text-gray-900 focus:text-gray-900 focus:outline-none transition-all ease-in-out duration-300">
-                          <i class="fad fa-comments"></i>               
+                        <button className="text-gray-500 menu-btn p-0 m-0 hover:text-gray-900 focus:text-gray-900 focus:outline-none transition-all ease-in-out duration-300">
+                          <i className="fad fa-comments"></i>               
                         </button>
               
-                        <button class="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
+                        <button className="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
               
-                        <div class="menu hidden md:w-full md:right-0 rounded bg-white shadow-md absolute z-20 right-0 w-84 mt-5 py-2 animated faster">
-                          <!-- top -->
-                          <div class="px-4 py-2 flex flex-row justify-between items-center capitalize font-semibold text-sm">
+                        <div className="menu hidden md:w-full md:right-0 rounded bg-white shadow-md absolute z-20 right-0 w-84 mt-5 py-2 animated faster">
+                          {/* <!-- top --> */}
+                          <div className="px-4 py-2 flex flex-row justify-between items-center capitalize font-semibold text-sm">
                             <h1>messages</h1>
-                            <div class="bg-teal-100 border border-teal-200 text-teal-500 text-xs rounded px-1">
+                            <div className="bg-teal-100 border border-teal-200 text-teal-500 text-xs rounded px-1">
                               <strong>3</strong>
                             </div>
                           </div>
-                          <hr>
-                          <!-- end top -->
+                          <hr />
+                          {/* <!-- end top --> */}
               
-                          <!-- body -->
+                          {/* <!-- body --> */}
               
-                          <!-- item -->
-                          <a class="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
+                          {/* <!-- item --> */}
+                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
               
-                            <div class="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-100 border border-gray-300">
-                              <img class="w-full h-full object-cover" src="img/user1.jpg" alt="">
+                            <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-100 border border-gray-300">
+                              <img className="w-full h-full object-cover" src="./img/user1.jpg" alt=""></img>
                             </div>
               
-                            <div class="flex-1 flex flex-rowbg-green-100">
-                              <div class="flex-1">
-                                <h1 class="text-sm font-semibold">mohamed said</h1>
-                                <p class="text-xs text-gray-500">yeah i know</p>
+                            <div className="flex-1 flex flex-rowbg-green-100">
+                              <div className="flex-1">
+                                <h1 className="text-sm font-semibold">mohamed said</h1>
+                                <p className="text-xs text-gray-500">yeah i know</p>
                               </div>
-                              <div class="text-right text-xs text-gray-500">
+                              <div className="text-right text-xs text-gray-500">
                                 <p>4 min ago</p>
                               </div>
                             </div>
               
                           </a>
-                          <hr>
-                          <!-- end item --> 
+                          <hr />
+                          {/* <!-- end item --> */} 
               
-                          <!-- item -->
-                          <a class="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
+                          {/* <!-- item --> */}
+                          <a className = "flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
               
-                            <div class="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-100 border border-gray-300">
-                              <img class="w-full h-full object-cover" src="img/user2.jpg" alt="">
+                            <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-100 border border-gray-300">
+                              <img className="w-full h-full object-cover" src="img/user2.jpg" alt=""></img>
                             </div>
               
-                            <div class="flex-1 flex flex-rowbg-green-100">
-                              <div class="flex-1">
-                                <h1 class="text-sm font-semibold">sull goldmen</h1>
-                                <p class="text-xs text-gray-500">for sure</p>
+                            <div className="flex-1 flex flex-rowbg-green-100">
+                              <div className="flex-1">
+                                <h1 className="text-sm font-semibold">sull goldmen</h1>
+                                <p className="text-xs text-gray-500">for sure</p>
                               </div>
-                              <div class="text-right text-xs text-gray-500">
+                              <div className="text-right text-xs text-gray-500">
                                 <p>1 day ago</p>
                               </div>
                             </div>
               
                           </a>
-                          <hr>
-                          <!-- end item -->
+                          <hr/>
+                          {/* <!-- end item --> */}
               
-                          <!-- item -->
-                          <a class="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
+                          {/* <!-- item --> */}
+                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
               
-                            <div class="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-100 border border-gray-300">
-                              <img class="w-full h-full object-cover" src="img/user3.jpg" alt="">
+                            <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-100 border border-gray-300">
+                              <img className="w-full h-full object-cover" src="img/user3.jpg" alt=""></img>
                             </div>
               
-                            <div class="flex-1 flex flex-rowbg-green-100">
-                              <div class="flex-1">
-                                <h1 class="text-sm font-semibold">mick</h1>
-                                <p class="text-xs text-gray-500">is typing ....</p>
+                            <div className="flex-1 flex flex-rowbg-green-100">
+                              <div className="flex-1">
+                                <h1 className="text-sm font-semibold">mick</h1>
+                                <p className="text-xs text-gray-500">is typing ....</p>
                               </div>
-                              <div class="text-right text-xs text-gray-500">
+                              <div className="text-right text-xs text-gray-500">
                                 <p>31 feb</p>
                               </div>
                             </div>
               
                           </a>
-                          <!-- end item -->
+                          {/* <!-- end item --> */}
               
               
-                          <!-- end body -->
+                          {/* <!-- end body --> */}
               
-                          <!-- bottom -->
-                          <hr>
-                          <div class="px-4 py-2 mt-2">
-                            <a href="#" class="border border-gray-300 block text-center text-xs uppercase rounded p-1 hover:text-teal-500 transition-all ease-in-out duration-500">
+                          {/* <!-- bottom --> */}
+                          <hr />
+                          <div className="px-4 py-2 mt-2">
+                            <a href="#" className="border border-gray-300 block text-center text-xs uppercase rounded p-1 hover:text-teal-500 transition-all ease-in-out duration-500">
                               view all
                             </a>
                           </div>
-                          <!-- end bottom -->            
+                          {/* <!-- end bottom --> */}            
                         </div>
                       </div>
-                      <!-- end messages -->               
+                      {/* <!-- end messages -->       */}         
               
               
                     </div>
-                    <!-- end right -->
+                    {/* <!-- end right --> */}
                   </div>
-                  <!-- end navbar content -->
+                  {/* <!-- end navbar content --> */}
               
                 </div>
-              <!-- end navbar -->
+              {/* <!-- end navbar --> */}
               
               
-              <!-- strat wrapper -->
-              <div class="h-screen flex flex-row flex-wrap">
+              {/* <!-- strat wrapper --> */}
+              <div className="h-screen flex flex-row flex-wrap">
                 
-                  <!-- start sidebar -->
-                <div id="sideBar" class="relative flex flex-col flex-wrap bg-white border-r border-gray-300 p-6 flex-none w-64 md:-ml-64 md:fixed md:top-0 md:z-30 md:h-screen md:shadow-xl animated faster">
+                  {/* <!-- start sidebar --> */}
+                <div id="sideBar" className="relative flex flex-col flex-wrap bg-white border-r border-gray-300 p-6 flex-none w-64 md:-ml-64 md:fixed md:top-0 md:z-30 md:h-screen md:shadow-xl animated faster">
                   
               
-                  <!-- sidebar content -->
-                  <div class="flex flex-col">
+                  {/* <!-- sidebar content --> */}
+                  <div className="flex flex-col">
               
-                    <!-- sidebar toggle -->
-                    <div class="text-right hidden md:block mb-4">
+                    {/* <!-- sidebar toggle --> */}
+                    <div className="text-right hidden md:block mb-4">
                       <button id="sideBarHideBtn">
-                        <i class="fad fa-times-circle"></i>
+                        <i className="fad fa-times-circle"></i>
                       </button>
                     </div>
-                    <!-- end sidebar toggle -->
+                    {/* <!-- end sidebar toggle --> */}
               
-                    <p class="uppercase text-xs text-gray-600 mb-4 tracking-wider">homes</p>
+                    <p className="uppercase text-xs text-gray-600 mb-4 tracking-wider">homes</p>
               
-                    <!-- link -->
-                    <a href="./index.html" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-chart-pie text-xs mr-2"></i>                
+                    {/*  link  */} 
+                    <a href="./index.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-chart-pie text-xs mr-2"></i>                
                       Analytics dashboard
                     </a>
-                    <!-- end link -->
+                    {/* <!-- end link --> */}
               
-                    <!-- link -->
-                    <a href="./index-1.html" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-shopping-cart text-xs mr-2"></i>
+                    {/* link  */} 
+                    <a href="./index-1.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-shopping-cart text-xs mr-2"></i>
                       ecommerce dashboard
                     </a>
-                    <!-- end link -->
+                    {/* <!-- end link --> */}
               
-                    <p class="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">apps</p>
+                    <p className="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">apps</p>
               
-                    <!-- link -->
-                    <a href="./email.html" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-envelope-open-text text-xs mr-2"></i>
+                    {/* {/*  link  */} 
+                    <a href="./email.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-envelope-open-text text-xs mr-2"></i>
                       email
                     </a>
-                    <!-- end link -->
+                    {/* <!-- end link --> */}
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-comments text-xs mr-2"></i>
+                    {/*  link  */} 
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-comments text-xs mr-2"></i>
                       chat
                     </a>
-                    <!-- end link -->
+                    {/* <!-- end link --> */}
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-shield-check text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-shield-check text-xs mr-2"></i>
                       todo
                     </a>
-                    <!-- end link -->
+                     {/* end link  */} 
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-calendar-edit text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-calendar-edit text-xs mr-2"></i>
                       calendar
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-file-invoice-dollar text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-file-invoice-dollar text-xs mr-2"></i>
                       invoice
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-folder-open text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-folder-open text-xs mr-2"></i>
                       file manager
                     </a>
-                    <!-- end link -->   
+                    {/* end link  */}   
                     
                     
-                    <p class="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">UI Elements</p>
+                    <p className="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">UI Elements</p>
               
-                    <!-- link -->
-                    <a href="./typography.html" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-text text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="./typography.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-text text-xs mr-2"></i>
                       typography
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
               
-                    <!-- link -->
-                    <a href="./alert.html" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-whistle text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="./alert.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-whistle text-xs mr-2"></i>
                       alerts
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
                     
               
-                    <!-- link -->
-                    <a href="./buttons.html" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-cricket text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="./buttons.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-cricket text-xs mr-2"></i>
                       buttons
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-box-open text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-box-open text-xs mr-2"></i>
                       Content
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-swatchbook text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-swatchbook text-xs mr-2"></i>
                       colors
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-atom-alt text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-atom-alt text-xs mr-2"></i>
                       icons
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-club text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-club text-xs mr-2"></i>
                       card
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-cheese-swiss text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-cheese-swiss text-xs mr-2"></i>
                       Widgets
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
               
-                    <!-- link -->
-                    <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i class="fad fa-computer-classic text-xs mr-2"></i>
+                    {/*  link  */}
+                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+                      <i className="fad fa-computer-classic text-xs mr-2"></i>
                       Components
                     </a>
-                    <!-- end link -->
+                    {/* end link  */}
                     
                     
               
                   </div>
-                  <!-- end sidebar content -->
+                  {/* <!-- end sidebar content --> */}
               
                 </div>
-                <!-- end sidbar -->
+                {/* <!-- end sidbar --> */}
               
-                <!-- strat content -->
-                <div class="bg-gray-100 flex-1 p-6 md:mt-16"> 
+                {/* <!-- strat content --> */}
+                <div className="bg-gray-100 flex-1 p-6 md:mt-16"> 
               
                   
-                  <!-- General Report -->
-                  <div class="grid grid-cols-4 gap-6 xl:grid-cols-1">
+                  {/* <!-- General Report --> */}
+                  <div className="grid grid-cols-4 gap-6 xl:grid-cols-1">
               
               
-                  <!-- card -->
-                  <div class="report-card">
-                      <div class="card">
-                          <div class="card-body flex flex-col">
+                  {/* <!-- card --> */}
+                  <div className="report-card">
+                      <div className="card">
+                          <div className="card-body flex flex-col">
                               
-                              <!-- top -->
-                              <div class="flex flex-row justify-between items-center">
-                                  <div class="h6 text-indigo-700 fad fa-shopping-cart"></div>
-                                  <span class="rounded-full text-white badge bg-teal-400 text-xs">
+                              {/* <!-- top --> */}
+                              <div className="flex flex-row justify-between items-center">
+                                  <div className="h6 text-indigo-700 fad fa-shopping-cart"></div>
+                                  <span className="rounded-full text-white badge bg-teal-400 text-xs">
                                       12%
-                                      <i class="fal fa-chevron-up ml-1"></i>
+                                      <i className="fal fa-chevron-up ml-1"></i>
                                   </span>
                               </div>
-                              <!-- end top -->
+                              {/* <!-- end top --> */}
               
-                              <!-- bottom -->
-                              <div class="mt-8">
-                                  <h1 class="h5 num-4"></h1>
+                              {/* <!-- bottom --> */}
+                              <div className="mt-8">
+                                  <h1 className="h5 num-4"></h1>
                                   <p>items sales</p>
                               </div>                
-                              <!-- end bottom -->
+                              {/* <!-- end bottom --> */}
                   
                           </div>
                       </div>
-                      <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
+                      <div className="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
                   </div>
-                  <!-- end card -->
+             {/* end card */} 
               
               
-                  <!-- card -->
-                  <div class="report-card">
-                      <div class="card">
-                          <div class="card-body flex flex-col">
+                  {/* <!-- card --> */}
+                  <div className="report-card">
+                      <div className="card">
+                          <div className="card-body flex flex-col">
                               
-                              <!-- top -->
-                              <div class="flex flex-row justify-between items-center">
-                                  <div class="h6 text-red-700 fad fa-store"></div>
-                                  <span class="rounded-full text-white badge bg-red-400 text-xs">
+                             {/*  <!-- top --> */}
+                              <div className="flex flex-row justify-between items-center">
+                                  <div className="h6 text-red-700 fad fa-store"></div>
+                                  <span className="rounded-full text-white badge bg-red-400 text-xs">
                                       6%
-                                      <i class="fal fa-chevron-down ml-1"></i>
+                                      <i className="fal fa-chevron-down ml-1"></i>
                                   </span>
                               </div>
-                              <!-- end top -->
+                              {/* <!-- end top --> */}
               
-                              <!-- bottom -->
-                              <div class="mt-8">
-                                  <h1 class="h5 num-4"></h1>
+                              {/* <!-- bottom --> */}
+                              <div className="mt-8">
+                                  <h1 className="h5 num-4"></h1>
                                   <p>new orders</p>
                               </div>                
-                              <!-- end bottom -->
+                              {/* <!-- end bottom --> */}
                   
                           </div>
                       </div>
-                      <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
+                      <div className="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
                   </div>
-                  <!-- end card -->
+                  {/* end card */}
               
               
-                  <!-- card -->
-                  <div class="report-card">
-                      <div class="card">
-                          <div class="card-body flex flex-col">
+                  {/* <!-- card --> */}
+                  <div className="report-card">
+                      <div className="card">
+                          <div className="card-body flex flex-col">
                               
-                              <!-- top -->
-                              <div class="flex flex-row justify-between items-center">
-                                  <div class="h6 text-yellow-600 fad fa-sitemap"></div>
-                                  <span class="rounded-full text-white badge bg-teal-400 text-xs">
+                              {/* <!-- top --> */}
+                              <div className="flex flex-row justify-between items-center">
+                                  <div className="h6 text-yellow-600 fad fa-sitemap"></div>
+                                  <span className="rounded-full text-white badge bg-teal-400 text-xs">
                                       72%
-                                      <i class="fal fa-chevron-up ml-1"></i>
+                                      <i className="fal fa-chevron-up ml-1"></i>
                                   </span>
                               </div>
-                              <!-- end top -->
+                              {/* <!-- end top --> */}
               
-                              <!-- bottom -->
-                              <div class="mt-8">
-                                  <h1 class="h5 num-4"></h1>
+                              {/* <!-- bottom --> */}
+                              <div className="mt-8">
+                                  <h1 className="h5 num-4"></h1>
                                   <p>total Products</p>
                               </div>                
-                              <!-- end bottom -->
+                              {/* <!-- end bottom --> */}
                   
                           </div>
                       </div>
-                      <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
+                      <div className="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
                   </div>
-                  <!-- end card -->
+                   {/* end card */} 
               
               
-                  <!-- card -->
-                  <div class="report-card">
-                      <div class="card">
-                          <div class="card-body flex flex-col">
+                  {/* <!-- card --> */}
+                  <div className="report-card">
+                      <div className="card">
+                          <div className="card-body flex flex-col">
                               
-                              <!-- top -->
-                              <div class="flex flex-row justify-between items-center">
-                                  <div class="h6 text-green-700 fad fa-users"></div>
-                                  <span class="rounded-full text-white badge bg-teal-400 text-xs">
+                              {/* <!-- top --> */}
+                              <div className="flex flex-row justify-between items-center">
+                                  <div className="h6 text-green-700 fad fa-users"></div>
+                                  <span className="rounded-full text-white badge bg-teal-400 text-xs">
                                       150%
-                                      <i class="fal fa-chevron-up ml-1"></i>
+                                      <i className="fal fa-chevron-up ml-1"></i>
                                   </span>
                               </div>
-                              <!-- end top -->
+                              {/* <!-- end top --> */}
               
-                              <!-- bottom -->
-                              <div class="mt-8">
-                                  <h1 class="h5 num-4"></h1>
+                             {/*  <!-- bottom --> */}
+                              <div className="mt-8">
+                                  <h1 className="h5 num-4"></h1>
                                   <p>new Visitor</p>
                               </div>                
-                              <!-- end bottom -->
+                             {/*  <!-- end bottom --> */}
                   
                           </div>
                       </div>
-                      <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
+                      <div className="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
                   </div>
-                  <!-- end card -->
+                  {/* end card */} 
                   
               
               </div>
-                  <!-- End General Report -->
+                  {/* <!-- End General Report --> */}
               
-                  <!-- strat Analytics -->
-                  <div class="mt-6 grid grid-cols-2 gap-6 xl:grid-cols-1">
+                  {/* <!-- strat Analytics --> */}
+                  <div className="mt-6 grid grid-cols-2 gap-6 xl:grid-cols-1">
               
-                  <!-- update section -->
-                  <div class="card bg-teal-400 border-teal-400 shadow-md text-white">
-                      <div class="card-body flex flex-row">
+                 {/*  <!-- update section --> */}
+                  <div className="card bg-teal-400 border-teal-400 shadow-md text-white">
+                      <div className="card-body flex flex-row">
                           
-                          <!-- image -->
-                          <div class="img-wrapper w-40 h-40 flex justify-center items-center">
-                              <img src="./img/happy.svg" alt="img title">
+                          {/* <!-- image --> */}
+                          <div className="img-wrapper w-40 h-40 flex justify-center items-center">
+                              <img src="./img/happy.svg" alt="img title"></img>
                           </div>
-                          <!-- end image -->
+                         {/*  <!-- end image --> */}
               
-                          <!-- info -->
-                          <div class="py-2 ml-10">
-                              <h1 class="h6">Good Job, Mohamed!</h1>
-                              <p class="text-white text-xs">You've finished all of your tasks for this week.</p>
+                          {/* <!-- info --> */}
+                          <div className="py-2 ml-10">
+                              <h1 className="h6">Good Job, Mohamed!</h1>
+                              <p className="text-white text-xs">You've finished all of your tasks for this week.</p>
               
-                              <ul class="mt-4">
-                                  <li class="text-sm font-light"><i class="fad fa-check-double mr-2 mb-2"></i> Finish Dashboard Design</li>
-                                  <li class="text-sm font-light"><i class="fad fa-check-double mr-2 mb-2"></i> Fix Issue #74</li>
-                                  <li class="text-sm font-light"><i class="fad fa-check-double mr-2"></i> Publish version 1.0.6</li>
+                              <ul className="mt-4">
+                                  <li className="text-sm font-light"><i className="fad fa-check-double mr-2 mb-2"></i> Finish Dashboard Design</li>
+                                  <li className="text-sm font-light"><i className="fad fa-check-double mr-2 mb-2"></i> Fix Issue #74</li>
+                                  <li className="text-sm font-light"><i className="fad fa-check-double mr-2"></i> Publish version 1.0.6</li>
                               </ul>
                           </div>
-                          <!-- end info -->
+                         {/*  <!-- end info --> */}
               
                       </div>
                   </div>
-                  <!-- end update section -->
+                  {/* <!-- end update section --> */}
               
-                  <!-- carts -->
-                  <div class="flex flex-col">
+                 {/*  <!-- carts --> */}
+                  <div className="flex flex-col">
               
-                      <!-- alert -->
-                      <div class="alert alert-dark mb-6">
+                     {/*  <!-- alert --> */}
+                      <div className="alert alert-dark mb-6">
                           Hi! Wait A Minute . . . . . . Follow Me On Twitter 
-                          <a class="ml-2" target="_blank" href="https://twitter.com/MohamedSaid__">@moesaid</a>
+                          <a className="ml-2" target="_blank" href="https://twitter.com/MohamedSaid__">@moesaid</a>
                       </div>
-                      <!-- end alert -->
+                      {/* <!-- end alert --> */}
               
-                      <!-- charts -->
-                      <div class="grid grid-cols-2 gap-6 h-full">
+                      {/* <!-- charts --> */}
+                      <div className="grid grid-cols-2 gap-6 h-full">
               
-                          <div class="card">
-                              <div class="py-3 px-4 flex flex-row justify-between">
-                                  <h1 class="h6">
-                                      <span class="num-4"></span>k
+                          <div className="card">
+                              <div className="py-3 px-4 flex flex-row justify-between">
+                                  <h1 className="h6">
+                                      <span className="num-4"></span>k
                                       <p>page view</p>
                                   </h1>
               
-                                  <div class="bg-teal-200 text-teal-700 border-teal-300 border w-10 h-10 rounded-full flex justify-center items-center">
-                                      <i class="fad fa-eye"></i>
+                                  <div className="bg-teal-200 text-teal-700 border-teal-300 border w-10 h-10 rounded-full flex justify-center items-center">
+                                      <i className="fad fa-eye"></i>
                                   </div>
                               </div>                
-                              <div class="analytics_1"></div>
+                              <div className="analytics_1"></div>
                           </div>
               
-                          <div class="card">
-                              <div class="py-3 px-4 flex flex-row justify-between">                    
-                                  <h1 class="h6">
-                                      <span class="num-2"></span>k
+                          <div className="card">
+                              <div className="py-3 px-4 flex flex-row justify-between">                    
+                                  <h1 className="h6">
+                                      <span className="num-2"></span>k
                                       <p>Unique Users</p>
                                   </h1>
               
-                                  <div class="bg-indigo-200 text-indigo-700 border-indigo-300 border w-10 h-10 rounded-full flex justify-center items-center">
-                                      <i class="fad fa-users-crown"></i>
+                                  <div className="bg-indigo-200 text-indigo-700 border-indigo-300 border w-10 h-10 rounded-full flex justify-center items-center">
+                                      <i className="fad fa-users-crown"></i>
                                   </div>
                               </div>
-                              <div class="analytics_1"></div>
+                              <div className="analytics_1"></div>
                           </div>
               
                       </div>     
-                      <!-- charts    -->
+                     {/*  <!-- charts    --> */}
               
                   </div>
-                  <!-- end charts -->
+                  {/* <!-- end charts --> */}
               
               
               </div>
-                  <!-- end Analytics -->
+                 {/*  <!-- end Analytics --> */}
               
-                  <!-- Sales Overview -->
-                  <div class="card mt-6">
+                  {/* <!-- Sales Overview --> */}
+                  <div className="card mt-6">
               
-                  <!-- header -->
-                  <div class="card-header flex flex-row justify-between">
-                      <h1 class="h6">Sales Overview</h1>
+                 {/*  <!-- header --> */}
+                  <div className="card-header flex flex-row justify-between">
+                      <h1 className="h6">Sales Overview</h1>
               
-                      <div class="flex flex-row justify-center items-center">
+                      <div className="flex flex-row justify-center items-center">
               
                           <a href="">
-                              <i class="fad fa-chevron-double-down mr-6"></i>
+                              <i className="fad fa-chevron-double-down mr-6"></i>
                           </a>
               
                           <a href="">
-                              <i class="fad fa-ellipsis-v"></i>
+                              <i className="fad fa-ellipsis-v"></i>
                           </a>
               
                       </div>
               
                   </div>
-                  <!-- end header -->
+                 {/*  <!-- end header --> */}
               
-                  <!-- body -->
-                  <div class="card-body grid grid-cols-2 gap-6 lg:grid-cols-1">
+                 {/*  <!-- body --> */}
+                  <div className="card-body grid grid-cols-2 gap-6 lg:grid-cols-1">
               
-                      <div class="p-8">
-                          <h1 class="h2">5,337</h1>
-                          <p class="text-black font-medium">Sales this month</p>
+                      <div className="p-8">
+                          <h1 className="h2">5,337</h1>
+                          <p className="text-black font-medium">Sales this month</p>
               
-                          <div class="mt-20 mb-2 flex items-center">
-                              <div class="py-1 px-3 rounded bg-green-200 text-green-900 mr-3">
-                                  <i class="fa fa-caret-up"></i>
+                          <div className="mt-20 mb-2 flex items-center">
+                              <div className="py-1 px-3 rounded bg-green-200 text-green-900 mr-3">
+                                  <i className="fa fa-caret-up"></i>
                               </div>
-                              <p class="text-black"><span class="num-2 text-green-400"></span><span class="text-green-400">% more sales</span> in comparison to last month.</p>
+                              <p className="text-black"><span className="num-2 text-green-400"></span><span className="text-green-400">% more sales</span> in comparison to last month.</p>
                           </div>
               
-                          <div class="flex items-center">
-                              <div class="py-1 px-3 rounded bg-red-200 text-red-900 mr-3">
-                                  <i class="fa fa-caret-down"></i>
+                          <div className="flex items-center">
+                              <div className="py-1 px-3 rounded bg-red-200 text-red-900 mr-3">
+                                  <i className="fa fa-caret-down"></i>
                               </div>
-                              <p class="text-black"><span class="num-2 text-red-400"></span><span class="text-red-400">% revenue per sale</span> in comparison to last month.</p>
+                              <p className="text-black"><span className="num-2 text-red-400"></span><span className="text-red-400">% revenue per sale</span> in comparison to last month.</p>
                           </div>
               
-                          <a href="#" class="btn-shadow mt-6">view details</a>
+                          <a href="#" className="btn-shadow mt-6">view details</a>
               
                       </div>
                   
-                      <div class="">
+                      <div className="">
                           <div id="sealsOverview"></div>
                       </div>
                   
                   </div>
-                  <!-- end body -->
+                  {/* <!-- end body --> */}
               
               </div>
-                  <!-- end Sales Overview -->
+                 {/*  <!-- end Sales Overview --> */}
               
-                  <!-- start numbers -->
-                  <div class="grid grid-cols-5 gap-6 xl:grid-cols-2">
+                  {/* <!-- start numbers --> */}
+                  <div className="grid grid-cols-5 gap-6 xl:grid-cols-2">
               
-                  <!-- card -->
-                  <div class="card mt-6">
-                      <div class="card-body flex items-center">
+                 {/*  <!-- card --> */}
+                  <div className="card mt-6">
+                      <div className="card-body flex items-center">
                           
-                          <div class="px-3 py-2 rounded bg-indigo-600 text-white mr-3">
-                              <i class="fad fa-wallet"></i>
+                          <div className="px-3 py-2 rounded bg-indigo-600 text-white mr-3">
+                              <i className="fad fa-wallet"></i>
                           </div>
               
-                          <div class="flex flex-col">
-                              <h1 class="font-semibold"><span class="num-2"></span> Sales</h1>
-                              <p class="text-xs"><span class="num-2"></span> payments</p>
+                          <div className="flex flex-col">
+                              <h1 className="font-semibold"><span className="num-2"></span> Sales</h1>
+                              <p className="text-xs"><span className="num-2"></span> payments</p>
                           </div>
               
                       </div>
                   </div>
-                  <!-- end card -->
+                 {/* end card */}
                   
-                  <!-- card -->
-                  <div class="card mt-6">
-                      <div class="card-body flex items-center">
+                 {/*  <!-- card --> */}
+                  <div className="card mt-6">
+                      <div className="card-body flex items-center">
                           
-                          <div class="px-3 py-2 rounded bg-green-600 text-white mr-3">
-                              <i class="fad fa-shopping-cart"></i>
+                          <div className="px-3 py-2 rounded bg-green-600 text-white mr-3">
+                              <i className="fad fa-shopping-cart"></i>
                           </div>
               
-                          <div class="flex flex-col">
-                              <h1 class="font-semibold"><span class="num-2"></span> Orders</h1>
-                              <p class="text-xs"><span class="num-2"></span> items</p>
+                          <div className="flex flex-col">
+                              <h1 className="font-semibold"><span className="num-2"></span> Orders</h1>
+                              <p className="text-xs"><span className="num-2"></span> items</p>
                           </div>
               
                       </div>
                   </div>
-                  <!-- end card -->
+                   {/* end card */} 
               
-                  <!-- card -->
-                  <div class="card mt-6 xl:mt-1">
-                      <div class="card-body flex items-center">
+                  {/* <!-- card --> */}
+                  <div className="card mt-6 xl:mt-1">
+                      <div className="card-body flex items-center">
                           
-                          <div class="px-3 py-2 rounded bg-yellow-600 text-white mr-3">
-                              <i class="fad fa-blog"></i>
+                          <div className="px-3 py-2 rounded bg-yellow-600 text-white mr-3">
+                              <i className="fad fa-blog"></i>
                           </div>
               
-                          <div class="flex flex-col">
-                              <h1 class="font-semibold"><span class="num-2"></span> posts</h1>
-                              <p class="text-xs"><span class="num-2"></span> active</p>
+                          <div className="flex flex-col">
+                              <h1 className="font-semibold"><span className="num-2"></span> posts</h1>
+                              <p className="text-xs"><span className="num-2"></span> active</p>
                           </div>
               
                       </div>
                   </div>
-                  <!-- end card -->
+                   {/* end card */} 
               
-                  <!-- card -->
-                  <div class="card mt-6 xl:mt-1">
-                      <div class="card-body flex items-center">
+                  {/* card */}
+                  <div className="card mt-6 xl:mt-1">
+                      <div className="card-body flex items-center">
                           
-                          <div class="px-3 py-2 rounded bg-red-600 text-white mr-3">
-                              <i class="fad fa-comments"></i>
+                          <div className="px-3 py-2 rounded bg-red-600 text-white mr-3">
+                              <i className="fad fa-comments"></i>
                           </div>
               
-                          <div class="flex flex-col">
-                              <h1 class="font-semibold"><span class="num-2"></span> comments</h1>
-                              <p class="text-xs"><span class="num-2"></span> approved</p>
+                          <div className="flex flex-col">
+                              <h1 className="font-semibold"><span className="num-2"></span> comments</h1>
+                              <p className="text-xs"><span className="num-2"></span> approved</p>
                           </div>
               
                       </div>
                   </div>
-                  <!-- end card -->
+                  {/* end card */}
               
-                  <!-- card -->
-                  <div class="card mt-6 xl:mt-1 xl:col-span-2">
-                      <div class="card-body flex items-center">
+                  {/* card */}
+                  <div className="card mt-6 xl:mt-1 xl:col-span-2">
+                      <div className="card-body flex items-center">
                           
-                          <div class="px-3 py-2 rounded bg-pink-600 text-white mr-3">
-                              <i class="fad fa-user"></i>
+                          <div className="px-3 py-2 rounded bg-pink-600 text-white mr-3">
+                              <i className="fad fa-user"></i>
                           </div>
               
-                          <div class="flex flex-col">
-                              <h1 class="font-semibold"><span class="num-2"></span> memebrs</h1>
-                              <p class="text-xs"><span class="num-2"></span> online</p>
+                          <div className="flex flex-col">
+                              <h1 className="font-semibold"><span className="num-2"></span> memebrs</h1>
+                              <p className="text-xs"><span className="num-2"></span> online</p>
                           </div>
               
                       </div>
                   </div>
-                  <!-- end card -->
+                  {/* end card */}
               
               </div>
-                  <!-- end nmbers -->
+                  {/* <!-- end nmbers --> */}
               
-                  <!-- start quick Info -->
-                  <div class="grid grid-cols-3 gap-6 mt-6 xl:grid-cols-1">
+                  {/* <!-- start quick Info --> */}
+                  <div className="grid grid-cols-3 gap-6 mt-6 xl:grid-cols-1">
               
               
-                  <!-- Browser Stats -->
-                  <div class="card">
-                      <div class="card-header">Browser Stats</div>
+                  {/* <!-- Browser Stats --> */}
+                  <div className="card">
+                      <div className="card-header">Browser Stats</div>
               
-                      <!-- brawser -->
-                      <div class="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
-                          <div class="flex items-center">
-                              <i class="fab fa-chrome mr-4"></i>    
+                     {/*  <!-- brawser --> */}
+                      <div className="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
+                          <div className="flex items-center">
+                              <i className="fab fa-chrome mr-4"></i>    
                               <h1>google chrome</h1>
                           </div>                
                           <div>
-                              <span class="num-2"></span>%
+                              <span className="num-2"></span>%
                           </div>
                       </div>
-                      <!-- end brawser -->
+                     {/*  <!-- end brawser --> */}
               
-                      <!-- brawser -->
-                      <div class="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
-                          <div class="flex items-center">
-                              <i class="fab fa-firefox mr-4"></i>    
+                      {/* <!-- brawser --> */}
+                      <div className="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
+                          <div className="flex items-center">
+                              <i className="fab fa-firefox mr-4"></i>    
                               <h1>firefox</h1>
                           </div>                
                           <div>
-                              <span class="num-2"></span>%
+                              <span className="num-2"></span>%
                           </div>
                       </div>
-                      <!-- end brawser -->
+                     {/*  <!-- end brawser --> */}
               
-                      <!-- brawser -->
-                      <div class="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
-                          <div class="flex items-center">
-                              <i class="fab fa-internet-explorer mr-4"></i>    
+                    {/*   <!-- brawser --> */}
+                      <div className="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
+                          <div className="flex items-center">
+                              <i className="fab fa-internet-explorer mr-4"></i>    
                               <h1>internet explorer</h1>
                           </div>                
                           <div>
-                              <span class="num-2"></span>%
+                              <span className="num-2"></span>%
                           </div>
                       </div>
-                      <!-- end brawser -->
+                      {/* <!-- end brawser --> */}
               
-                      <!-- brawser -->
-                      <div class="p-6 flex flex-row justify-between items-center text-gray-600 border-b-0">
-                          <div class="flex items-center">
-                              <i class="fab fa-safari mr-4"></i>    
+                      {/* <!-- brawser --> */}
+                      <div className="p-6 flex flex-row justify-between items-center text-gray-600 border-b-0">
+                          <div className="flex items-center">
+                              <i className="fab fa-safari mr-4"></i>    
                               <h1>safari</h1>
                           </div>                
                           <div>
-                              <span class="num-2"></span>%
+                              <span className="num-2"></span>%
                           </div>
                       </div>
-                      <!-- end brawser -->
+                     {/*  <!-- end brawser --> */}
               
                   </div>
-                  <!-- end Browser Stats -->
+                  {/* <!-- end Browser Stats --> */}
               
-                  <!-- Start Recent Sales -->
-                  <div class="card col-span-2 xl:col-span-1">
-                      <div class="card-header">Recent Sales</div>
+                  {/* <!-- Start Recent Sales --> */}
+                  <div className="card col-span-2 xl:col-span-1">
+                      <div className="card-header">Recent Sales</div>
               
-                      <table class="table-auto w-full text-left">
+                      <table className="table-auto w-full text-left">
                           <thead>
                               <tr>
-                                  <th class="px-4 py-2 border-r"></th>
-                                  <th class="px-4 py-2 border-r">product</th>
-                                  <th class="px-4 py-2 border-r">price</th>
-                                  <th class="px-4 py-2">date</th>
+                                  <th className="px-4 py-2 border-r"></th>
+                                  <th className="px-4 py-2 border-r">product</th>
+                                  <th className="px-4 py-2 border-r">price</th>
+                                  <th className="px-4 py-2">date</th>
                               </tr>
                           </thead>
-                          <tbody class="text-gray-600">
+                          <tbody className="text-gray-600">
               
                               <tr>                    
-                                  <td class="border border-l-0 px-4 py-2 text-center text-green-500"><i class="fad fa-circle"></i></td>
-                                  <td class="border border-l-0 px-4 py-2">Lightning to USB-C Adapter Lightning.</td>
-                                  <td class="border border-l-0 px-4 py-2">$<span class="num-2"></span></td>
-                                  <td class="border border-l-0 border-r-0 px-4 py-2"><span class="num-2"></span> minutes ago</td>
+                                  <td className="border border-l-0 px-4 py-2 text-center text-green-500"><i className="fad fa-circle"></i></td>
+                                  <td className="border border-l-0 px-4 py-2">Lightning to USB-C Adapter Lightning.</td>
+                                  <td className="border border-l-0 px-4 py-2">$<span className="num-2"></span></td>
+                                  <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span> minutes ago</td>
                               </tr>
                               <tr>                    
-                                  <td class="border border-l-0 px-4 py-2 text-center text-yellow-500"><i class="fad fa-circle"></i></td>
-                                  <td class="border border-l-0 px-4 py-2">Apple iPhone 8.</td>
-                                  <td class="border border-l-0 px-4 py-2">$<span class="num-2"></span></td>
-                                  <td class="border border-l-0 border-r-0 px-4 py-2"><span class="num-2"></span> minutes ago</td>
+                                  <td className="border border-l-0 px-4 py-2 text-center text-yellow-500"><i className="fad fa-circle"></i></td>
+                                  <td className="border border-l-0 px-4 py-2">Apple iPhone 8.</td>
+                                  <td className="border border-l-0 px-4 py-2">$<span className="num-2"></span></td>
+                                  <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span> minutes ago</td>
                               </tr>
                               <tr>                    
-                                  <td class="border border-l-0 px-4 py-2 text-center text-green-500"><i class="fad fa-circle"></i></td>
-                                  <td class="border border-l-0 px-4 py-2">Apple MacBook Pro.</td>
-                                  <td class="border border-l-0 px-4 py-2">$<span class="num-2"></span></td>
-                                  <td class="border border-l-0 border-r-0 px-4 py-2"><span class="num-2"></span> minutes ago</td>
+                                  <td className="border border-l-0 px-4 py-2 text-center text-green-500"><i className="fad fa-circle"></i></td>
+                                  <td className="border border-l-0 px-4 py-2">Apple MacBook Pro.</td>
+                                  <td className="border border-l-0 px-4 py-2">$<span className="num-2"></span></td>
+                                  <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span> minutes ago</td>
                               </tr>
                               <tr>                    
-                                  <td class="border border-l-0 px-4 py-2 text-center text-red-500"><i class="fad fa-circle"></i></td>
-                                  <td class="border border-l-0 px-4 py-2">Samsung Galaxy S9.</td>
-                                  <td class="border border-l-0 px-4 py-2">$<span class="num-2"></span></td>
-                                  <td class="border border-l-0 border-r-0 px-4 py-2"><span class="num-2"></span> minutes ago</td>
+                                  <td className="border border-l-0 px-4 py-2 text-center text-red-500"><i className="fad fa-circle"></i></td>
+                                  <td className="border border-l-0 px-4 py-2">Samsung Galaxy S9.</td>
+                                  <td className="border border-l-0 px-4 py-2">$<span className="num-2"></span></td>
+                                  <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span> minutes ago</td>
                               </tr>
                               <tr>                    
-                                  <td class="border border-l-0 px-4 py-2 text-center text-yellow-500"><i class="fad fa-circle"></i></td>
-                                  <td class="border border-l-0 px-4 py-2">Samsung Galaxy S8 256GB.</td>
-                                  <td class="border border-l-0 px-4 py-2">$<span class="num-2"></span></td>
-                                  <td class="border border-l-0 border-r-0 px-4 py-2"><span class="num-2"></span> minutes ago</td>
+                                  <td className="border border-l-0 px-4 py-2 text-center text-yellow-500"><i className="fad fa-circle"></i></td>
+                                  <td className="border border-l-0 px-4 py-2">Samsung Galaxy S8 256GB.</td>
+                                  <td className="border border-l-0 px-4 py-2">$<span className="num-2"></span></td>
+                                  <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span> minutes ago</td>
                               </tr>
                               <tr>                    
-                                  <td class="border border-l-0 border-b-0 px-4 py-2 text-center text-green-500"><i class="fad fa-circle"></i></td>
-                                  <td class="border border-l-0 border-b-0 px-4 py-2">apple watch.</td>
-                                  <td class="border border-l-0 border-b-0 px-4 py-2">$<span class="num-2"></span></td>
-                                  <td class="border border-l-0 border-b-0 border-r-0 px-4 py-2"><span class="num-2"></span> minutes ago</td>
+                                  <td className="border border-l-0 border-b-0 px-4 py-2 text-center text-green-500"><i className="fad fa-circle"></i></td>
+                                  <td className="border border-l-0 border-b-0 px-4 py-2">apple watch.</td>
+                                  <td className="border border-l-0 border-b-0 px-4 py-2">$<span className="num-2"></span></td>
+                                  <td className="border border-l-0 border-b-0 border-r-0 px-4 py-2"><span className="num-2"></span> minutes ago</td>
                               </tr>
                               
                           </tbody>
                       </table>
                   </div>
-                  <!-- End Recent Sales -->
+                 {/*  <!-- End Recent Sales --> */}
               
               
               </div>
-                  <!-- end quick Info -->
+                  {/* <!-- end quick Info --> */}
                       
               
                 </div>
-                <!-- end content -->
+                {/* <!-- end content --> */}
               
               </div>
-              <!-- end wrapper -->
+              {/* <!-- end wrapper --> */}
               
-              <!-- script -->
+              {/* <!-- script --> */}
               <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
               <script src="js/scripts.js"></script>
-              <!-- end script -->
+              {/* <!-- end script --> */}
               
               </body>
         </>
