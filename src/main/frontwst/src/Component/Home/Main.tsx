@@ -582,12 +582,7 @@ export default function Main (){
                  {/*  <!-- carts --> */}
                   <div className="flex flex-col">
               
-                     {/*  <!-- alert --> */}
-                      <div className="alert alert-dark mb-6">
-                          Hi! Wait A Minute . . . . . . Follow Me On Twitter 
-                          <a className="ml-2" target="_blank" href="https://twitter.com/MohamedSaid__">@moesaid</a>
-                      </div>
-                      {/* <!-- end alert --> */}
+                  
               
                       {/* <!-- charts --> */}
                       <div className="grid grid-cols-2 gap-6 h-full">
