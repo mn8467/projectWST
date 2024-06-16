@@ -22,11 +22,11 @@ export default function ResentTable(){
                           <tbody className="text-gray-600">
               
                               <tr>                    
-                                  <td className="border border-l-0 px-4 py-2 text-center text-green-500">1<i className="fad fa-circle"></i></td>
+                                  <td className="border border-l-0 px-4 py-2 text-center ">1</td>
                                   <td className="border border-l-0 px-4 py-2">바로텍</td>
                                   <td className="border border-l-0 px-4 py-2">폴리에틸렌<span className="num-2"></span></td>
                                   <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span>1000(kg)</td>
-                                  <td className="border border-l-0 px-4 py-2 text-center text-green-500">460000<i className="fad fa-circle"></i></td>
+                                  <td className="border border-l-0 px-4 py-2 ">460000</td>
                                   <td className="border border-l-0 px-4 py-2">10%</td>
                                   <td className="border border-l-0 px-4 py-2">어제 12시간 전<span className="num-2"></span></td>
                                   <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span></td>

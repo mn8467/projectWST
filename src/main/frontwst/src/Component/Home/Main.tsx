@@ -707,22 +707,7 @@ export default function Main (){
                   </div>
                  {/* end card */}
                   
-                 {/*  <!-- card --> */}
-                  <div className="card mt-6">
-                      <div className="card-body flex items-center">
-                          
-                          <div className="px-3 py-2 rounded bg-green-600 text-white mr-3">
-                              <i className="fad fa-shopping-cart"></i>
-                          </div>
-              
-                          <div className="flex flex-col">
-                              <h1 className="font-semibold"><span className="num-2"></span> Orders</h1>
-                              <p className="text-xs"><span className="num-2"></span> items</p>
-                          </div>
-              
-                      </div>
-                  </div>
-                   {/* end card */} 
+                 
               
                   {/* <!-- card --> */}
                   <div className="card mt-6 xl:mt-1">
