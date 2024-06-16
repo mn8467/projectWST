@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from './img/logo.png'; //되는데 왜..?
 import './css/style.css'; // "./" 까지는 현재 폴더까지 이미 경로가 설정되어있는 것 여기서의 현재폴더는 ./Component/Home 이므로 그 다음 적용할 하위 폴더를 적어주면 됨!
 export default function Main (){
         return(
@@ -9,7 +8,7 @@ export default function Main (){
                         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>  
                         <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon"></link>
                         <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css"></link>
-                        <title>Welcome To Cleopatra</title>
+                        <title>Project - WST</title>
                 </head>
               <body className="bg-gray-100">
               
@@ -19,13 +18,13 @@ export default function Main (){
                   
                   {/* logo */}
                   <div className="flex-none w-56 flex flex-row items-center">
-                    <img src= {logo} className="w-10 flex-none"></img>
-                    <strong className="capitalize ml-1 flex-1">cleopatra</strong>
+                    <img src = "./img" className="w-10 flex-none"></img>
+                    <strong className="capitalize ml-1 flex-1">WST</strong>
               
                     <button id="sliderBtn" className = "flex-none text-right text-gray-900 hidden md:block">
                       <i className="fad fa-list-ul"></i>
                     </button>
-                  </div>monami
+                  </div>
                 {/* end logo */}
                 {/*navbar content toggle */}
                   <button id="navbarToggle" className="hidden md:block md:fixed right-0 mr-6">
@@ -58,7 +57,7 @@ export default function Main (){
                           </div> 
               
                           <div className="ml-2 capitalize flex ">
-                            <h1 className="text-sm text-gray-800 font-semibold m-0 p-0 leading-none">moeSaid</h1>
+                            <h1 className="text-sm text-gray-800 font-semibold m-0 p-0 leading-none">정민호</h1>
                             <i className="fad fa-chevron-down ml-2 text-xs leading-none"></i>
                           </div>                        
                         </button>
@@ -354,19 +353,19 @@ export default function Main (){
                     </div>
                     {/* <!-- end sidebar toggle --> */}
               
-                    <p className="uppercase text-xs text-gray-600 mb-4 tracking-wider">homes</p>
+                    <p className="uppercase text-xs text-gray-600 mb-4 tracking-wider">dash board</p>
               
                     {/*  link  */} 
                     <a href="./index.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
                       <i className="fad fa-chart-pie text-xs mr-2"></i>                
-                      Analytics dashboard
+                      데이터 분석 대시보드
                     </a>
                     {/* <!-- end link --> */}
               
                     {/* link  */} 
                     <a href="./index-1.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
                       <i className="fad fa-shopping-cart text-xs mr-2"></i>
-                      ecommerce dashboard
+                      매출 데이터 대시보드
                     </a>
                     {/* <!-- end link --> */}
               
@@ -840,15 +839,19 @@ export default function Main (){
               
                   {/* <!-- Start Recent Sales --> */}
                   <div className="card col-span-2 xl:col-span-1">
-                      <div className="card-header">Recent Sales</div>
+                      <div className="card-header">최근 거래 목록</div>
               
                       <table className="table-auto w-full text-left">
                           <thead>
                               <tr>
-                                  <th className="px-4 py-2 border-r"></th>
-                                  <th className="px-4 py-2 border-r">product</th>
-                                  <th className="px-4 py-2 border-r">price</th>
-                                  <th className="px-4 py-2">date</th>
+                                  <td className="border border-l-0 px-4 py-2 text-center ">1</td>
+                                  <td className="border border-l-0 px-4 py-2">바로텍</td>
+                                  <td className="border border-l-0 px-4 py-2">폴리에틸렌<span className="num-2"></span></td>
+                                  <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span>1000(kg)</td>
+                                  <td className="border border-l-0 px-4 py-2 ">460000</td>
+                                  <td className="border border-l-0 px-4 py-2">10%</td>
+                                  <td className="border border-l-0 px-4 py-2">어제 12시간 전<span className="num-2"></span></td>
+                                  <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span></td>
                               </tr>
                           </thead>
                           <tbody className="text-gray-600">
