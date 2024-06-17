@@ -35,15 +35,7 @@ export default function Main (){
               
                   {/* navbar content */}
                   <div id="navbar" className="animated md:hidden md:fixed md:top-0 md:w-full md:left-0 md:mt-16 md:border-t md:border-b md:border-gray-200 md:p-10 md:bg-white flex-1 pl-3 flex flex-row flex-wrap justify-between items-center md:flex-col md:items-center">
-                    
-                    {/* left */}
-                    <div className="text-gray-600 md:w-full md:flex md:flex-row md:justify-evenly md:pb-10 md:mb-10 md:border-b md:border-gray-200">
-                      <a className="mr-2 transition duration-500 ease-in-out hover:text-gray-900" href="#" title="email"><i className="fad fa-envelope-open-text"></i></a>        
-                      <a className="mr-2 transition duration-500 ease-in-out hover:text-gray-900" href="#" title="email"><i className="fad fa-comments-alt"></i></a>        
-                      <a className="mr-2 transition duration-500 ease-in-out hover:text-gray-900" href="#" title="email"><i className="fad fa-check-circle"></i></a>        
-                      <a className="mr-2 transition duration-500 ease-in-out hover:text-gray-900" href="#" title="email"><i className="fad fa-calendar-exclamation"></i></a>        
-                    </div>
-                    {/* end left */}      
+                          
               
                     {/* right */}
                     <div className="flex flex-row-reverse items-center"> 
@@ -369,7 +361,7 @@ export default function Main (){
                     </a>
                     {/* <!-- end link --> */}
               
-                    <p className="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">apps</p>
+                    <p className="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">Not yet</p>
               
                     {/* {/*  link  */} 
                     <a href="./email.html" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
@@ -377,45 +369,6 @@ export default function Main (){
                       email
                     </a>
                     {/* <!-- end link --> */}
-              
-                    {/*  link  */} 
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-comments text-xs mr-2"></i>
-                      chat
-                    </a>
-                    {/* <!-- end link --> */}
-              
-                    {/*  link  */}
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-shield-check text-xs mr-2"></i>
-                      todo
-                    </a>
-                     {/* end link  */} 
-              
-                    {/*  link  */}
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-calendar-edit text-xs mr-2"></i>
-                      calendar
-                    </a>
-                    {/* end link  */}
-              
-                    {/*  link  */}
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-file-invoice-dollar text-xs mr-2"></i>
-                      invoice
-                    </a>
-                    {/* end link  */}
-              
-                    {/*  link  */}
-                    <a href="#" className="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-                      <i className="fad fa-folder-open text-xs mr-2"></i>
-                      file manager
-                    </a>
-                    {/* end link  */}   
-                    
-                    
-                   
-              
                   </div>
                   {/* <!-- end sidebar content --> */}
               
