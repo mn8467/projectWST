@@ -64,19 +64,6 @@ export default function Main (){
                           </a>     
                           {/* end item */}
               
-                          {/* item */}
-                          <a className="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
-                            <i className="fad fa-inbox-in text-xs mr-1"></i> 
-                            my inbox
-                          </a>     
-                          {/* end item */}
-              
-                          {/* item */}
-                          <a className="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
-                            <i className="fad fa-badge-check text-xs mr-1"></i> 
-                            tasks
-                          </a>     
-                          {/* end item */}
               
                           {/* item */}
                           <a className="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
