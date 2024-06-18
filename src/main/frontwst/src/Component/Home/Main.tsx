@@ -250,14 +250,14 @@ export default function Main (){
 
                   {/* ----------------------Data input frame in-----------------------------*/}
 
-                <div className="card mt-6  justify-end">
+                <div className="card mt-6 flex justify-end">
                                     {/*  <!-- header --> */}
                                   
-                                      <div className = "flex">
+                                      <div className = "flex ">
                                          <h1 className="h6">Data input</h1>
                                       </div>
-                                        <div className="flex  items-center">
-                                          <button >
+                                        <div className="flex ">
+                                          <button>
                                             <a className = "">데이터 입력하기</a>
                                           </button>
                                         </div>
