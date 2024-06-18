@@ -1,4 +1,5 @@
 import React from 'react'
+import userLogo from './img/user.svg';
 import './css/style.css'; // "./" 까지는 현재 폴더까지 이미 경로가 설정되어있는 것 여기서의 현재폴더는 ./Component/Home 이므로 그 다음 적용할 하위 폴더를 적어주면 됨!
 export default function Main (){
         return(
@@ -14,11 +15,10 @@ export default function Main (){
               
               
               {/* start navbar */} 
-              <div className="md:fixed md:w-full md:top-0 md:z-20 flex flex-row flex-wrap items-center bg-white p-6 border-b border-gray-300">
+              <div className="md:fixed md:w-full md:top-0 md:z-20 flex justify-end flex-wrap items-center bg-white p-6 border-b border-gray-300">
                   
                   {/* logo */}
                   <div className="flex-none w-56 flex flex-row items-center">
-                    <img src = "./img" className="w-10 flex-none"></img>
                     <strong className="capitalize ml-1 flex-1">WST</strong>
               
                     <button id="sliderBtn" className = "flex-none text-right text-gray-900 hidden md:block">
@@ -26,33 +26,29 @@ export default function Main (){
                     </button>
                   </div>
                 {/* end logo */}
-                {/*navbar content toggle */}
-                  <button id="navbarToggle" className="hidden md:block md:fixed right-0 mr-6">
-                    <i className="fad fa-chevron-double-down"></i>
-                  </button>
-                  {/* end navbar content toggle*/}
+
+
                   
               
                   {/* navbar content */}
-                  <div id="navbar" className="animated md:hidden md:fixed md:top-0 md:w-full md:left-0 md:mt-16 md:border-t md:border-b md:border-gray-200 md:p-10 md:bg-white flex-1 pl-3 flex flex-row flex-wrap justify-between items-center md:flex-col md:items-center">
+                  <div id="navbar" className="animated md:hidden md:fixed md:top-0 md:w-full md:left-0 md:mt-16 md:border-t md:border-b md:border-gray-200 md:p-10 md:bg-white flex-1 pl-3 flex flex-row flex-wrap justify-end items-center md:flex-col md:items-center">
                           
-              
                     {/* right */}
-                    <div className="flex flex-row-reverse items-center"> 
+                    <div className="flex  items-center"> 
               
                       {/* user */}
-                      <div className="dropdown relative md:static">
+                      <div className="relative md:static">
               
                         <button className="menu-btn focus:outline-none focus:shadow-outline flex flex-wrap items-center">
                           <div className="w-8 h-8 overflow-hidden rounded-full">
-                            <img className="w-full h-full object-cover" src="img/user.svg" ></img>
+                            <img className="w-full h-full object-cover" src={userLogo} ></img>
                           </div> 
               
                           <div className="ml-2 capitalize flex ">
                             <h1 className="text-sm text-gray-800 font-semibold m-0 p-0 leading-none">정민호</h1>
-                            <i className="fad fa-chevron-down ml-2 text-xs leading-none"></i>
                           </div>                        
                         </button>
+                        
                         <button className="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
               
                         <div className="text-gray-500 menu hidden md:mt-10 md:w-full rounded bg-white shadow-md absolute z-20 right-0 w-40 mt-5 py-2 animated faster">
@@ -63,248 +59,11 @@ export default function Main (){
                             edit my profile
                           </a>     
                           {/* end item */}
-              
-              
-                          {/* item */}
-                          <a className="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
-                            <i className="fad fa-comment-alt-dots text-xs mr-1"></i> 
-                            chats
-                          </a>     
-                          {/* end item */}
-              
-                          <hr/>
-              
-                          {/* item */}
-                          <a className="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
-                            <i className="fad fa-user-times text-xs mr-1"></i> 
-                            log out
-                          </a>     
-                          {/* end item */}
-              
+
                         </div>
                       </div>
                       {/* end user */}
-              
-                      {/* <!-- notifcation --> */}
-                      <div className="dropdown relative mr-5 md:static">
-              
-                        <button className="text-gray-500 menu-btn p-0 m-0 hover:text-gray-900 focus:text-gray-900 focus:outline-none transition-all ease-in-out duration-300">
-                          <i className="fad fa-bells"></i>               
-                        </button>
-              
-                        <button className="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
-              
-                        <div className="menu hidden rounded bg-white md:right-0 md:w-full shadow-md absolute z-20 right-0 w-84 mt-5 py-2 animated faster">
-                          {/* <!-- top --> */}
-                          <div className="px-4 py-2 flex flex-row justify-between items-center capitalize font-semibold text-sm">
-                            <h1>notifications</h1>
-                            <div className="bg-teal-100 border border-teal-200 text-teal-500 text-xs rounded px-1">
-                              <strong>5</strong>
-                            </div>
-                          </div>
-                          <hr/>
-                          {/* <!-- end top --> */}
-              
-                          {/* <!-- body --> */}
-              
-                          {/* <!-- item --> */}
-                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
-              
-                            <div className="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
-                              <i className="fad fa-birthday-cake text-sm"></i>
-                            </div>
-              
-                            <div className="flex-1 flex flex-rowbg-green-100">
-                              <div className="flex-1">
-                                <h1 className="text-sm font-semibold">poll..</h1>
-                                <p className="text-xs text-gray-500">text here also</p>
-                              </div>
-                              <div className="text-right text-xs text-gray-500">
-                                <p>4 min ago</p>
-                              </div>
-                            </div>
-              
-                          </a>
-                          <hr/>
-                          {/* <!-- end item --> */}
-              
-                          {/* <!-- item --> */}
-                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
-              
-                            <div className="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
-                              <i className="fad fa-user-circle text-sm"></i>
-                            </div>
-              
-                            <div className="flex-1 flex flex-rowbg-green-100">
-                              <div className="flex-1">
-                                <h1 className="text-sm font-semibold">mohamed..</h1>
-                                <p className="text-xs text-gray-500">text here also</p>
-                              </div>
-                              <div className="text-right text-xs text-gray-500">
-                                <p>78 min ago</p>
-                              </div>
-                            </div>
-              
-                          </a>
-                          <hr />
-                          {/* <!-- end item --> */}
-              
-                          {/* <!-- item --> */}
-                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
-              
-                            <div className="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
-                              <i className="fad fa-images text-sm"></i>
-                            </div>
-              
-                            <div className="flex-1 flex flex-rowbg-green-100">
-                              <div className="flex-1">
-                                <h1 className="text-sm font-semibold">new imag..</h1>
-                                <p className="text-xs text-gray-500">text here also</p>
-                              </div>
-                              <div className="text-right text-xs text-gray-500">
-                                <p>65 min ago</p>
-                              </div>
-                            </div>
-              
-                          </a>
-                          <hr/>
-                          {/* <!-- end item --> */}
-              
-                          {/* <!-- item --> */}
-                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
-              
-                            <div className="px-3 py-2 rounded mr-3 bg-gray-100 border border-gray-300">
-                              <i className="fad fa-alarm-exclamation text-sm"></i>
-                            </div>
-              
-                            <div className="flex-1 flex flex-rowbg-green-100">
-                              <div className="flex-1">
-                                <h1 className="text-sm font-semibold">time is up..</h1>
-                                <p className="text-xs text-gray-500">text here also</p>
-                              </div>
-                              <div className="text-right text-xs text-gray-500">
-                                <p>1 min ago</p>
-                              </div>
-                            </div>
-              
-                          </a>
-                          {/* <!-- end item --> */}
-              
-              
-                          {/* <!-- end body --> */}
-              
-                          {/* <!-- bottom --> */}
-                          <hr/>
-                          <div className="px-4 py-2 mt-2">
-                            <a href="#" className="border border-gray-300 block text-center text-xs uppercase rounded p-1 hover:text-teal-500 transition-all ease-in-out duration-500">
-                              view all
-                            </a>
-                          </div>
-                          {/* <!-- end bottom --> */}            
-                        </div>
-                      </div>
-                      {/* <!-- end notifcation --> */}
-              
-                      {/* <!-- messages --> */}
-                      <div className="dropdown relative mr-5 md:static">
-              
-                        <button className="text-gray-500 menu-btn p-0 m-0 hover:text-gray-900 focus:text-gray-900 focus:outline-none transition-all ease-in-out duration-300">
-                          <i className="fad fa-comments"></i>               
-                        </button>
-              
-                        <button className="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
-              
-                        <div className="menu hidden md:w-full md:right-0 rounded bg-white shadow-md absolute z-20 right-0 w-84 mt-5 py-2 animated faster">
-                          {/* <!-- top --> */}
-                          <div className="px-4 py-2 flex flex-row justify-between items-center capitalize font-semibold text-sm">
-                            <h1>messages</h1>
-                            <div className="bg-teal-100 border border-teal-200 text-teal-500 text-xs rounded px-1">
-                              <strong>3</strong>
-                            </div>
-                          </div>
-                          <hr />
-                          {/* <!-- end top --> */}
-              
-                          {/* <!-- body --> */}
-              
-                          {/* <!-- item --> */}
-                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
-              
-                            <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-100 border border-gray-300">
-                              <img className="w-full h-full object-cover" src="./img/user1.jpg" alt=""></img>
-                            </div>
-              
-                            <div className="flex-1 flex flex-rowbg-green-100">
-                              <div className="flex-1">
-                                <h1 className="text-sm font-semibold">mohamed said</h1>
-                                <p className="text-xs text-gray-500">yeah i know</p>
-                              </div>
-                              <div className="text-right text-xs text-gray-500">
-                                <p>4 min ago</p>
-                              </div>
-                            </div>
-              
-                          </a>
-                          <hr />
-                          {/* <!-- end item --> */} 
-              
-                          {/* <!-- item --> */}
-                          <a className = "flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
-              
-                            <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-100 border border-gray-300">
-                              <img className="w-full h-full object-cover" src="img/user2.jpg" alt=""></img>
-                            </div>
-              
-                            <div className="flex-1 flex flex-rowbg-green-100">
-                              <div className="flex-1">
-                                <h1 className="text-sm font-semibold">sull goldmen</h1>
-                                <p className="text-xs text-gray-500">for sure</p>
-                              </div>
-                              <div className="text-right text-xs text-gray-500">
-                                <p>1 day ago</p>
-                              </div>
-                            </div>
-              
-                          </a>
-                          <hr/>
-                          {/* <!-- end item --> */}
-              
-                          {/* <!-- item --> */}
-                          <a className="flex flex-row items-center justify-start px-4 py-4 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 transition-all duration-300 ease-in-out" href="#">
-              
-                            <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-100 border border-gray-300">
-                              <img className="w-full h-full object-cover" src="img/user3.jpg" alt=""></img>
-                            </div>
-              
-                            <div className="flex-1 flex flex-rowbg-green-100">
-                              <div className="flex-1">
-                                <h1 className="text-sm font-semibold">mick</h1>
-                                <p className="text-xs text-gray-500">is typing ....</p>
-                              </div>
-                              <div className="text-right text-xs text-gray-500">
-                                <p>31 feb</p>
-                              </div>
-                            </div>
-              
-                          </a>
-                          {/* <!-- end item --> */}
-              
-              
-                          {/* <!-- end body --> */}
-              
-                          {/* <!-- bottom --> */}
-                          <hr />
-                          <div className="px-4 py-2 mt-2">
-                            <a href="#" className="border border-gray-300 block text-center text-xs uppercase rounded p-1 hover:text-teal-500 transition-all ease-in-out duration-500">
-                              view all
-                            </a>
-                          </div>
-                          {/* <!-- end bottom --> */}            
-                        </div>
-                      </div>
-                      {/* <!-- end messages -->       */}         
-              
-              
+
                     </div>
                     {/* <!-- end right --> */}
                   </div>
@@ -488,80 +247,19 @@ export default function Main (){
               
               </div>
                   {/* <!-- End General Report --> */}
-              
-                  {/* <!-- strat Analytics --> */}
-                  <div className="mt-6 grid grid-cols-2 gap-6 xl:grid-cols-1">
-              
-                 {/*  <!-- update section --> */}
-                  <div className="card bg-teal-400 border-teal-400 shadow-md text-white">
-                      <div className="card-body flex flex-row">
-                          
-                          {/* <!-- image --> */}
-                          <div className="img-wrapper w-40 h-40 flex justify-center items-center">
-                              <img src="./img/happy.svg" alt="img title"></img>
-                          </div>
-                         {/*  <!-- end image --> */}
-              
-                          {/* <!-- info --> */}
-                          <div className="py-2 ml-10">
-                              <h1 className="h6">Good Job, Mohamed!</h1>
-                              <p className="text-white text-xs">You've finished all of your tasks for this week.</p>
-              
-                              <ul className="mt-4">
-                                  <li className="text-sm font-light"><i className="fad fa-check-double mr-2 mb-2"></i> Finish Dashboard Design</li>
-                                  <li className="text-sm font-light"><i className="fad fa-check-double mr-2 mb-2"></i> Fix Issue #74</li>
-                                  <li className="text-sm font-light"><i className="fad fa-check-double mr-2"></i> Publish version 1.0.6</li>
-                              </ul>
-                          </div>
-                         {/*  <!-- end info --> */}
-              
-                      </div>
-                  </div>
-                  {/* <!-- end update section --> */}
-              
-                 {/*  <!-- carts --> */}
-                  <div className="flex flex-col">
-              
-                      {/* <!-- charts --> */}
-                      <div className="grid grid-cols-2 gap-6 h-full">
-              
-                          <div className="card">
-                              <div className="py-3 px-4 flex flex-row justify-between">
-                                  <h1 className="h6">
-                                      <span className="num-4"></span>k
-                                      <p>page view</p>
-                                  </h1>
-              
-                                  <div className="bg-teal-200 text-teal-700 border-teal-300 border w-10 h-10 rounded-full flex justify-center items-center">
-                                      <i className="fad fa-eye"></i>
-                                  </div>
-                              </div>                
-                              <div className="analytics_1"></div>
-                          </div>
-              
-                          <div className="card">
-                              <div className="py-3 px-4 flex flex-row justify-between">                    
-                                  <h1 className="h6">
-                                      <span className="num-2"></span>k
-                                      <p>Unique Users</p>
-                                  </h1>
-              
-                                  <div className="bg-indigo-200 text-indigo-700 border-indigo-300 border w-10 h-10 rounded-full flex justify-center items-center">
-                                      <i className="fad fa-users-crown"></i>
-                                  </div>
-                              </div>
-                              <div className="analytics_1"></div>
-                          </div>
-              
-                      </div>     
-                     {/*  <!-- charts    --> */}
-              
-                  </div>
-                  {/* <!-- end charts --> */}
-              
-              
-              </div>
-                 {/*  <!-- end Analytics --> */}
+
+                  {/* ----------------------Data input frame in-----------------------------*/}
+
+                <div className="card mt-6">
+                                    {/*  <!-- header --> */}
+                                     <div className="card-header flex flex-row justify-between">
+                                         <h1 className="h6">Data input</h1>
+                                          <div className="flex flex-row justify-center items-center">
+
+                                          </div>
+                                     </div>
+                </div>                  
+                  {/* ----------------------Data input frame end----------------------*/}
               
                   {/* <!-- Sales Overview --> */}
                   <div className="card mt-6">
@@ -622,77 +320,8 @@ export default function Main (){
               
                   {/* <!-- start numbers --> */}
                   <div className="grid grid-cols-5 gap-6 xl:grid-cols-2">
-              
-                 {/*  <!-- card --> */}
-                  <div className="card mt-6">
-                      <div className="card-body flex items-center">
-                          
-                          <div className="px-3 py-2 rounded bg-indigo-600 text-white mr-3">
-                              <i className="fad fa-wallet"></i>
-                          </div>
-              
-                          <div className="flex flex-col">
-                              <h1 className="font-semibold"><span className="num-2"></span> Sales</h1>
-                              <p className="text-xs"><span className="num-2"></span> payments</p>
-                          </div>
-              
-                      </div>
-                  </div>
-                 {/* end card */}
-                  
-                 
-              
-                  {/* <!-- card --> */}
-                  <div className="card mt-6 xl:mt-1">
-                      <div className="card-body flex items-center">
-                          
-                          <div className="px-3 py-2 rounded bg-yellow-600 text-white mr-3">
-                              <i className="fad fa-blog"></i>
-                          </div>
-              
-                          <div className="flex flex-col">
-                              <h1 className="font-semibold"><span className="num-2"></span> posts</h1>
-                              <p className="text-xs"><span className="num-2"></span> active</p>
-                          </div>
-              
-                      </div>
-                  </div>
-                   {/* end card */} 
-              
-                  {/* card */}
-                  <div className="card mt-6 xl:mt-1">
-                      <div className="card-body flex items-center">
-                          
-                          <div className="px-3 py-2 rounded bg-red-600 text-white mr-3">
-                              <i className="fad fa-comments"></i>
-                          </div>
-              
-                          <div className="flex flex-col">
-                              <h1 className="font-semibold"><span className="num-2"></span> comments</h1>
-                              <p className="text-xs"><span className="num-2"></span> approved</p>
-                          </div>
-              
-                      </div>
-                  </div>
-                  {/* end card */}
-              
-                  {/* card */}
-                  <div className="card mt-6 xl:mt-1 xl:col-span-2">
-                      <div className="card-body flex items-center">
-                          
-                          <div className="px-3 py-2 rounded bg-pink-600 text-white mr-3">
-                              <i className="fad fa-user"></i>
-                          </div>
-              
-                          <div className="flex flex-col">
-                              <h1 className="font-semibold"><span className="num-2"></span> memebrs</h1>
-                              <p className="text-xs"><span className="num-2"></span> online</p>
-                          </div>
-              
-                      </div>
-                  </div>
-                  {/* end card */}
-              
+         
+       
               </div>
                   {/* <!-- end nmbers --> */}
               

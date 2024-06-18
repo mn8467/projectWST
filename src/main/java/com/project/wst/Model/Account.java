@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
-public class Accounts {
+public class Account {
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_code_seq")
     private Integer userCode;
 
