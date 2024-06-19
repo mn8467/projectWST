@@ -1,6 +1,9 @@
 import React from 'react'
 import userLogo from './img/user.svg';
 import './css/style.css'; // "./" 까지는 현재 폴더까지 이미 경로가 설정되어있는 것 여기서의 현재폴더는 ./Component/Home 이므로 그 다음 적용할 하위 폴더를 적어주면 됨!
+import Overview from './OverView.tsx';
+import RecentTable from './RecentSales.tsx';
+
 export default function Main (){
         return(
         <>
@@ -250,77 +253,16 @@ export default function Main (){
 
                   {/* ----------------------Data input frame in-----------------------------*/}
 
-                <div className="card mt-6 flex justify-end">
-                                    {/*  <!-- header --> */}
-                                  
-                                      <div className = "flex ">
-                                         <h1 className="h6">Data input</h1>
-                                      </div>
-                                        <div className="flex ">
-                                          <button>
-                                            <a className = "">데이터 입력하기</a>
-                                          </button>
-                                        </div>
-                              
-                </div>                  
+
+                                        
+                                        <a href="#" className="btn-shadow w-48 mt-6">명세표 입력</a>
+                                        
+                
                   {/* ----------------------Data input frame end----------------------*/}
               
-                  {/* <!-- Sales Overview --> */}
-                  <div className="card mt-6">
-              
-                 {/*  <!-- header --> */}
-                  <div className="card-header flex flex-row justify-between">
-                      <h1 className="h6">Sales Overview</h1>
-              
-                      <div className="flex flex-row justify-center items-center">
-              
-                          <a href="">
-                              <i className="fad fa-chevron-double-down mr-6"></i>
-                          </a>
-              
-                          <a href="">
-                              <i className="fad fa-ellipsis-v"></i>
-                          </a>
-              
-                      </div>
-              
-                  </div>
-                 {/*  <!-- end header --> */}
-              
-                 {/*  <!-- body --> */}
-                  <div className="card-body grid grid-cols-2 gap-6 lg:grid-cols-1">
-              
-                      <div className="p-8">
-                          <h1 className="h2">5,337</h1>
-                          <p className="text-black font-medium">Sales this month</p>
-              
-                          <div className="mt-20 mb-2 flex items-center">
-                              <div className="py-1 px-3 rounded bg-green-200 text-green-900 mr-3">
-                                  <i className="fa fa-caret-up"></i>
-                              </div>
-                              <p className="text-black"><span className="num-2 text-green-400"></span><span className="text-green-400">% more sales</span> in comparison to last month.</p>
-                          </div>
-              
-                          <div className="flex items-center">
-                              <div className="py-1 px-3 rounded bg-red-200 text-red-900 mr-3">
-                                  <i className="fa fa-caret-down"></i>
-                              </div>
-                              <p className="text-black"><span className="num-2 text-red-400"></span><span className="text-red-400">% revenue per sale</span> in comparison to last month.</p>
-                          </div>
-              
-                          <a href="#" className="btn-shadow mt-6">view details</a>
-              
-                      </div>
-                  
-                      <div className="">
-                          <div id="sealsOverview"></div>
-                      </div>
-                  
-                  </div>
-                  {/* <!-- end body --> */}
-              
-              </div>
-                 {/*  <!-- end Sales Overview --> */}
+                      {/* OverView start */}
+                  <Overview />
+                      {/* OverView end */}
               
                   {/* <!-- start numbers --> */}
                   <div className="grid grid-cols-5 gap-6 xl:grid-cols-2">
@@ -388,38 +330,9 @@ export default function Main (){
                   </div>
                   {/* <!-- end Browser Stats --> */}
               
-                  {/* <!-- Start Recent Sales --> */}
-                  <div className="card col-span-2 xl:col-span-1">
-                      <div className="card-header">최근 거래 목록</div>
-              
-                      <table className="table-auto w-full text-left">
-                          <thead>
-                              <tr>
-                                  <th className="px-4 py-2 border-r">거래번호</th>
-                                  <th className="px-4 py-2 border-r">거래처</th>
-                                  <th className="px-4 py-2 border-r">품목</th>
-                                  <th className="px-4 py-2 border-r">수량</th>
-                                  <th className="px-4 py-2 border-r">거래 가격</th>
-                                  <th className="px-4 py-2 border-r">세액</th>
-                                  <th className="px-4 py-2 border-r">거래일</th>
-                                  <th className="px-4 py-2 border-r">비고</th>
-                              </tr>
-                          </thead>
-                          <tbody className="text-gray-600">
-                              <tr>                    
-                                  <td className="border border-l-0 px-4 py-2 text-center ">1</td>
-                                  <td className="border border-l-0 px-4 py-2">바로텍</td>
-                                  <td className="border border-l-0 px-4 py-2">폴리에틸렌<span className="num-2"></span></td>
-                                  <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span>1000(kg)</td>
-                                  <td className="border border-l-0 px-4 py-2 ">460000</td>
-                                  <td className="border border-l-0 px-4 py-2">10%</td>
-                                  <td className="border border-l-0 px-4 py-2">어제 12시간 전<span className="num-2"></span></td>
-                                  <td className="border border-l-0 border-r-0 px-4 py-2"><span className="num-2"></span></td>
-                              </tr>                          
-                          </tbody>
-                      </table>
-                  </div>
-                 {/*  <!-- End Recent Sales --> */}
+                                           {/* <!--------------------- Start RecentSales -----------------------> */}
+                                                    <RecentTable />
+                                           {/*  <!----------------------- End RecentSales -----------------------> */}
               
               
               </div>

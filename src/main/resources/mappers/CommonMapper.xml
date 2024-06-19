@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.wst.Mapper.CommonMapper">
+
+    <!--메이저에 해당되는 데이터를 모두 가져오는 코드 -->
+    
+    <select id="getList" resultType="com.project.wst.Model.Common">
+        select *
+        from common
+        where major_code = '01'
+    </select>
+
+</mapper>
