@@ -5,11 +5,11 @@
 <mapper namespace="com.project.wst.Mapper.CommonMapper">
 
     <!--메이저에 해당되는 데이터를 모두 가져오는 코드 -->
-    
-    <select id="getList" resultType="com.project.wst.Model.Common">
+
+    <select id="getCode" resultType="com.project.wst.Model.Common">
         select *
         from common
-        where major_code = '01'
+        where major_code = '01';
     </select>
 
 </mapper>

@@ -13,8 +13,8 @@ public class CommonService {
     @Autowired
     private CommonMapper commonMapper;
 
-    public List<Common> getMajorCode() {  //Common 테이블의 전체 코드를 가져와서 Major코드만 남기는 SQL 작성
-        return commonMapper.getCode();
+    public List<Common> getMajorCode(Common common) {  //Common 테이블의 전체 코드를 가져와서 Major코드만 남기는 SQL 작성
+        return commonMapper.getCode(common);
     }
 
 }
