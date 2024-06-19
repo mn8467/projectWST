@@ -7,5 +7,5 @@ import java.util.List;
 
 @Mapper
 public interface CommonMapper {
-    List<Common> getCode(Common common); //전체 코드를 가져온다
+    public List<Common> getCode(Common common); //전체 코드를 가져온다
 }

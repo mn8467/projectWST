@@ -20,7 +20,7 @@ public class CommonController {
     @Autowired
     private CommonService commonService;
 
-    @RequestMapping(value = "/classifications", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/classifications", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
     @ResponseBody //@RequestMapping 의 형태는 name = value 형태가 되어야한다
     public Map<String, Object> CodeController(Common common) {
         Map<String, Object> resultMap = new HashMap<>();
