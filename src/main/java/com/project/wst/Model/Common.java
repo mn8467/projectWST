@@ -12,6 +12,6 @@ public class Common {
     private String detailCode;
     private String attributeCode;
     private String nameCode;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private String createdAt; //데이터 뽑을때 TO_CHAR() 사용하므로
+    private String updatedAt;
 }
