@@ -3,8 +3,11 @@ import userLogo from './img/user.svg';
 import './css/style.css'; // "./" 까지는 현재 폴더까지 이미 경로가 설정되어있는 것 여기서의 현재폴더는 ./Component/Home 이므로 그 다음 적용할 하위 폴더를 적어주면 됨!
 import Overview from './OverView.tsx';
 import RecentTable from './RecentSales.tsx';
+import Modal from './Modal.tsx';
+import Funx from './js/funx.tsx';
 
 export default function Main (){
+
         return(
         <>
                 <head>
@@ -27,6 +30,9 @@ export default function Main (){
                     <button id="sliderBtn" className = "flex-none text-right text-gray-900 hidden md:block">
                       <i className="fad fa-list-ul"></i>
                     </button>
+
+                
+
                   </div>
                 {/* end logo */}
 
@@ -66,6 +72,8 @@ export default function Main (){
                         </div>
                       </div>
                       {/* end user */}
+
+                      
 
                     </div>
                     {/* <!-- end right --> */}
@@ -118,6 +126,13 @@ export default function Main (){
                       email
                     </a>
                     {/* <!-- end link --> */}
+
+                           {/* ----------------------Data input frame in-----------------------------*/}
+
+                                    <Funx/>
+                                        
+                           {/* ----------------------Data input frame end----------------------*/}
+
                   </div>
                   {/* <!-- end sidebar content --> */}
               
@@ -130,109 +145,14 @@ export default function Main (){
                   
                   {/* <!-- General Report --> */}
                   <div className="grid grid-cols-4 gap-6 xl:grid-cols-1">
-              
-              
-              
-              
-              
-                  {/* <!-- card --> */}
-                  <div className="report-card">
-                      <div className="card">
-                          <div className="card-body flex flex-col">
                               
-                             {/*  <!-- top --> */}
-                              <div className="flex flex-row justify-between items-center">
-                                  <div className="h6 text-red-700 fad fa-store"></div>
-                                  <span className="rounded-full text-white badge bg-red-400 text-xs">
-                                      6%
-                                      <i className="fal fa-chevron-down ml-1"></i>
-                                  </span>
-                              </div>
-                              {/* <!-- end top --> */}
               
-                              {/* <!-- bottom --> */}
-                              <div className="mt-8">
-                                  <h1 className="h5 num-4"></h1>
-                                  <p>new orders</p>
-                              </div>                
-                              {/* <!-- end bottom --> */}
-                  
-                          </div>
-                      </div>
-                      <div className="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
-                  </div>
-                  {/* end card */}
-              
-              
-                  {/* <!-- card --> */}
-                  <div className="report-card">
-                      <div className="card">
-                          <div className="card-body flex flex-col">
-                              
-                              {/* <!-- top --> */}
-                              <div className="flex flex-row justify-between items-center">
-                                  <div className="h6 text-yellow-600 fad fa-sitemap"></div>
-                                  <span className="rounded-full text-white badge bg-teal-400 text-xs">
-                                      72%
-                                      <i className="fal fa-chevron-up ml-1"></i>
-                                  </span>
-                              </div>
-                              {/* <!-- end top --> */}
-              
-                              {/* <!-- bottom --> */}
-                              <div className="mt-8">
-                                  <h1 className="h5 num-4"></h1>
-                                  <p>total Products</p>
-                              </div>                
-                              {/* <!-- end bottom --> */}
-                  
-                          </div>
-                      </div>
-                      <div className="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
-                  </div>
-                   {/* end card */} 
-              
-              
-                  {/* <!-- card --> */}
-                  <div className="report-card">
-                      <div className="card">
-                          <div className="card-body flex flex-col">
-                              
-                              {/* <!-- top --> */}
-                              <div className="flex flex-row justify-between items-center">
-                                  <div className="h6 text-green-700 fad fa-users"></div>
-                                  <span className="rounded-full text-white badge bg-teal-400 text-xs">
-                                      150%
-                                      <i className="fal fa-chevron-up ml-1"></i>
-                                  </span>
-                              </div>
-                              {/* <!-- end top --> */}
-              
-                             {/*  <!-- bottom --> */}
-                              <div className="mt-8">
-                                  <h1 className="h5 num-4"></h1>
-                                  <p>new Visitor</p>
-                              </div>                
-                             {/*  <!-- end bottom --> */}
-                  
-                          </div>
-                      </div>
-                      <div className="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
-                  </div>
-                  {/* end card */} 
-                  
+
               
               </div>
                   {/* <!-- End General Report --> */}
 
-                  {/* ----------------------Data input frame in-----------------------------*/}
 
-
-                                        
-                                        <a href="#" className="btn-shadow w-48 mt-6">명세표 입력</a>
-                                        
-                
-                  {/* ----------------------Data input frame end----------------------*/}
               
                       {/* OverView start */}
                   <Overview />
