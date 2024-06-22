@@ -166,63 +166,10 @@ export default function Main (){
                   {/* <!-- end nmbers --> */}
               
                   {/* <!-- start quick Info --> */}
-                  <div className="grid grid-cols-3 gap-6 mt-6 xl:grid-cols-1">
+                  <div className="grid grid-cols-2 gap-6 mt-6 xl:grid-cols-1">
               
               
-                  {/* <!-- Browser Stats --> */}
-                  <div className="card">
-                      <div className="card-header">Browser Stats</div>
-              
-                     {/*  <!-- brawser --> */}
-                      <div className="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
-                          <div className="flex items-center">
-                              <i className="fab fa-chrome mr-4"></i>    
-                              <h1>google chrome</h1>
-                          </div>                
-                          <div>
-                              <span className="num-2"></span>%
-                          </div>
-                      </div>
-                     {/*  <!-- end brawser --> */}
-              
-                      {/* <!-- brawser --> */}
-                      <div className="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
-                          <div className="flex items-center">
-                              <i className="fab fa-firefox mr-4"></i>    
-                              <h1>firefox</h1>
-                          </div>                
-                          <div>
-                              <span className="num-2"></span>%
-                          </div>
-                      </div>
-                     {/*  <!-- end brawser --> */}
-              
-                    {/*   <!-- brawser --> */}
-                      <div className="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
-                          <div className="flex items-center">
-                              <i className="fab fa-internet-explorer mr-4"></i>    
-                              <h1>internet explorer</h1>
-                          </div>                
-                          <div>
-                              <span className="num-2"></span>%
-                          </div>
-                      </div>
-                      {/* <!-- end brawser --> */}
-              
-                      {/* <!-- brawser --> */}
-                      <div className="p-6 flex flex-row justify-between items-center text-gray-600 border-b-0">
-                          <div className="flex items-center">
-                              <i className="fab fa-safari mr-4"></i>    
-                              <h1>safari</h1>
-                          </div>                
-                          <div>
-                              <span className="num-2"></span>%
-                          </div>
-                      </div>
-                     {/*  <!-- end brawser --> */}
-              
-                  </div>
-                  {/* <!-- end Browser Stats --> */}
+                 
               
                                            {/* <!--------------------- Start RecentSales -----------------------> */}
                                                     <RecentTable />
