@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.List;
@@ -30,5 +31,15 @@ public class CommonController {
 
         return resultMap;
         }
+
+    @RequestMapping("/codes/trashtype")
+    public Map<String,List<Common>> MajorCodeController(Common common){
+        Map<String, List<Common>> resultMap = new HashMap<>();
+        List<Common> resultList = commonService.getTypeCode(common);
+        resultMap.put("resultList", resultList);
+        log.info("resultList : " + resultMap);
+
+        return resultMap;
+    }
 }
 

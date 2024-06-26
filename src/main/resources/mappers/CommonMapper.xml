@@ -16,4 +16,10 @@
         where major_code = '01';
     </select>
 
+    <select id="getTypeCode" resultType="om.project.wst.Model.Common">
+        select major_codem
+               major_name,
+
+    </select>
+
 </mapper>

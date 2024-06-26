@@ -17,4 +17,8 @@ public class CommonService {
         return commonMapper.getCode(common);
     }
 
+    public List<Common> getTypeCode(Common common){
+        return commonMapper.getTypeCode(common);
+    }
+
 }
