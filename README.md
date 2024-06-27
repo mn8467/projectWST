@@ -7,3 +7,7 @@
 - SQL 컬럼 추가 완료  <br/>
 - 데이터베이스 변경으로 인한 데이터 수정중... 적용  <br/>
 - 쓰레기 major, sub , detail 이름들 가져오는 Mapper 만드는중 <br/>
+
+!--- 2024 - 06 - 27 ---! <br/>
+- SQL 어떻게 짤지 고려중... 머리 쥐날거같다 하 <br/>
+- BackEndData Front React로 보내는 작업중.. 어렵다 진짜로<br/>

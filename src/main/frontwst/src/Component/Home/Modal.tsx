@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import Flatpickr from 'react-flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import axios from 'axios'
+
 
 const items = ["Item 1", "Item 2", "Item 3"]; // 드롭다운 목록
 

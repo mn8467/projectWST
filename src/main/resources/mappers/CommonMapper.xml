@@ -16,10 +16,35 @@
         where major_code = '01';
     </select>
 
-    <select id="getTypeCode" resultType="om.project.wst.Model.Common">
-        select major_codem
+    <select id="getTypeCode" resultType="com.project.wst.Model.Common">
+        select major_code,
                major_name,
-
+               sub_code,
+               sub_name,
+               detail_code,
+               name_code
+        from common
     </select>
+
+    <select id="getMajorCode" resultType="com.project.wst.Model.Common">
+        SELECT DISTINCT major_code, major_name
+        FROM Common
+        WHERE major_code IS NOT NULL;
+    </select>
+
+    <select id="getSubCode" resultType="com.project.wst.Model.Common">
+        SELECT DISTINCT sub_code, sub_name
+        FROM Common
+        WHERE major_code = '선택한 대분류 코드' AND sub_code IS NOT NULL;
+    </select>
+
+    <!--name_code == detail_name 의미 -->
+    <select id="getDetailCode" resultType="com.project.wst.Model.Common">
+        SELECT DISTINCT detail_code, name_code
+        FROM Common
+        WHERE sub_code = '선택한 중분류 코드' AND detail_code IS NOT NULL;
+    </select>
+
+
 
 </mapper>

@@ -5,8 +5,27 @@ import Overview from './OverView.tsx';
 import RecentTable from './RecentSales.tsx';
 import Modal from './Modal.tsx';
 import Funx from './js/funx.tsx';
+import { useState,useEffect } from 'react';
+import axios from 'axios';
 
 export default function Main (){
+  
+const [data, setData] = useState(null); // 데이터를 저장할 상태 변수
+
+useEffect(() => {
+    // 데이터를 가져오는 함수
+    const fetchData = async () => {
+        try {
+            const response = await axios.post('/codes/trashtype'); // API 엔드포인트에 요청
+            setData(response.data); // 받은 데이터를 상태에 저장
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    fetchData(); // 데이터를 가져오는 함수 호출
+
+}, []); 
 
         return(
         <>
@@ -160,7 +179,8 @@ export default function Main (){
               
                   {/* <!-- start numbers --> */}
                   <div className="grid grid-cols-5 gap-6 xl:grid-cols-2">
-         
+                  
+
        
               </div>
                   {/* <!-- end nmbers --> */}
@@ -179,9 +199,23 @@ export default function Main (){
               </div>
                   {/* <!-- end quick Info --> */}
                       
-              
+                  {data ? (
+                <div>
+                    <h1>받아온 데이터</h1>
+                    <p>대분류 코드: {data.majorCode}</p>
+                    <p>대분류 이름: {data.majorName}</p>
+                    <p>중분류 코드: {data.subCode}</p>
+                    <p>중분류 이름: {data.subName}</p>
+                    <p>소분류 코드: {data.detailCode}</p>
+                    <p>소분류 이름: {data.nameCode}</p>
+                </div>
+            ) : (
+                <p>Loading...</p>
+            )}
+
                 </div>
                 {/* <!-- end content --> */}
+
               
               </div>
               {/* <!-- end wrapper --> */}
