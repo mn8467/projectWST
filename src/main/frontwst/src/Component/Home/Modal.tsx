@@ -4,7 +4,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 import axios from 'axios'
 
 
-const items = ["Item 1", "Item 2", "Item 3"]; // 드롭다운 목록
+const items = ["Item 1", "Item 2", "dddd"]; // 드롭다운 목록
 
 const DataTable = () => {
   const [date, setDate] = useState(new Date());
