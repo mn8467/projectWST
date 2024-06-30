@@ -4,7 +4,11 @@ import 'flatpickr/dist/flatpickr.min.css';
 import axios from 'axios'
 
 
-const items = ["Item 1", "Item 2", "dddd"]; // 드롭다운 목록
+const items1 = ["대분류 코드"]; // 드롭다운 목록
+const items2 = ["중분류 코드"]; // 드롭다운 목록
+const items3 = ["소분류 코드"]; // 드롭다운 목록
+
+
 
 const DataTable = () => {
   const [date, setDate] = useState(new Date());
@@ -34,20 +38,67 @@ const DataTable = () => {
             />
           </td>
           <td className="border border-gray-200 px-4 py-2">
-            <select className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-              {items.map((item, index) => (
+          <div className="flex">
+            <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2">
+              {items1.map((item, index) => (
                 <option key={index} value={item}>
                   {item}
                 </option>
               ))}
             </select>
+            <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2">
+              {items2.map((item, index) => (
+                <option key={index} value={item}>
+                  {item}
+                </option>
+              ))}
+            </select>
+            <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              {items3.map((item, index) => (
+                <option key={index} value={item}>
+                  {item}
+                </option>
+              ))}
+            </select>
+          </div>
           </td>
-          <td className="border border-gray-200 px-4 py-2"></td>
-          <td className="border border-gray-200 px-4 py-2"></td>
-          <td className="border border-gray-200 px-4 py-2"></td>
-          <td className="border border-gray-200 px-4 py-2"></td>
-          <td className="border border-gray-200 px-4 py-2"></td>
-          <td className="border border-gray-200 px-4 py-2"></td>
+          <td className="border border-gray-200 px-2 py-2">
+            <form>
+              <input className='' >
+              </input>
+            </form>
+          </td>
+          <td className="border border-gray-200 w-4  py-2">
+            <form>
+              <input className=''>
+              </input>
+            </form>
+          </td>
+          <td className="border border-gray-200py-2">
+          <form>
+              <input className=''>
+              </input>
+            </form>
+
+          </td>
+          <td className="border border-gray-200  py-2">
+          <form>
+              <input className=''>
+              </input>
+            </form>
+          </td>
+          <td className="border border-gray-200  py-2">
+          <form>
+              <input className=''>
+              </input>
+            </form>
+          </td>
+          <td className="border border-gray-200 px-4 py-2">
+          <form>
+              <input className=''>
+              </input>
+            </form>
+          </td>
         </tr>
       </tbody>
     </table>
