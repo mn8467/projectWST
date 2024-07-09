@@ -36,8 +36,8 @@ function GetMajorCodeComponent(){
   return (
     <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2">
         {resultList.map((item) => (
-        <option key={item.major_code} value={item.major_name}>
-           {item.major_name}
+        <option key={item.majorCode} value={item.majorName}>
+           {item.majorName}
         </option>
         ))}
     </select>
