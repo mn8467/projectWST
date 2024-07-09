@@ -9,9 +9,47 @@ const items2 = ["중분류 코드"]; // 드롭다운 목록
 const items3 = ["소분류 코드"]; // 드롭다운 목록
 
 
+function GetDetailCodeComponent(){
+
+  const [getdata, setdata] = useState([]);
+  const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열, any[]는 임시로 모든 타입을 허용하는 예시입니다. 실제로는 받아오는 데이터의 타입을 정의하는 것이 좋습니다.
+
+
+  useEffect(() => {
+    fetch("/codes/trash-type", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        setResultList(data.resultList); // 받아온 데이터의 resultList를 상태에 저장
+
+        // 추가적인 로직 처리나 상태 업데이트 등을 할 수 있음
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // 에러 처리 로직을 추가할 수 있음
+      });
+  }, []);
+
+  return (
+    <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2">
+        {resultList.map((item) => (
+        <option key={item.detailCode} value={item.nameCode}>
+           {item.nameCode}
+        </option>
+        ))}
+    </select>
+  );
+}
 
 const DataTable = () => {
   const [date, setDate] = useState(new Date());
+
+  
 
   return (
     <table className="min-w-full bg-white border border-gray-200">
@@ -53,13 +91,7 @@ const DataTable = () => {
                 </option>
               ))}
             </select>
-            <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-              {items3.map((item, index) => (
-                <option key={index} value={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
+            <GetDetailCodeComponent />
           </div>
           </td>
           <td className="border border-gray-200 px-2 py-2">

@@ -8,24 +8,57 @@ import Funx from './js/funx.tsx';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 
+
+function TypeCodeComponent(){
+
+  const [getdata, setdata] = useState([]);
+  const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열, any[]는 임시로 모든 타입을 허용하는 예시입니다. 실제로는 받아오는 데이터의 타입을 정의하는 것이 좋습니다.
+
+
+  useEffect(() => {
+    fetch("/codes/trash-type", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        setResultList(data.resultList); // 받아온 데이터의 resultList를 상태에 저장
+
+        // 추가적인 로직 처리나 상태 업데이트 등을 할 수 있음
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // 에러 처리 로직을 추가할 수 있음
+      });
+  }, []);
+
+  return (
+    <div>
+      <h2>Result List:</h2>
+      <ul>
+        {resultList.map((item) => (
+          <li key={item.nameCode}>
+            <p>majorCode:{item.majorCode}</p>
+            <p>majorName: {item.majorName}</p>
+            <p>subCode: {item.subCode}</p>
+            <p>subName: {item.subName}</p>
+            <p>detailCode: {item.detailCode}</p>
+            <p>attributeCode: {item.attributeCode}</p>
+            <p>nameCode: {item.nameCode}</p>
+            {/* 필요한 데이터 필드를 추가적으로 출력 */}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export default function Main (){
   
-const [data, setData] = useState(null); // 데이터를 저장할 상태 변수
-
-useEffect(() => {
-    // 데이터를 가져오는 함수
-    const fetchData = async () => {
-        try {
-            const response = await axios.post('/codes/trashtype'); // API 엔드포인트에 요청
-            setData(response.data); // 받은 데이터를 상태에 저장
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
-
-    fetchData(); // 데이터를 가져오는 함수 호출
-
-}, []); 
+  
 
         return(
         <>
@@ -180,6 +213,7 @@ useEffect(() => {
                   {/* <!-- start numbers --> */}
                   <div className="grid grid-cols-5 gap-6 xl:grid-cols-2">
                   
+                  <TypeCodeComponent />
 
        
               </div>
@@ -199,19 +233,6 @@ useEffect(() => {
               </div>
                   {/* <!-- end quick Info --> */}
                       
-                  {data ? (
-                <div>
-                    <h1>받아온 데이터</h1>
-                    <p>대분류 코드: {data.majorCode}</p>
-                    <p>대분류 이름: {data.majorName}</p>
-                    <p>중분류 코드: {data.subCode}</p>
-                    <p>중분류 이름: {data.subName}</p>
-                    <p>소분류 코드: {data.detailCode}</p>
-                    <p>소분류 이름: {data.nameCode}</p>
-                </div>
-            ) : (
-                <p>Loading...</p>
-            )}
 
                 </div>
                 {/* <!-- end content --> */}
@@ -228,4 +249,8 @@ useEffect(() => {
               </body>
         </>
         )
+}
+
+function setResultList(resultList: any) {
+  throw new Error('Function not implemented.');
 }

@@ -1,17 +1,16 @@
 package com.project.wst.Controller;
 
-import ch.qos.logback.core.model.Model;
 import com.project.wst.Model.Common;
 import com.project.wst.Service.CommonService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
-import javax.management.Attribute;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,9 +33,9 @@ public class CommonController {
         return resultMap;
         }
 
-    @RequestMapping(value = "/codes/trashtype", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
+    @RequestMapping(value = "/codes/trash-type", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
     @ResponseBody //@RequestMapping 의 형태는 name = value 형태가 되어야한다
-    public Map<String,List<Common>> MajorCodeController(Common common){
+    public Map<String,List<Common>> MajorCodeController(Common common, Model model){
 
         List<Common> majorType = this.commonService.getMajorCode(common);
         List<Common> subType = this.commonService.getSubCode(common);
@@ -44,6 +43,7 @@ public class CommonController {
 
 
         Map<String, List<Common>> resultMap = new HashMap<>();
+        List<Common> majorCodeList = new ArrayList<>();
         List<Common> resultList = commonService.getTypeCode(common);
 
 

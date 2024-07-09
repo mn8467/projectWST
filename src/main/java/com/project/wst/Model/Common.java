@@ -1,6 +1,6 @@
 package com.project.wst.Model;
 
-import jakarta.persistence.Entity;
+
 import lombok.Data;
 
 

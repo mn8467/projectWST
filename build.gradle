@@ -26,6 +26,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
     implementation 'org.slf4j:slf4j-api:2.0.6'
 // https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
     implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '3.0.3'
