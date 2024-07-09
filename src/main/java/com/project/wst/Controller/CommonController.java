@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -37,13 +38,7 @@ public class CommonController {
     @ResponseBody //@RequestMapping 의 형태는 name = value 형태가 되어야한다
     public Map<String,List<Common>> MajorCodeController(Common common, Model model){
 
-        List<Common> majorType = this.commonService.getMajorCode(common);
-        List<Common> subType = this.commonService.getSubCode(common);
-        List<Common> detailType = this.commonService.getDetailCode(common);
-
-
         Map<String, List<Common>> resultMap = new HashMap<>();
-        List<Common> majorCodeList = new ArrayList<>();
         List<Common> resultList = commonService.getTypeCode(common);
 
 
@@ -52,5 +47,21 @@ public class CommonController {
 
         return resultMap;
     }
+
+    @RequestMapping(value = "/codes/major-code", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
+    @ResponseBody //@RequestMapping 의 형태는 name = value 형태가 되어야한다.
+    public Map<String,List<Common>> GetMajorCode(Common common){
+        Map<String,List<Common>> resultMap = new HashMap<>();
+        List<Common> resultList = commonService.getMajorCode(common);
+
+        resultMap.put("resultList", resultList);
+        log.info("resultList : " + resultMap);
+        return resultMap;
+    }
+
+/*    @PostMapping("/home")
+    public String receiveSelectedValue(){
+
+    }*/
 }
 

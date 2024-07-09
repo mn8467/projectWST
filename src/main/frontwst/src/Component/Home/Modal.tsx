@@ -8,6 +8,42 @@ const items1 = ["대분류 코드"]; // 드롭다운 목록
 const items2 = ["중분류 코드"]; // 드롭다운 목록
 const items3 = ["소분류 코드"]; // 드롭다운 목록
 
+function GetMajorCodeComponent(){
+  const [getdata, setdata] = useState([]);
+  const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열, any[]는 임시로 모든 타입을 허용하는 예시입니다. 실제로는 받아오는 데이터의 타입을 정의하는 것이 좋습니다.
+
+
+  useEffect(() => {
+    fetch("/codes/major-code", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        setResultList(data.resultList); // 받아온 데이터의 resultList를 상태에 저장
+
+        // 추가적인 로직 처리나 상태 업데이트 등을 할 수 있음
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // 에러 처리 로직을 추가할 수 있음
+      });
+  }, []);
+
+  return (
+    <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2">
+        {resultList.map((item) => (
+        <option key={item.major_code} value={item.major_name}>
+           {item.major_name}
+        </option>
+        ))}
+    </select>
+  );
+}
+
 
 function GetDetailCodeComponent(){
 
@@ -77,13 +113,7 @@ const DataTable = () => {
           </td>
           <td className="border border-gray-200 px-4 py-2">
           <div className="flex">
-            <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2">
-              {items1.map((item, index) => (
-                <option key={index} value={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
+            <GetMajorCodeComponent />
             <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2">
               {items2.map((item, index) => (
                 <option key={index} value={item}>
