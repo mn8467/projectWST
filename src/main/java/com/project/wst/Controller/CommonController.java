@@ -6,62 +6,55 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Controller
+@RestController
+@RequestMapping("/codes")
 @Slf4j
 public class CommonController {
 
     @Autowired
     private CommonService commonService;
 
-    @RequestMapping(value = "/codes/classifications", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
-    @ResponseBody //@RequestMapping 의 형태는 name = value 형태가 되어야한다
+    @PostMapping(value = "/classifications", produces = "application/json; charset=UTF-8")
     public Map<String, Object> CodeController(Common common) {
         Map<String, Object> resultMap = new HashMap<>();
         List<Common> resultList = commonService.getCode(common);
-            resultMap.put("resultList",resultList);
-            log.info("resultList" + resultMap);
+        resultMap.put("resultList", resultList);
+        log.info("resultList" + resultMap);
 
         return resultMap;
-        }
+    }
 
-    @RequestMapping(value = "/codes/trash-type", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
-    @ResponseBody //@RequestMapping 의 형태는 name = value 형태가 되어야한다
-    public Map<String,List<Common>> MajorCodeController(Common common, Model model){
-
+    @PostMapping(value = "/trash-type", produces = "application/json; charset=UTF-8")
+    public Map<String, List<Common>> MajorCodeController(Common common) {
         Map<String, List<Common>> resultMap = new HashMap<>();
         List<Common> resultList = commonService.getTypeCode(common);
-
-
         resultMap.put("resultList", resultList);
         log.info("resultList : " + resultMap);
 
         return resultMap;
     }
 
-    @RequestMapping(value = "/codes/major-code", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
-    @ResponseBody //@RequestMapping 의 형태는 name = value 형태가 되어야한다.
-    public Map<String,List<Common>> GetMajorCode(Common common){
-        Map<String,List<Common>> resultMap = new HashMap<>();
+    @PostMapping(value = "/major-code", produces = "application/json; charset=UTF-8")
+    public Map<String, List<Common>> GetMajorCode(Common common) {
+        Map<String, List<Common>> resultMap = new HashMap<>();
         List<Common> resultList = commonService.getMajorCode(common);
-
         resultMap.put("resultList", resultList);
         log.info("resultList : " + resultMap);
+
         return resultMap;
     }
+}
 
 /*    @PostMapping("/home")
     public String receiveSelectedValue(){
 
     }*/
-}
+
 

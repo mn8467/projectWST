@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.wst.Mapper.AccountMapper">
+
+    <insert id="saveAccount" parameterType="com.project.wst.Model.Account">
+        INSERT INTO account (user_id, user_name, password, email, role, join_date, user_status)
+        VALUES (#{userId}, #{userName}, #{password}, #{email}, '10', NOW(), 'joined')
+    </insert>
+
+</mapper>

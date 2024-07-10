@@ -29,6 +29,7 @@
     <select id="getMajorCode" resultType="com.project.wst.Model.Common">
         SELECT DISTINCT major_code, major_name
         FROM Common
+
     </select>
 
     <select id="getSubCode" resultType="com.project.wst.Model.Common">

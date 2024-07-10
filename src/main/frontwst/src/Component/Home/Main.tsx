@@ -5,60 +5,17 @@ import Overview from './OverView.tsx';
 import RecentTable from './RecentSales.tsx';
 import Modal from './Modal.tsx';
 import Funx from './js/funx.tsx';
-import { useState,useEffect } from 'react';
+import { useState,useEffect} from 'react';
+import { useNavigate  } from 'react-router-dom';
 import axios from 'axios';
-
-
-function TypeCodeComponent(){
-
-  const [getdata, setdata] = useState([]);
-  const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열, any[]는 임시로 모든 타입을 허용하는 예시입니다. 실제로는 받아오는 데이터의 타입을 정의하는 것이 좋습니다.
-
-
-  useEffect(() => {
-    fetch("/codes/trash-type", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      }
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-        setResultList(data.resultList); // 받아온 데이터의 resultList를 상태에 저장
-
-        // 추가적인 로직 처리나 상태 업데이트 등을 할 수 있음
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        // 에러 처리 로직을 추가할 수 있음
-      });
-  }, []);
-
-  return (
-    <div>
-      <h2>Result List:</h2>
-      <ul>
-        {resultList.map((item) => (
-          <li key={item.nameCode}>
-            <p>majorCode:{item.majorCode}</p>
-            <p>majorName: {item.majorName}</p>
-            <p>subCode: {item.subCode}</p>
-            <p>subName: {item.subName}</p>
-            <p>detailCode: {item.detailCode}</p>
-            <p>attributeCode: {item.attributeCode}</p>
-            <p>nameCode: {item.nameCode}</p>
-            {/* 필요한 데이터 필드를 추가적으로 출력 */}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
 
 export default function Main (){
   
-  
+  const navigate = useNavigate(); // 페이지 이동 함수
+
+  const navigateToSignUp = () => { // sign-up 페이지로 이동
+    navigate('/sign-up');
+  };
 
         return(
         <>
@@ -100,14 +57,10 @@ export default function Main (){
                       {/* user */}
                       <div className="relative md:static">
               
-                        <button className="menu-btn focus:outline-none focus:shadow-outline flex flex-wrap items-center">
-                          <div className="w-8 h-8 overflow-hidden rounded-full">
-                            <img className="w-full h-full object-cover" src={userLogo} ></img>
-                          </div> 
-              
-                          <div className="ml-2 capitalize flex ">
-                            <h1 className="text-sm text-gray-800 font-semibold m-0 p-0 leading-none">정민호</h1>
-                          </div>                        
+                        <button type="button"
+                                onClick={navigateToSignUp}
+                                className="justify-center items-center btn-shadow w-32 mt-6 focus:outline-none focus:shadow-outline flex flex-wrap">
+                          회원가입
                         </button>
                         
                         <button className="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
@@ -213,7 +166,6 @@ export default function Main (){
                   {/* <!-- start numbers --> */}
                   <div className="grid grid-cols-5 gap-6 xl:grid-cols-2">
                   
-                  <TypeCodeComponent />
 
        
               </div>

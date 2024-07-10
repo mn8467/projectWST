@@ -16,7 +16,6 @@ import java.time.LocalDateTime;
 public class Account {
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_code_seq")
     private Integer userCode;
-
     private String userId;
     private String userName;
     private String password;
@@ -25,6 +24,5 @@ public class Account {
     private LocalDateTime joinDate;
     private LocalDateTime updateDate;
     private String userStatus;
-
 
 }

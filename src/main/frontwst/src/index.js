@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import Main from './Component/Home/Main.tsx';
 import App from './App.js';
+import UserSignUpPage from './Component/Home/UserSignUpPage.tsx';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,6 +15,7 @@ root.render(
                  <Routes>
                      <Route exact path="/" element={<App />}></Route>
                      <Route exact path="/home" element={<Main/>}></Route>   {/*main col 12*/}
+                     <Route exact path="/sign-up" element={<UserSignUpPage/>}></Route>
                  </Routes>
               </BrowserRouter>
   </React.StrictMode>
