@@ -35,3 +35,9 @@
 - 다음 목표 : 회원가입 insert 완료시키기, 회원 만든 다음에 명세서 데이터 insert 완료시키기
 - 다음 목표 : CORS 에러에 대해 공부해보기
 - 아니 왜 자꾸 데이터 받으면 null 값뜨지??? 받는 데이터 타입에 문제가 있는건가 하..
+
+!--- 2024 - 07 - 10 ---! <br/>
+- saveAccount Controller의 매개변수 타입에 어노테이션 Reqeust Body 를 추가해 Json 타입을 받아서 DB에 성공적으로 데이터 넣음
+- CREATE SEQUENCE "명칭" START1; 을 사용하여 시퀀스 생성완료
+-     user_code integer default nextval('seq_account') 컬럼 형태 바꿈
+- 다음 목표 : Controller 부분에서 Map<String,String> 타입 어떻게 돌아가는지 공부하기

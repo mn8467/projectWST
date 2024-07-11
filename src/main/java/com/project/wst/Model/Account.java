@@ -4,18 +4,17 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 
-@Entity
-@Getter
-@Setter
+@Data
 public class Account {
-    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_code_seq")
-    private Integer userCode;
+
+    private int userCode;
     private String userId;
     private String userName;
     private String password;

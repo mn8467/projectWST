@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,13 +23,12 @@ public class AccountController {
     private AccountService accountService;
 
     @PostMapping("/sign-up")
-    public Map<String, List<Account>> saveAccountController(Account account){
-        Map<String, List<Account>> resultMap = new HashMap<>();
-        List<Account> resultList =  accountService.saveAccount(account);
-        resultMap.put("resultList", resultList);
+    public Map<String, String> saveAccountController(@RequestBody  Account account){
+        accountService.addAccount(account);
+        Map<String, String> resultMap = new HashMap<>();
+        resultMap.put("result", "ok"); //클라이언트에 ok를 반환
 
-        log.info("resultList : " + resultMap);
-       return resultMap;
+        return resultMap;
     }
 
 }

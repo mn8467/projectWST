@@ -14,7 +14,7 @@ public class AccountService {
     @Autowired
     private AccountMapper accountMapper;
 
-    public List<Account> saveAccount(Account account){
-        return accountMapper.saveAccount(account);
+    public void addAccount(Account account){
+        accountMapper.saveAccount(account);
     }
 }

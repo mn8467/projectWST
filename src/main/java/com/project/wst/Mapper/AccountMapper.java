@@ -7,5 +7,5 @@ import java.util.List;
 
 @Mapper
 public interface AccountMapper {
-    public List<Account> saveAccount(Account account);
+    void saveAccount(Account account);
 }
