@@ -30,7 +30,7 @@ export default function Main (){
               
               
               {/* start navbar */} 
-              <div className="md:fixed md:w-full md:top-0 md:z-20 flex justify-end flex-wrap items-center bg-white p-6 border-b border-gray-300">
+              <div className="md:fixed md:w-full md:top-0 md:z-20 flex justify-end flex-wrap items-center  bg-white p-6 border-b border-gray-300">
                   
                   {/* logo */}
                   <div className="flex-none w-56 flex flex-row items-center">
@@ -55,11 +55,17 @@ export default function Main (){
                     <div className="flex  items-center"> 
               
                       {/* user */}
-                      <div className="relative md:static">
+                      <div className="flex flex-row relative md:static">
+
+                      <button type="button"
+                                onClick={navigateToSignUp}
+                                className="justify-center items-center btn-shadow w-32  mx-3 focus:outline-none focus:shadow-outline flex flex-wrap">
+                          로그인
+                        </button>
               
                         <button type="button"
                                 onClick={navigateToSignUp}
-                                className="justify-center items-center btn-shadow w-32 mt-6 focus:outline-none focus:shadow-outline flex flex-wrap">
+                                className="justify-center items-center btn-shadow w-32  focus:outline-none focus:shadow-outline flex flex-wrap">
                           회원가입
                         </button>
                         

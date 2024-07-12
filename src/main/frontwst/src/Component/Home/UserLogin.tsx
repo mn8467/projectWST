@@ -1,8 +1,8 @@
-import React from "react"
-import {useState} from "react";
-export default function UserSignUpPage(){
+import React,{useState} from "react";
 
-    const [formData, setFormData] = useState({
+export default function UserLogin(){
+    
+    const [loginFormData, setFormData] = useState({
         userId: '',
         userName: '',
         password: '',
@@ -12,25 +12,25 @@ export default function UserSignUpPage(){
       const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
-          ...formData,
+          ...loginFormData,
           [name]: value,
         });
       };
     
       const handleSubmit = (e) => {
-        e.preventDefault();     // 여기에서 formData를 사용하여 회원가입 요청을 서버에 보냅니다.
-        console.log(formData);
+        e.preventDefault();     // 여기에서 formData를 사용하여 로그인 요청을 서버에 보냅니다.
+        console.log(loginFormData);
 
         const sendData = {
-            userId: formData.userId,
-            userName: formData.userName,
-            password: formData.password,
-            email: formData.email,
+            userId: loginFormData.userId,
+            userName: loginFormData.userName,
+            password: loginFormData.password,
+            email: loginFormData.email,
       };
 
 
      // POST 요청을 보낼 URL 설정
-     const url = 'http://localhost:8080/user/sign-up'; // 적절한 백엔드 URL로 변경해야 합니다.
+     const url = 'http://localhost:8080/user/login'; // 적절한 백엔드 URL로 변경해야 합니다.
 
      // fetch를 사용하여 POST 요청 보내기
      fetch(url, {
@@ -41,7 +41,7 @@ export default function UserSignUpPage(){
         "Accept": "application/json",
         "Access-Control-Allow-Origin": "true"
       },
-       body: JSON.stringify(sendData), // 데이터를 JSON 문자열로 변환하여 전송
+       body: JSON.stringify(sendData), // 데이터를 JSON 문자열로 변환하여 전송, 전송될 때 자바스크립트 형식
      })
        .then((response) => {
          if (!response.ok) {
@@ -58,17 +58,18 @@ export default function UserSignUpPage(){
          // 에러 처리 로직을 추가할 수 있습니다.
        });
    };
+    
     return(
-
+        
         <div>
-        <h2>회원가입 페이지</h2>
+        <h2>로그인 페이지</h2>
         <form onSubmit={handleSubmit}>
           <div>
             <label>아이디:</label>
             <input className="bg-teal-400 my-3"
               type="text"
               name="userId"
-              value={formData.userId}
+              value={loginFormData.userId}
               onChange={handleChange}
               required
             />
@@ -78,7 +79,7 @@ export default function UserSignUpPage(){
             <input className="bg-teal-400 my-3"
               type="text"
               name="userName"
-              value={formData.userName}
+              value={loginFormData.userName}
               onChange={handleChange}
               required
             />
@@ -88,7 +89,7 @@ export default function UserSignUpPage(){
             <input className="bg-teal-400 my-3"
               type="password"
               name="password"
-              value={formData.password}
+              value={loginFormData.password}
               onChange={handleChange}
               required
             />
@@ -98,7 +99,7 @@ export default function UserSignUpPage(){
             <input className="bg-teal-400 my-3"
               type="email"
               name="email"
-              value={formData.email}
+              value={loginFormData.email}
               onChange={handleChange}
               required
             />
@@ -108,4 +109,4 @@ export default function UserSignUpPage(){
       </div>
 
     )
-};
+}

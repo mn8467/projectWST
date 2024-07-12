@@ -3,6 +3,7 @@ package com.project.wst.Controller;
 import com.project.wst.Model.Account;
 import com.project.wst.Model.Common;
 import com.project.wst.Service.AccountService;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,8 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    @PostMapping("/sign-up")
-    public Map<String, String> saveAccountController(@RequestBody  Account account){
+    @PostMapping("/sign-up") //CREATE user
+    public Map<String, String> saveAccountController(@RequestBody Account account){
         accountService.addAccount(account);
         Map<String, String> resultMap = new HashMap<>();
         resultMap.put("result", "ok"); //클라이언트에 ok를 반환

@@ -36,8 +36,16 @@
 - 다음 목표 : CORS 에러에 대해 공부해보기
 - 아니 왜 자꾸 데이터 받으면 null 값뜨지??? 받는 데이터 타입에 문제가 있는건가 하..
 
-!--- 2024 - 07 - 10 ---! <br/>
+!--- 2024 - 07 - 11 ---! <br/>
 - saveAccount Controller의 매개변수 타입에 어노테이션 Reqeust Body 를 추가해 Json 타입을 받아서 DB에 성공적으로 데이터 넣음
 - CREATE SEQUENCE "명칭" START1; 을 사용하여 시퀀스 생성완료
--     user_code integer default nextval('seq_account') 컬럼 형태 바꿈
+-  user_code integer default nextval('seq_account') 컬럼 형태 바꿈
 - 다음 목표 : Controller 부분에서 Map<String,String> 타입 어떻게 돌아가는지 공부하기
+
+!--- 2024 - 07 - 12 ---! <br/>
+- sql 명령어 수정, pk,fk 설정완료, 테이블 생성 완료 (Audit 제외)
+- @RequestMapping 공부, @Request Body = JSON 타입 데이터(객체 다른것)를 JAVA 객체로 받아주기
+- 오늘은 좀 알바하기 빡센날이라 무리하면 안되겠다.. 이정도만 하자
+- 다음 목표 : CORS 에러에 대해 공부해보기
+- 다음 목표 : Controller 부분에서 Map<String,String> 타입 어떻게 돌아가는지 공부하기
+- 다음 목표 : 명세서 입력 시 대분류 데이터 선택 후 SQL 돌아가서 데이터 다시 걸러서 서버에 뿌려주게끔 하기
