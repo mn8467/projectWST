@@ -21,16 +21,6 @@ public class CommonController {
     @Autowired
     private CommonService commonService;
 
-    @PostMapping(value = "/classifications", produces = "application/json; charset=UTF-8")
-    public Map<String, Object> CodeController(Common common) {
-        Map<String, Object> resultMap = new HashMap<>();
-        List<Common> resultList = commonService.getCode(common);
-        resultMap.put("resultList", resultList);
-        log.info("resultList" + resultMap);
-
-        return resultMap;
-    }
-
     @PostMapping(value = "/trash-type", produces = "application/json; charset=UTF-8")
     public Map<String, List<Common>> MajorCodeController(Common common) {
         Map<String, List<Common>> resultMap = new HashMap<>();
@@ -42,7 +32,7 @@ public class CommonController {
     }
 
     @PostMapping(value = "/major-code", produces = "application/json; charset=UTF-8")
-    public Map<String, List<Common>> GetMajorCode(Common common) {
+    public Map<String, List<Common>> getMajorCode(Common common) {
         Map<String, List<Common>> resultMap = new HashMap<>();
         List<Common> resultList = commonService.getMajorCode(common);
         resultMap.put("resultList", resultList);
@@ -50,6 +40,15 @@ public class CommonController {
 
         return resultMap;
     }
+
+    @PostMapping(value = "/api/major-code")
+    public Map<String,String> getSubCode(@RequestBody Common common){
+        commonService.getMajorCode(common);
+        Map<String, String> resultMap = commonService.getSubCode(common);
+        resultMap.put("result", "ok"); // 클라이언트에 ok를 반환
+        return resultMap;
+    }
+
 }
 
 /*    @PostMapping("/home")

@@ -24,11 +24,13 @@ public class CommonService {
     public List<Common> getMajorCode(Common common){
         return commonMapper.getMajorCode(common);
     }
-    public List<Common> getSubCode(Common common){
-        return commonMapper.getSubCode(common);
+    public List<Common> getSubCode(String majorCode){
+        return commonMapper.getSubCode(majorCode);
     }
     public List<Common> getDetailCode(Common common){
         return commonMapper.getDetailCode(common);
     }
+
+    public List<Common> loadMajorCode(Common common) {return commonMapper.inputMajorCode(common);}
 
 }

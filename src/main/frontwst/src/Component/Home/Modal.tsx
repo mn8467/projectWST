@@ -11,6 +11,7 @@ const items3 = ["소분류 코드"]; // 드롭다운 목록
 function GetMajorCodeComponent(){
   const [getdata, setdata] = useState([]);
   const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열, any[]는 임시로 모든 타입을 허용하는 예시입니다. 실제로는 받아오는 데이터의 타입을 정의하는 것이 좋습니다.
+  const [selectedMajorCode, setSelectedMajorCode] = useState(""); // 사용자가 선택한 majorCode를 저장할 상태
 
 
   useEffect(() => {
@@ -25,18 +26,47 @@ function GetMajorCodeComponent(){
         console.log("Success:", data);
         setResultList(data.resultList); // 받아온 데이터의 resultList를 상태에 저장
 
+
+
         // 추가적인 로직 처리나 상태 업데이트 등을 할 수 있음
       })
       .catch((error) => {
         console.error("Error:", error);
         // 에러 처리 로직을 추가할 수 있음
       });
-  }, []);
+        
+  
+    }, []);
+
+    const handleChange = (e) => {
+      const selectedCode = e.target.value;
+      setSelectedMajorCode(selectedCode);
+    };
+
+    const handleSubmit = () => {
+      fetch("/codes/api/major-code", { // 적절한 백엔드 URL로 변경해야 합니다.
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ majorCode: selectedMajorCode }), // 선택된 majorCode를 JSON 형식으로 변환하여 전송
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Submit Success:", data);
+          // 성공적으로 처리된 경우 추가적인 로직을 수행할 수 있음
+        })
+        .catch((error) => {
+          console.error("Submit Error:", error);
+          // 에러 처리 로직을 추가할 수 있음
+        });
+    };
 
   return (
-    <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2">
+    <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2"
+            onChange={handleChange}>
         {resultList.map((item) => (
-        <option key={item.majorCode} value={item.majorName}>
+        <option onClick={handleSubmit} key={item.majorCode} value={item.majorName}>
            {item.majorName}
         </option>
         ))}
@@ -85,7 +115,6 @@ function GetDetailCodeComponent(){
 const DataTable = () => {
   const [date, setDate] = useState(new Date());
 
-  
 
   return (
     <table className="min-w-full bg-white border border-gray-200">

@@ -29,13 +29,13 @@
     <select id="getMajorCode" resultType="com.project.wst.Model.Common">
         SELECT DISTINCT major_code, major_name
         FROM Common
-
     </select>
 
-    <select id="getSubCode" resultType="com.project.wst.Model.Common">
+
+    <select id="getSubCode" parameterType="com.project.wst.Model.Common" resultType="com.project.wst.Model.Common">
         SELECT DISTINCT sub_code, sub_name
         FROM Common
-        WHERE major_code = '{선택한 대분류 코드}' AND sub_code IS NOT NULL;
+        WHERE major_code = #{majorCode} AND sub_code IS NOT NULL;
     </select>
 
     <!--name_code == detail_name 의미 -->
