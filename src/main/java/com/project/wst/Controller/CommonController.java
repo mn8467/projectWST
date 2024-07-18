@@ -42,9 +42,9 @@ public class CommonController {
     }
 
     @PostMapping(value = "/api/major-code")
-    public Map<String,String> getSubCode(@RequestBody Common common){
-        commonService.getMajorCode(common);
-        Map<String, String> resultMap = commonService.getSubCode(common);
+    public Map<String,String> getSubCode(@RequestParam(value = "majorCode") String majorCode,Common common){
+        commonService.getSubCode(majorCode);
+        Map<String, String> resultMap = commonService.getSubCode(majorCode);
         resultMap.put("result", "ok"); // 클라이언트에 ok를 반환
         return resultMap;
     }

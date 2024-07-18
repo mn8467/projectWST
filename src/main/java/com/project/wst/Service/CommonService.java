@@ -2,8 +2,10 @@ package com.project.wst.Service;
 
 import com.project.wst.Mapper.CommonMapper;
 import com.project.wst.Model.Common;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Map;
@@ -24,7 +26,7 @@ public class CommonService {
     public List<Common> getMajorCode(Common common){
         return commonMapper.getMajorCode(common);
     }
-    public List<Common> getSubCode(String majorCode){
+    public Map<String,String> getSubCode(@Param("majorCode") String majorCode){
         return commonMapper.getSubCode(majorCode);
     }
     public List<Common> getDetailCode(Common common){
