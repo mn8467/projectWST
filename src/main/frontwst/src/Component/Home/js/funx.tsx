@@ -14,11 +14,14 @@ export default function funx(){
   };
 
   return (
-    <div className="App flex items-center justify-center">
-      <button type="button" className="items-center btn-shadow w-48 mt-6" onClick={openModal}>
-        명세표 입력
+    <div className="pp flex items-center justify-center flex-col">
+      <button type="button" className="items-center bg-blue-600 btn-shadow w-48 mt-6" onClick={openModal}>
+        수입 명세표 입력
       </button>
       <Modal isOpen={isModalOpen} closeModal={closeModal} />
+      <button type="button" className="items-center bg-red-600 align-bottom btn-shadow w-48 mt-6" /* onClick={} */>
+        지출 명세표 입력
+      </button>
     </div>
     );
 }
