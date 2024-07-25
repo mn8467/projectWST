@@ -26,11 +26,12 @@ public class CommonService {
     public List<Common> getMajorCode(Common common){
         return commonMapper.getMajorCode(common);
     }
-    public Map<String,String> getSubCode(@Param("majorCode") String majorCode){
+    public List<Common> getSubCode(String majorCode){
         return commonMapper.getSubCode(majorCode);
     }
-    public List<Common> getDetailCode(Common common){
-        return commonMapper.getDetailCode(common);
+
+    public List<Common> getDetailCode(String majorCode, String subCode){
+        return commonMapper.getDetailCode(majorCode, subCode); //오 두개 넣을수도있네?
     }
 
     public List<Common> loadMajorCode(Common common) {return commonMapper.inputMajorCode(common);}

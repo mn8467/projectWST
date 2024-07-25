@@ -13,9 +13,9 @@ public interface CommonMapper {
     public List<Common> getCode(Common common); //전체 코드를 가져온다
     public List<Common> getTypeCode(Common common);
     public List<Common> getMajorCode(Common common);
-    public Map<String,String> getSubCode(@Param("majorCode") String majorCode);
+    public List<Common> getSubCode(@Param("majorCode") String majorCode);
 
-    public List<Common> getDetailCode(Common common);
+    public List<Common> getDetailCode(@Param("majorCode") String majorCode,@Param("subCode") String subCode);
     public List<Common> inputMajorCode(Common common);
 
 }

@@ -1,9 +1,14 @@
 package com.project.wst.Controller;
 
+import com.project.wst.Model.CodeGetModel;
 import com.project.wst.Model.Common;
 import com.project.wst.Service.CommonService;
 import lombok.extern.slf4j.Slf4j;
+import org.antlr.v4.runtime.misc.NotNull;
+import org.aspectj.apache.bcel.classfile.Code;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -41,19 +46,26 @@ public class CommonController {
         return resultMap;
     }
 
-    @PostMapping(value = "/api/major-code")
-    public Map<String,String> getSubCode(@RequestParam(value = "majorCode") String majorCode,Common common){
-        commonService.getSubCode(majorCode);
-        Map<String, String> resultMap = commonService.getSubCode(majorCode);
-        resultMap.put("result", "ok"); // 클라이언트에 ok를 반환
-        return resultMap;
+    @PostMapping(value = "/api/waste-code", produces = "application/json; charset=UTF-8")
+    public Map<String, List<Common>> getSubCode(@RequestBody CodeGetModel codeGetModel) {
+        String majorCode = codeGetModel.getMajorCode(); // majorCode 갖고오기
+        String subCode = codeGetModel.getSubCode();
+        Map<String, List<Common>> resultMap = new HashMap<>();
+        log.info("majorCode : " + majorCode);
+        log.info("subCode :" + subCode);
+
+        if(majorCode != null && subCode == null) {
+            List<Common> resultList = commonService.getSubCode(majorCode); // majorCode 갖고온걸로 getSubCode 에넣어 메서드 돌려서 나온 결과값을 resultList에 대입
+            resultMap.put("resultList", resultList);
+            log.info("resultList : " + resultMap);
+            return resultMap;
+        }
+         // majorCode 와 subCode 둘 값이 존재할 경우 실행되는 코드
+            List<Common> resultList = commonService.getDetailCode(majorCode,subCode);
+            resultMap.put("resultList", resultList);
+            log.info("resultList : " + resultMap);
+            return resultMap;
     }
 
 }
-
-/*    @PostMapping("/home")
-    public String receiveSelectedValue(){
-
-    }*/
-
 

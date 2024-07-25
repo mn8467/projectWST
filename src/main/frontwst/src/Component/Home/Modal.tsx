@@ -4,15 +4,15 @@ import 'flatpickr/dist/flatpickr.min.css';
 import axios from 'axios'
 
 
+
 const items1 = ["대분류 코드"]; // 드롭다운 목록
 const items2 = ["중분류 코드"]; // 드롭다운 목록
 const items3 = ["소분류 코드"]; // 드롭다운 목록
 
-function GetMajorCodeComponent(){
-  const [getdata, setdata] = useState([]);
-  const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열, any[]는 임시로 모든 타입을 허용하는 예시입니다. 실제로는 받아오는 데이터의 타입을 정의하는 것이 좋습니다.
+// majorCode 담당
+function GetMajorCodeComponent({ onSelectMajorCode }) {
+  const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열
   const [selectedMajorCode, setSelectedMajorCode] = useState(""); // 사용자가 선택한 majorCode를 저장할 상태
-
 
   useEffect(() => {
     fetch("/codes/major-code", {
@@ -21,142 +21,240 @@ function GetMajorCodeComponent(){
         "Content-Type": "application/json",
       }
     })
-      .then((response) => response.json())
-      .then((data) => {
+      .then(response => response.json())
+      .then(data => {
         console.log("Success:", data);
         setResultList(data.resultList); // 받아온 데이터의 resultList를 상태에 저장
-
-
-
-        // 추가적인 로직 처리나 상태 업데이트 등을 할 수 있음
       })
-      .catch((error) => {
+      .catch(error => {
         console.error("Error:", error);
-        // 에러 처리 로직을 추가할 수 있음
       });
-        
+  }, []);
+
+  const handleChange = (e) => {
+    const selectedCode = e.target.value;
+    setSelectedMajorCode(selectedCode); // 선택된 값을 상태에 저장
+    onSelectMajorCode(selectedCode); // 부모 컴포넌트에 선택된 majorCode를 전달
+  };
+
+  return (
+    <select 
+      className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2"
+      onChange={handleChange}
+      value={selectedMajorCode}
+    >
+      <option value="">▶대분류 코드</option>
+      {resultList.map((item) => (
+        <option key={item.majorCode} value={item.majorCode}>
+          {item.majorName}
+        </option>
+      ))}
+    </select>
+  );
+}
+
+//subCode 담당
+function GetSubCodeComponent({ majorCode, onSelectSubCode}) {
+  const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열
+  const [loading, setLoading] = useState<boolean>(false); // 로딩 상태 관리
+  const [error, setError] = useState<string | null>(null); // 에러 상태 관리
+  const [selectedSubCode, setSelectedSubCode] = useState("");
+
+  interface SubCode {
+    subCode: string;
+    subName: string;
+  }
   
-    }, []);
+  interface SubCodeResponse {
+    resultList: SubCode[];
+  }
 
-    const handleChange = (e) => {
-      const selectedCode = e.target.value;
-      setSelectedMajorCode(selectedCode);
-    };
+  
 
-    const handleSubmit = () => {
-      fetch("/codes/api/major-code", { // 적절한 백엔드 URL로 변경해야 합니다.
+  useEffect(() => {
+    if (majorCode) {
+      setLoading(true); // 로딩 시작
+      fetch("/codes/api/waste-code", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ majorCode: selectedMajorCode }), // 선택된 majorCode를 JSON 형식으로 변환하여 전송
+        body: JSON.stringify({ majorCode }), // 선택된 majorCode를 JSON 형식으로 변환하여 전송
       })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Submit Success:", data);
-          // 성공적으로 처리된 경우 추가적인 로직을 수행할 수 있음
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
         })
-        .catch((error) => {
-          console.error("Submit Error:", error);
-          // 에러 처리 로직을 추가할 수 있음
+        .then(data => {
+          console.log("Success:", data);
+          if (data.resultList && Array.isArray(data.resultList)) {
+            setResultList(data.resultList); // 받아온 데이터의 resultList를 상태에 저장
+            
+          } else {
+            
+            console.error("Unexpected data format:", data);
+          }
+
+          
+        })
+        
+        .catch(error => {
+          console.error("Error:", error);
+          setError(error.message); // 에러 메시지 상태 업데이트
+        })
+        .finally(() => {
+          setLoading(false); // 로딩 종료
         });
-    };
-
-  return (
-    <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2"
-            onChange={handleSubmit}>
-        {resultList.map((item) => (
-        <option key={item.majorCode} value={item.majorName}>
-           {item.majorName}
-        </option>
-        ))}
-    </select>
-  );
-}
-
-function GetSubCodeComponent(){
-  const [getdata, setdata] = useState([]);
-  const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열, any[]는 임시로 모든 타입을 허용하는 예시입니다. 실제로는 받아오는 데이터의 타입을 정의하는 것이 좋습니다.
-  const [selectedMajorCode, setSelectedMajorCode] = useState(""); // 사용자가 선택한 majorCode를 저장할 상태
-
-
-  useEffect(() => {
-    fetch("/codes/major-code", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      }
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-        setResultList(data.resultList); // 받아온 데이터의 resultList를 상태에 저장
-
-
-
-        // 추가적인 로직 처리나 상태 업데이트 등을 할 수 있음
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        // 에러 처리 로직을 추가할 수 있음
-      });
-      
-    }, []);
+    }
+  }, [majorCode]); // majorCode가 변경될 때마다 useEffect 실행
 
   
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+  const handleChange = (e) => {
+    const selectedCode = e.target.value;
+    setSelectedSubCode(selectedCode); // 선택된 값을 상태에 저장
+    onSelectSubCode(selectedCode); // 부모 컴포넌트에 선택된 subCode를 전달
+  };
+
   return (
-    <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2"
-            >
-        {resultList.map((item) => (
-        <option key={item.subCode} value={item.subName}>
-           {item.subName}
-        </option>
-        ))}
+    <select
+      className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2"
+      onChange={handleChange}
+      value={selectedSubCode}
+    >
+      <option value="">▶중분류 코드</option>
+      {resultList.length > 0 ? (
+        resultList.map((item) => (
+          <option key={item.subCode} value={item.subCode}>
+            {item.subName}
+          </option>
+        ))
+      ) : (
+        <option value="">No data available</option>
+      )}
     </select>
   );
 }
 
+//DetailCode 담당
+function GetDetailCodeComponent({ majorCode, subCode }) {
+  const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열
+  const [loading, setLoading] = useState<boolean>(false); // 로딩 상태 관리
+  const [error, setError] = useState<string | null>(null); // 에러 상태 관리
 
-function GetDetailCodeComponent(){
+  interface DetailCode{
+    detailCode : string;
+    nameCode : string;
+  }
 
-  const [getdata, setdata] = useState([]);
-  const [resultList, setResultList] = useState<any[]>([]); // 초기 값은 빈 배열, any[]는 임시로 모든 타입을 허용하는 예시입니다. 실제로는 받아오는 데이터의 타입을 정의하는 것이 좋습니다.
-
+  interface DetailCodeResponse {
+    resultList: DetailCode[];
+  }
 
   useEffect(() => {
-    fetch("/codes/trash-type", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      }
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-        setResultList(data.resultList); // 받아온 데이터의 resultList를 상태에 저장
-
-        // 추가적인 로직 처리나 상태 업데이트 등을 할 수 있음
+    if (majorCode && subCode ) {
+      setLoading(true); // 로딩 시작
+      fetch("/codes/api/waste-code", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ majorCode, subCode }), // 선택된 majorCode를 JSON 형식으로 변환하여 전송
       })
-      .catch((error) => {
-        console.error("Error:", error);
-        // 에러 처리 로직을 추가할 수 있음
-      });
-  }, []);
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log("Success:", data);
+          if (data.resultList && Array.isArray(data.resultList)) {
+            setResultList(data.resultList); // 받아온 데이터의 resultList를 상태에 저장
+            
+          } else {
+            
+            console.error("Unexpected data format:", data);
+          }
+
+          
+        })
+        
+        .catch(error => {
+          console.error("Error:", error);
+          setError(error.message); // 에러 메시지 상태 업데이트
+        })
+        .finally(() => {
+          setLoading(false); // 로딩 종료
+        });
+    }
+  }, [majorCode,subCode]); // majorCode,subCode 변경될 때마다 useEffect 실행
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+  
 
   return (
-    <select className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2">
-        {resultList.map((item) => (
-        <option key={item.detailCode} value={item.nameCode}>
-           {item.nameCode}
-        </option>
-        ))}
+    <select
+      className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mr-2"
+    >
+      <option value="">▶소분류 코드</option>
+      {resultList.length > 0 ? (
+        resultList.map((item) => (
+          <option key={item.detailCode} value={item.detailCode}>
+            {item.nameCode}
+          </option>
+        ))
+      ) : (
+        <option value="">No data available</option>
+      )}
     </select>
   );
 }
+
+// 부모 컴포넌트
+function ParentComponent() {
+  const [selectedMajorCode, setSelectedMajorCode] = useState(""); // 부모 컴포넌트에서 선택된 majorCode를 관리
+  const [selectedSubCode, setSelectedSubCode] = useState("");
+
+  const handleSelectMajorCode = (majorCode) => {
+    setSelectedMajorCode(majorCode); // majorCode를 상태에 저장
+  };
+
+  const handleSelectSubCode = (subCode) => {
+    setSelectedSubCode(subCode); // majorCode를 상태에 저장
+  };
+
+  return (
+    <div className="flex">
+      <GetMajorCodeComponent onSelectMajorCode={handleSelectMajorCode} />
+      <GetSubCodeComponent majorCode={selectedMajorCode} onSelectSubCode = {handleSelectSubCode}/>
+      <GetDetailCodeComponent majorCode={selectedMajorCode} subCode={selectedSubCode} />
+    </div>
+  );
+}
+
 
 const DataTable = () => {
   const [date, setDate] = useState(new Date());
 
+  /* fetch << 여기에 뭘 넣을꺼냐? th 태그의 value 값을 넣고 back 과 통신할거임 ㅋㅋ */
 
   return (
     <table className="min-w-full bg-white border border-gray-200">
@@ -183,10 +281,8 @@ const DataTable = () => {
             />
           </td>
           <td className="border border-gray-200 px-4 py-2">
-          <div className="flex">
-            <GetMajorCodeComponent />
-            <GetSubCodeComponent />
-            <GetDetailCodeComponent />
+          <div className="flex flex-row">
+            <ParentComponent />
           </div>
           </td>
           <td className="border border-gray-200 px-2 py-2">
