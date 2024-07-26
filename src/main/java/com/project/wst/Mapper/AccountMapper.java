@@ -9,5 +9,4 @@ import java.util.List;
 @Mapper
 public interface AccountMapper {
     void saveAccount(Account account);
-    void loginAccount(@Param );
 }
