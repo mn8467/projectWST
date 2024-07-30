@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: 951951
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:h2:mem:testdb # 메모리 H2 DB 경로 설정
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
   mybatis:
     mapper-locations: mappers/**/*.xml
     configuration:
@@ -22,6 +22,3 @@ spring:
         show_sql: true
     defer-datasource-initialization: true
     open-in-view: false
-
-jwt:
-  secret: c3ByaW5nLWJvb3Qtc2VjdXJpdHktand0LXR1dG9yaWFsLWppd29vbi1zcHJpbmctYm9vdC1zZWN1cml0eS1qd3QtdHV0b3JpYWwK
