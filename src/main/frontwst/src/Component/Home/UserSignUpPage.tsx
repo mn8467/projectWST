@@ -30,7 +30,7 @@ export default function UserSignUpPage(){
 
 
      // POST 요청을 보낼 URL 설정
-     const url = 'http://localhost:8080/user/sign-up'; // 적절한 백엔드 URL로 변경해야 합니다.
+     const url = 'http://localhost:8080/member/sign-up'; // 적절한 백엔드 URL로 변경해야 합니다.
 
      // fetch를 사용하여 POST 요청 보내기
      fetch(url, {

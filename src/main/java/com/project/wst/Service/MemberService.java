@@ -11,6 +11,7 @@ public class MemberService {
     @Autowired
     private MemberMapper memberMapperMapper;
 
+
     public void addAccount(Member member){
         memberMapperMapper.saveAccount(member);
     }
