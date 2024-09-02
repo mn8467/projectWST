@@ -12,6 +12,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/*
+
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
 public class MemberSignupService {
@@ -27,7 +29,7 @@ public class MemberSignupService {
         if (memberRepository.existsByUserId(request.getUserId())) {
             throw new NicknameDuplicateException(request.getUserId());
         }
-         */
+
 
         Member member = Member.builder()
                 .email(request.getEmail())
@@ -42,3 +44,5 @@ public class MemberSignupService {
         return MemberSignupResponse.from(member);
     }
 }
+
+ */
